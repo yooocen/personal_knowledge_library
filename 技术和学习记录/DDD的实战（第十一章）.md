@@ -1,0 +1,3 @@
+[Sometimes, though, we can get a leg up.](obsidian://booknote?type=annotation&book=resources/Domain-Driven%20Design%20Tackling%20Complexity%20in%20the%20Heart%20of%20Software%20by%20Eric%20Evans%20(z-lib.org).pdf&id=371afae9-6ab8-76e1-0a03-d0dde51c0cb0&page=213&rect=249.666,731.931,434.271,747.122)
+
+[Analysis patterns are groups of concepts that represent a common construction in business modeling. It may be relevant to only one domain or it may span many domains.](obsidian://booknote?type=annotation&book=resources/Domain-Driven%20Design%20Tackling%20Complexity%20in%20the%20Heart%20of%20Software%20by%20Eric%20Evans%20(z-lib.org).pdf&id=8243f5e8-9814-26e1-1219-3aec2573a711&page=213&rect=80.241,498.031,548.947,529.715)

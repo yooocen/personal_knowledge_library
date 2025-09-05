@@ -1,0 +1,57 @@
+{
+  "id": "2a8e9f0a-095f-4327-bae4-cf111d1b5862",
+  "title": "你好",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "你好",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": null,
+      "id": "b7e987a0-c2bc-420e-b088-69e53f5b8948",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "metaTemplate设计思路.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "id": "b6eaa97d-b560-4324-a804-6c0c10ce6556",
+      "metadata": {}
+    }
+  ],
+  "createdAt": 1742393092935,
+  "updatedAt": 1742393785904,
+  "schemaVersion": 1
+}

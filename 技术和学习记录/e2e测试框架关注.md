@@ -1,0 +1,5 @@
+selenium
+webdriver
+cypress
+puppeteer
+testCafe

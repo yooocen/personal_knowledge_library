@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "300c6f5f7df24a22",
+    "type": "split",
+    "children": [
+      {
+        "id": "59d5f10f77c83e9a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "58be216750f1b440",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "AKKA.canvas",
+                "viewState": {
+                  "x": -247.87035136381837,
+                  "y": -589.2908971220826,
+                  "zoom": -0.7152705230668874
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "AKKA"
+            }
+          },
+          {
+            "id": "676ab980278e412d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.9.12"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "259f7e416b0ee1a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "b240c4075c8cc190",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e1978705381d4273",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "f7742aafa10c1309",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "c102b7abc77291e6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 289.5
+  },
+  "right": {
+    "id": "0d8af2f16342be7c",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b43559960ef6a72",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "366ce8514f229bc2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DDD 的实战（第十一章）.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "DDD 的实战（第十一章） 的反向链接列表"
+            }
+          },
+          {
+            "id": "569f48001645f426",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DDD 的实战（第十一章）.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "DDD 的实战（第十一章） 的出链列表"
+            }
+          },
+          {
+            "id": "efa9d4c26d85512e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "4ab5e6199dddf198",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DDD 的实战（第十一章）.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "DDD 的实战（第十一章） 的大纲"
+            }
+          },
+          {
+            "id": "cbb6a5272eea6f6c",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "笔记复习序列"
+            }
+          },
+          {
+            "id": "e21596bbe0f8c842",
+            "type": "leaf",
+            "state": {
+              "type": "view-count",
+              "state": {},
+              "icon": "eye",
+              "title": "View count"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:创建新数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "cbb6a5272eea6f6c",
+  "lastOpenFiles": [
+    "数据库连接池.canvas",
+    "机器学习.canvas",
+    "languages/suffice.md",
+    "BASE/单词查询.base",
+    "languages/a fraction of.md",
+    "languages/a plethora of.md",
+    "languages/abide.md",
+    "languages/absorbed.md",
+    "BASE/单词查询.md",
+    "未命名.md",
+    "parsing technique.canvas",
+    "BASE",
+    "DDD 的实战（第十一章）.md",
+    "线程Thread名字的来源.md",
+    "公务员考试.canvas"
+  ]
+}

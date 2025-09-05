@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"2766e655f4399d93","x":-473,"y":-6.0325117580968595,"width":400,"height":500,"type":"file","file":"factory bean.md","subpath":""},
+		{"id":"fb84fe9f5005fc9a","x":1124.601559633266,"y":-271.45045464051225,"width":454.2560504035155,"height":326.24465928102455,"type":"text","text":"FactoryBean 通常是用来创建比较复杂的bean，一般的bean 直接用xml配置和基于Java配置即可，但如果一个bean的创建过程中涉及到很多其他的bean 和复杂的逻辑，用xml配置比较困难，这时可以考虑用FactoryBean。\n\n作者：攻城狮susht\n链接：https://www.jianshu.com/p/271cefdd708c\n来源：简书\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"},
+		{"id":"4e527a7ef93fc832","x":148.16409334460056,"y":-271.45045464051225,"width":761.9559015144578,"height":1132.354541894164,"type":"link","url":"https://www.jianshu.com/p/271cefdd708c"},
+		{"id":"ded7626efb893f66","x":-129.14484124421483,"y":-1479.576437242253,"width":1480.8744260792387,"height":1096.2944552981128,"type":"link","url":"https://blog.csdn.net/weixin_60740180/article/details/119821334"},
+		{"id":"a88e7bfc07e94c20","x":-129.14484124421483,"y":-1931.0889163836684,"width":400,"height":177,"type":"file","file":"spring 读取配置文件.md","subpath":""}
+	],
+	"edges":[
+		{"id":"1ac1e29089cf0cb5","fromNode":"2766e655f4399d93","fromSide":"right","toNode":"4e527a7ef93fc832","toSide":"left"},
+		{"id":"1f01b6e6f79e42e7","fromNode":"4e527a7ef93fc832","fromSide":"right","toNode":"fb84fe9f5005fc9a","toSide":"left","color":"4","label":"关键点"}
+	]
+}

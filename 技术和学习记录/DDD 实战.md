@@ -1,0 +1,2 @@
+[2小时掌握宇宙最强DDD（Domain driven design）DDD领域驱动设计实战_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Y341167Xp?p=5)
+[2小时掌握宇宙最强DDD（Domain driven design）DDD领域驱动设计实战_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Y341167Xp?p=6)

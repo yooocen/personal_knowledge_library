@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"type":"file","file":"resources/Pasted image 20221218132527.png","id":"bc636a170f1288aa","x":203,"y":-571,"width":1022,"height":728},
+		{"type":"text","text":"Java 虚拟机不仅要看类的全名是否相同，还要看加载此类的类加载器是否一样。只有两者都相同的情况，才认为两个类是相同的。","id":"32463104c2574965","x":-419,"y":411,"width":423,"height":150},
+		{"type":"text","text":"1、代理模式是为了保证 Java 核心库的类型安全：通过代理模式，对于 Java 核心库的类的加载工作由引导类加载器来统一完成，保证了 Java 应用所使用的都是同一个版本的 Java 核心库的类，是互相兼容的。\r\n\r\n2、相同名称的类可以并存在 Java 虚拟机中：不同的类加载器为相同名称的类创建了额外的名称空间。相同名称的类可以并存在 Java 虚拟机中，只需要用不同的类加载器来加载它们即可。不同类加载器加载的类之间是不兼容的，这就相当于在 Java 虚拟机内部创建了一个个相互隔离的 Java 类空间。\r\n\r\n这种技术在许多框架中都被用到，比如以 Apache Tomcat 来说，容器不希望它下面的webapps之间能互相访问到，每个 Web 应用都有一个对应的类加载器实例。","id":"a30af780b83c1a41","x":-1280,"y":344,"width":720,"height":362},
+		{"type":"link","url":"https://zhuanlan.zhihu.com/p/375932112","id":"11a36773c51ddff7","x":-1224,"y":-720,"width":1145,"height":845}
+	],
+	"edges":[
+		{"id":"a36f5d57b673aa16","fromNode":"bc636a170f1288aa","fromSide":"left","toNode":"11a36773c51ddff7","toSide":"right"},
+		{"id":"20e1726eb394e1a3","fromNode":"32463104c2574965","fromSide":"top","toNode":"11a36773c51ddff7","toSide":"bottom"},
+		{"id":"8a54cf5949a4089d","fromNode":"a30af780b83c1a41","fromSide":"top","toNode":"11a36773c51ddff7","toSide":"bottom"}
+	]
+}

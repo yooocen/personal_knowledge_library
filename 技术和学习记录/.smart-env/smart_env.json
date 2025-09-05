@@ -1,0 +1,51 @@
+{
+  "is_obsidian_vault": true,
+  "smart_blocks": {
+    "embed_blocks": true,
+    "min_chars": 200
+  },
+  "smart_sources": {
+    "single_file_data_path": ".smart-env/smart_sources.json",
+    "min_chars": 200,
+    "embed_model": {
+      "adapter": "transformers",
+      "transformers": {
+        "legacy_transformers": false,
+        "model_key": "Xenova/jina-embeddings-v2-base-zh"
+      },
+      "TaylorAI/bge-micro-v2": {},
+      "Xenova/jina-embeddings-v2-base-zh": {}
+    },
+    "smart_change": {
+      "active": true
+    },
+    "expanded_view": false
+  },
+  "file_exclusions": "Untitled",
+  "folder_exclusions": "smart-chats",
+  "smart_view_filter": {
+    "render_markdown": true,
+    "show_full_path": true,
+    "results_limit": 10
+  },
+  "excluded_headings": "",
+  "smart_threads": {
+    "chat_model": {
+      "adapter": "custom",
+      "openai": {
+        "model_key": "gpt-4o"
+      },
+      "custom": {
+        "api_adapter": "openai"
+      }
+    },
+    "embed_model": {
+      "model_key": "None"
+    },
+    "language": "zh",
+    "review_context": true,
+    "lookup_limit": "10",
+    "send_tool_output_in_user_message": false
+  },
+  "expanded_view": true
+}

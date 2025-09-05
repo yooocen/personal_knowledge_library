@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"bf5592e0a55ff685","x":-460,"y":-160,"width":250,"height":60,"type":"text","text":"ambiguous grammer\n语法歧义"},
+		{"id":"21fce476cb8ff897","x":-100,"y":-344,"width":600,"height":524,"type":"text","text":"🤔 “Ambiguous语法”指的是**语法结构有不止一种解释或理解方式**的情况。在语言学中，这样的句子或表达可能导致**不同的含义或结构分析**，也就是语法歧义。\n\n### 🧩 什么是语法歧义（Ambiguity）？\n\n语法歧义指的是**一个句子或词组在语法上可以被解读为多种不同的结构或意义**。它通常分为以下几类：\n\n- **结构歧义（Syntactic ambiguity）**：句子的结构有多种解释方式。\n- **词义歧义（Lexical ambiguity）**：某个词本身有多种含义。\n- **语义歧义（Semantic ambiguity）**：句子的意义不明确，不同读者可能理解成不同意思。\n\n---\n\n### 📚 示例：结构歧义\n\n英文句子：\n\n> I saw the man with the telescope.\n\n这个句子的歧义在于：\n\n1. 是“我用望远镜看到了一个人”？\n2. 还是“我看到一个拿着望远镜的人”？\n\n这就是典型的**语法歧义**，结构的不同会影响解释。\n\n---\n"}
+	],
+	"edges":[]
+}

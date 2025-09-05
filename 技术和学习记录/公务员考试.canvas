@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"type":"group","id":"11dbfce1c1290028","x":-840,"y":-560,"width":700,"height":430,"label":"未命名组"},
+		{"type":"text","text":"12.23% = 1223/10000 挪一个小数点100加一个0","id":"2cc9944d773c4ffb","x":60,"y":-8,"width":380,"height":100},
+		{"type":"text","text":"415份数法\n在于增长率是不是能够化成一个常见的分数，然后就可以大概估算本期和基期的份数","id":"0e8989ce994e9324","x":-2320,"y":433,"width":400,"height":179},
+		{"type":"text","text":"基期：除数 减数\n末期：被除数 被减数","id":"8ba28762a533dcf0","x":-820,"y":-510,"width":250,"height":60},
+		{"type":"text","text":"比重\n比值","id":"728e328183147faa","x":-500,"y":-380,"width":250,"height":60},
+		{"type":"text","text":"名义增长率\n实际增长率\n名义增长率 = 实际增长率 + 通货膨胀率","id":"12aa1a79dc6dba10","x":-520,"y":-540,"width":360,"height":90},
+		{"type":"text","text":"同比\n环比","id":"250a8c491b9637fd","x":-820,"y":-210,"width":250,"height":60},
+		{"type":"text","text":"百分数\n百分点","id":"786f0e4b1e4dc3e1","x":-500,"y":-210,"width":250,"height":60},
+		{"type":"text","text":"假设分配法\n\n![[Pasted image 20230209003902.png]]\n\n左边是前期，右边是增长量\n23% = 100 / 23\n\n1320 第一次可以分为 1000 / 230, 1230按这个比例先分配，剩下130继续分配\n130 第二次可以先分为100 /23 , 123按照这个比例分配，剩下7继续分配","id":"824defe3ceb68227","x":-1605,"y":42,"width":1085,"height":960},
+		{"type":"text","text":"增长量\n增长率（增长速度 增长幅度）","id":"e843a8d9356bb552","x":-820,"y":-350,"width":280,"height":60},
+		{"type":"link","url":"https://www.xiaohongshu.com/explore/625530fb000000002103ed36","id":"867485a1c8d8170a","x":120,"y":1211,"width":920,"height":1080},
+		{"type":"file","file":"resources/Pasted image 20230207003415.png","id":"95c99f63c35e4c8b","x":-264,"y":260,"width":899,"height":220},
+		{"type":"file","file":"resources/Pasted image 20230207003101.png","id":"8f0472a1324cd0b0","x":-270,"y":660,"width":905,"height":140},
+		{"type":"file","file":"resources/Pasted image 20230209004846.png","id":"8bcbe53c450e6ffa","x":-1123,"y":1211,"width":1107,"height":221}
+	],
+	"edges":[]
+}

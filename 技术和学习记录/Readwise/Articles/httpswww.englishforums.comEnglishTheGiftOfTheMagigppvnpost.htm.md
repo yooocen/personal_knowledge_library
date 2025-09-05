@@ -1,0 +1,12 @@
+# https://www.englishforums.com/English/TheGiftOfTheMagi/gppvn/post.htm
+
+tags:: source
+## Metadata
+- Author: englishforums.com
+- Full Title: https://www.englishforums.com/English/TheGiftOfTheMagi/gppvn/post.htm
+- Category: #articles
+- URL: https://www.englishforums.com/English/TheGiftOfTheMagi/gppvn/post.htm
+
+## Highlights
+- Hi,While the mistress of the home is gradually subsiding from the first stage to the second, take a look at the home. A furnished flat at $8 per week. It did not exactly (A) beggar description, but (B) it certainly had that word on the lookout for the mendicancysquad. ** From O Henry's "THE GIFT OF THE MAGI"1. Does (A) mean that it is beyond description? Something that is hard to be expressed? See Avangi's explanation: it exhausts all resources when one attempts to describe it. The writer's intended meaning is that the flat is a horrid, cheap place. 2. (B) is hard to understand...(1) "that word" means beggar? Yes.(2) "had that word on the lookout for" ......... What does this mean? A 'mendicant' is a beggar. Police 'departments' are often known as 'squads'. eg the robbery squad, the fraud squad. The writer is imagining a police squad called 'the mendicancy squad' whose imaginary job would be to look out for (be on the lookout for) anything that relates to begging.The overall idea is this. Using the phrase 'beggar description' may be a little extreme, but the 'mendicancy squad' might think the word 'beggar' was pretty accurate. In other words, the flat really did beggar description, or at least came so close that the 'mendicancy squad' would be interested.It's a humorous way of phrasing the idea.Best wishes, Clive
+- I've never before seen a construction quite like this. He makes use of two different meanings of the word "beggar": (1) transitive verb - to turn someone or something into a beggar by using up (exhausting) everything he/it has (all his/its resources). "The housing mortgage crunch has beggared the US treasury." "Her beauty beggars description." "The boy's excessive gambling beggared his father."(2) noun - a person whose only means of support is whatever he can persuade others to give him. "He has been a beggar ever since he was crippled in an accident and burned out his brain with drugs."After using the word "beggar" in the first sense, O Henry says, "Hey, speaking of beggars, this place is so scroungy, it makes you think a beggar (the second sense of the word) must live here, and if the police saw it, they'd be looking to arrest him [for being a beggar]."

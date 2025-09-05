@@ -1,0 +1,4 @@
+- a package qualified class name
+- bean behavioral configuration elements
+- references
+- other configuration settings to set in the newly created object
