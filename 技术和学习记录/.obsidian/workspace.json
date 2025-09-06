@@ -28,12 +28,14 @@
             "id": "676ab980278e412d",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.9.12"
+                "file": "languages/dial.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.9.12"
+              "icon": "lucide-file",
+              "title": "dial"
             }
           }
         ],
@@ -158,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DDD 的实战（第十一章）.md",
+                "file": "languages/dial.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "DDD 的实战（第十一章） 的大纲"
+              "title": "dial 的大纲"
             }
           },
           {
@@ -183,20 +185,40 @@
             "state": {
               "type": "view-count",
               "state": {},
-              "icon": "eye",
-              "title": "View count"
+              "icon": "lucide-ghost",
+              "title": "view-count"
+            }
+          },
+          {
+            "id": "9fba364c07cf0560",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "笔记复习序列"
+            }
+          },
+          {
+            "id": "456bc9dce3338afb",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 898.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "bases:创建新数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -209,8 +231,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "cbb6a5272eea6f6c",
+  "active": "4ab5e6199dddf198",
   "lastOpenFiles": [
+    "languages/knob.md",
+    "languages/dial.md",
     "数据库连接池.canvas",
     "机器学习.canvas",
     "languages/suffice.md",

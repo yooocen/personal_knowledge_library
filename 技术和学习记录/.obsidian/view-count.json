@@ -437,6 +437,32 @@
           "timestampMillis": 1756871118934
         }
       ]
+    },
+    {
+      "path": "languages/knob.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1757142014926
+        }
+      ]
+    },
+    {
+      "path": "languages/dial.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 3,
+      "openLogs": [
+        {
+          "timestampMillis": 1757142049936
+        },
+        {
+          "timestampMillis": 1757142151624
+        },
+        {
+          "timestampMillis": 1757142161233
+        }
+      ]
     }
   ]
 }
