@@ -214,7 +214,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 898.5
+    "width": 487.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -231,7 +231,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4ab5e6199dddf198",
+  "active": "456bc9dce3338afb",
   "lastOpenFiles": [
     "languages/knob.md",
     "languages/dial.md",

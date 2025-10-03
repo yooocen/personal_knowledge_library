@@ -450,8 +450,8 @@
     },
     {
       "path": "languages/dial.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 5,
       "openLogs": [
         {
           "timestampMillis": 1757142049936
@@ -461,6 +461,12 @@
         },
         {
           "timestampMillis": 1757142161233
+        },
+        {
+          "timestampMillis": 1759462265474
+        },
+        {
+          "timestampMillis": 1759462267504
         }
       ]
     }
