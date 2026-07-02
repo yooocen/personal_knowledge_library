@@ -1,72 +1,87 @@
 {
   "main": {
-    "id": "300c6f5f7df24a22",
+    "id": "b366fece6866646c",
     "type": "split",
     "children": [
       {
-        "id": "59d5f10f77c83e9a",
+        "id": "b4e2a24654f5c214",
         "type": "tabs",
         "children": [
           {
-            "id": "58be216750f1b440",
+            "id": "97ab4427451176bc",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "canvas",
+              "type": "bases",
               "state": {
-                "file": "AKKA.canvas",
-                "viewState": {
-                  "x": -247.87035136381837,
-                  "y": -589.2908971220826,
-                  "zoom": -0.7152705230668874
-                }
+                "file": "BASE/知识看点.base",
+                "viewName": "lazyvim"
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "AKKA"
+              "pinned": true,
+              "icon": "lucide-table",
+              "title": "知识看点"
             }
           },
           {
-            "id": "676ab980278e412d",
+            "id": "aaaf87beb27908d6",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "BASE/linux.base",
+                "viewName": "大模型学习"
+              },
+              "pinned": true,
+              "icon": "lucide-table",
+              "title": "linux"
+            }
+          },
+          {
+            "id": "cde512c5a23e58fa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "languages/dial.md",
+                "file": "DDD 的实战（第十章）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dial"
+              "title": "DDD 的实战（第十章）"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "259f7e416b0ee1a9",
+    "id": "fa6b1fd26af811ff",
     "type": "split",
     "children": [
       {
-        "id": "b240c4075c8cc190",
+        "id": "d517e538712e6b5e",
         "type": "tabs",
         "children": [
           {
-            "id": "e1978705381d4273",
+            "id": "41bb37d4bad91402",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
             }
           },
           {
-            "id": "f7742aafa10c1309",
+            "id": "8e2dff63500770ba",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -83,7 +98,7 @@
             }
           },
           {
-            "id": "c102b7abc77291e6",
+            "id": "ccee3a85b416e242",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -91,56 +106,117 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
+          },
+          {
+            "id": "ed67bae0c04c2532",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "笔记本导航器"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 302.5
   },
   "right": {
-    "id": "0d8af2f16342be7c",
+    "id": "3e1ff64513648795",
     "type": "split",
     "children": [
       {
-        "id": "3b43559960ef6a72",
+        "id": "2d4709cd4b599ae5",
         "type": "tabs",
         "children": [
           {
-            "id": "366ce8514f229bc2",
+            "id": "09194c49f446f66b",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "gdb x命令.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": false
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "gdb x命令 的关系图"
+            }
+          },
+          {
+            "id": "ea657350a2ca4108",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DDD 的实战（第十一章）.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "DDD 的实战（第十一章） 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
-            "id": "569f48001645f426",
+            "id": "62fddc01b9cf46e5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DDD 的实战（第十一章）.md",
+                "file": "记录网络流量定位（解决wsl无法apt update的问题）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "DDD 的实战（第十一章） 的出链列表"
+              "title": "记录网络流量定位（解决wsl无法apt update的问题） 的出链列表"
             }
           },
           {
-            "id": "efa9d4c26d85512e",
+            "id": "4c7045556a86a4e4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "AKKA.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "AKKA 的大纲"
+            }
+          },
+          {
+            "id": "869cf6c0cc6d5491",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -155,42 +231,17 @@
             }
           },
           {
-            "id": "4ab5e6199dddf198",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "languages/dial.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "dial 的大纲"
-            }
-          },
-          {
-            "id": "cbb6a5272eea6f6c",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "笔记复习序列"
-            }
-          },
-          {
-            "id": "e21596bbe0f8c842",
+            "id": "926fd8c4291ca88c",
             "type": "leaf",
             "state": {
               "type": "view-count",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "view-count"
+              "icon": "eye",
+              "title": "View count"
             }
           },
           {
-            "id": "9fba364c07cf0560",
+            "id": "1d03c991d7a3fa6f",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -200,55 +251,118 @@
             }
           },
           {
-            "id": "456bc9dce3338afb",
+            "id": "eb2616aba4823cd7",
             "type": "leaf",
             "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
+      },
+      {
+        "id": "53b3287b0846f851",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "831c203e7b978d38",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "DDD 的实战（第十章）.md"
+              },
+              "icon": "lucide-info",
+              "title": "笔记属性"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 487.5
+    "width": 446.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
-      "bases:创建新数据库": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
+      "bases:新建数据库": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
+      "canvas:新建白板": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
+      "templater-obsidian:Templater": false,
       "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "templater-obsidian:Templater": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-kanban:创建新看板": false,
+      "notebook-navigator:笔记本导航器": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "456bc9dce3338afb",
+  "active": "cde512c5a23e58fa",
   "lastOpenFiles": [
-    "languages/knob.md",
-    "languages/dial.md",
+    "Readwise/Articles/Spring源码解析 – @Configuration配置类及注解Bean的解析 - 互联网荒漠 - 博客园.md",
+    "Readwise/Articles/SpringBoot设置@Configuration的加载顺序.md",
+    "Readwise/Articles/Springboot注解@ServletComponentScan和@ComponentScan_小强签名设计的博客-CSDN博客_servletcomponentscan.md",
+    "Readwise/Articles/TOMCAT源码学习所得（一）_libo_591的博客-CSDN博客.md",
+    "Readwise/Articles/TypeScript和Vue · Webpack指南.md",
+    "Readwise/Articles/Understanding Akka Actors' Threading.md",
+    "Readwise/Articles/Vue中的虚拟DOM  Vue源码系列-Vue中文社区.md",
+    "Readwise/Articles/Vuejs Module Not Found Error Can't Resolve '@Components Error Using Webpack.md",
+    "Readwise/Articles/Vue3.0中Ref与Reactive的区别是什么 - 开发技术 - 亿速云.md",
+    "Readwise/Articles/Web on Reactive Stack.md",
+    "Readwise/Articles/Web on Servlet Stack.md",
+    "Readwise/Articles/What Is a Test Runner.md",
+    "Readwise/Articles/Wiki 网关开发指南.md",
+    "Readwise/Articles/Wiki 配置中心集成.md",
+    "Readwise/Articles/Win10 配置 Wsl2 终极开发环境  Server 运维论坛.md",
+    "Readwise/Articles/Yarn Workspace 使用指南.md",
+    "Readwise/Articles/yarn.lock 你锁明白了吗？.md",
+    "Readwise/Articles/MyBatis源码解读（2）——MapperProxy - OKevin - 博客园.md",
+    "Readwise/Articles/Docs.md",
+    "Readwise/Articles/Class.forName用法（详解）_活抓一只程序员的博客-CSDN博客_class.forname.md",
+    "Readwise/Articles/Can I Map Alt Key in Vim.md",
+    "Readwise/Articles/Appearance of Split Lines in Vim.md",
+    "Readwise/Articles/application.properties Versus applicationContext.xml.md",
+    "BASE/知识看点.base",
+    "SKILL 推荐.md",
+    "Readwise/Articles/怎么解决java.lang.NoClassDefFoundError错误_AlwaysOnMyWay的博客-CSDN博客_noclassdeffounderror.md",
+    "安娜的档案 zlibrary.md",
+    "resources/images/Pasted image 20220611234847.png",
+    "resources/images/Pasted image 20220529184504.png",
+    "resources/images/Pasted image 20220501133659.png",
+    "resources/223005882-6632c997-b9a6-445b-800c-77a4b76a6325.mov",
+    "resources/postgresql_internals-14_parts1-4_en.pdf",
+    "resources/Screenshot_20220929_152342_tv.danmaku.bili.jpg",
+    "resources/Screenshot_20230808_144035_md.obsidian_edit_321602635280093.jpg",
     "数据库连接池.canvas",
-    "机器学习.canvas",
-    "languages/suffice.md",
-    "BASE/单词查询.base",
-    "languages/a fraction of.md",
-    "languages/a plethora of.md",
-    "languages/abide.md",
-    "languages/absorbed.md",
-    "BASE/单词查询.md",
-    "未命名.md",
+    "BASE/linux.base",
+    "resources/機器學習的數學基礎_AI、深度學習打底必讀 -- 西內啟, 譯者_胡豐榮、徐先正 -- 662eab70ef87bef718daae72cb6bfd0d -- Anna’s Archive.pdf",
+    "resources/未确认 760836.crdownload",
+    "resources/images/Pasted image 20260629224445.png",
+    "AKKA.canvas",
+    "resources/images/Pasted image 20260621235510.png",
+    "resources/html-show/sector.html",
+    "resources/html-show/radix-tree-demo.html",
+    "resources/html-show",
+    "resources/gdb.pdf",
+    "resources/images/Pasted image 20260616211756.png",
+    "resources/images/Pasted image 20260616211713.png",
+    "resources/images/Pasted image 20260616211651.png",
+    "Java classloader.canvas",
     "parsing technique.canvas",
-    "BASE",
-    "DDD 的实战（第十一章）.md",
-    "线程Thread名字的来源.md",
+    "Netty.canvas",
+    "机器学习.canvas",
+    "spring.canvas",
+    "games101.canvas",
     "公务员考试.canvas"
   ]
 }

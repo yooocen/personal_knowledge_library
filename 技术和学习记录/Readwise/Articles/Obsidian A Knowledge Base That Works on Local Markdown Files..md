@@ -1,3 +1,7 @@
+---
+tags:
+  - obsidian
+---
 # Obsidian: A Knowledge Base That Works on Local Markdown Files.
 
 tags:: source

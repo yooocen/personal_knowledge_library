@@ -1,1 +1,9 @@
-{}
+{
+  "attachmentFolderPath": "resources/images",
+  "alwaysUpdateLinks": true,
+  "propertiesInDocument": "hidden",
+  "foldHeading": false,
+  "showInlineTitle": false,
+  "readableLineLength": false,
+  "strictLineBreaks": true
+}

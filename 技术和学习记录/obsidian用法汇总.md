@@ -1,5 +1,7 @@
 ---
 view-count: 2
+tags:
+  - obsidian
 ---
 ### 好用的插件
 #obsidian #ob
@@ -34,13 +36,21 @@ view-count: 2
 28. Advanced slides
 29. image toolkit
 30. enhanced-editing(国产)
-31. recent files list
-32. editing-toolbar cuman新作品
-33. 3d-graph
-34. opengate
-35. path finder(找到两个节点之间的联系)
-36. Simple CanvasSearch
-37. dataLoom 表格
+31. editing toolbar(好用！)
+32. recent files list
+33. editing-toolbar cuman新作品
+34. 3d-graph
+35. opengate
+36. path finder(找到两个节点之间的联系)
+37. Simple CanvasSearch
+38. ~~dataLoom 表格~~
+39. Notebook Navigator
+40. mermaid-view https://github.com/weppos/obsidian-mermaid-view
+41. better mermaid
+42. mermaid zoom
+43. HTML view plus
+44. hider
+45. Advance canvas 可以给canvas增加自定义属性
 
 ### 各种引用
 ```

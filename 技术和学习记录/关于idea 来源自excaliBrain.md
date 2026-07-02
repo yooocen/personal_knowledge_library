@@ -6,7 +6,7 @@ view-count: 3
 
 ![](https://www.youtube.com/watch?v=7rnsULzez-g)
 
-![[Pasted image 20230616220931.png]]
+![[Pasted image 20230616220931.png|527]]
 
 
 

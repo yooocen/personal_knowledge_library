@@ -1,7 +1,7 @@
 ---
-
 mindmap-plugin: basic
-
+tags:
+  - DDD
 ---
 
 # 领域服务

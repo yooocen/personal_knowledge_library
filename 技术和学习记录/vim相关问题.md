@@ -1,11 +1,14 @@
 ---
 view-count: 4
+tags:
+  - vim
 ---
 ### vim怎么拷贝到系统粘贴板
 https://www.cnblogs.com/Biiigwang/p/12086514.html
 
 wsl怎么做呢？
 [[vim in wsl 如何与window进行复制粘贴]]
+
 
 ### vim 为什么插件的主题不能设置
 https://stackoverflow.com/questions/40077211/e185-cannot-find-color-scheme

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B+树可视化</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #667eea;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .sidebar {
+            width: 350px;
+            flex-shrink: 0;
+            border-left: 2px solid #e9ecef;
+            padding-left: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .controls input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 150px;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-insert { background: #28a745; }
+        .btn-delete { background: #dc3545; }
+        .btn-search { background: #007bff; }
+        .btn-clear { background: #6c757d; }
+
+        .controls button:hover {
+            opacity: 0.9;
+        }
+
+        .canvas-container {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .stat-box {
+            flex: 1;
+            min-width: 150px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .stat-box h3 {
+            color: #667eea;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .info {
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .info h4 {
+            color: #667eea;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .info p {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+
+        .message {
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: none;
+            font-weight: bold;
+        }
+
+        .message.success { background: #d4edda; color: #155724; }
+        .message.error { background: #f8d7da; color: #721c24; }
+        .message.info { background: #d1ecf1; color: #0c5460; }
+
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-left: none;
+                border-top: 2px solid #e9ecef;
+                padding-left: 0;
+                padding-top: 20px;
+            }
+        }
+
+        #treeContainer {
+            min-height: 400px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        #svgContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .tree-level {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 100px;
+            width: 100%;
+            flex-wrap: nowrap;
+            position: relative;
+            z-index: 2;
+            min-width: fit-content;
+        }
+
+        .node {
+            display: inline-flex;
+            background: white;
+            border: 3px solid #4a90d9;
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 80px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .node.leaf {
+            border-color: #28a745;
+        }
+
+        .node.highlighted {
+            border-color: #dc3545;
+            border-width: 4px;
+        }
+
+        .node-keys {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .key {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: #e3f2fd;
+            border-radius: 50%;
+            font-weight: bold;
+            color: #1976d2;
+            font-size: 14px;
+        }
+
+        .node.leaf .key {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .edge {
+            position: absolute;
+            width: 2px;
+            background: #999;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .edge-horizontal {
+            position: absolute;
+            height: 2px;
+            background: #ccc;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="header">
+                <h1>B+树可视化</h1>
+                <p>交互式B+树算法演示工具</p>
+            </div>
+
+            <div class="controls">
+                <input type="number" id="inputValue" placeholder="输入数值">
+                <button class="btn-insert" onclick="insertValue()">插入</button>
+                <button class="btn-delete" onclick="deleteValue()">删除</button>
+                <button class="btn-search" onclick="searchValue()">搜索</button>
+                <button class="btn-clear" onclick="clearTree()">清空</button>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div id="treeContainer"></div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>节点总数</h3>
+                    <p id="nodeCount">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>树的高度</h3>
+                    <p id="treeHeight">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>关键字总数</h3>
+                    <p id="keyCount">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>叶子节点数</h3>
+                    <p id="leafCount">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="info">
+                <h3>操作说明</h3>
+                <p><strong>插入</strong>: 输入数值后点击插入按钮，B+树会自动调整</p>
+                <p><strong>删除</strong>: 输入要删除的数值</p>
+                <p><strong>搜索</strong>: 输入数值进行搜索，会高亮显示搜索路径</p>
+                <p><strong>清空</strong>: 清空整个B+树</p>
+                <p style="margin-top:10px; color:#666;"><strong>图例</strong>: 蓝色=内部节点 | 绿色=叶子节点 | 红色=搜索路径 | 绿色虚线=链表指针</p>
+            </div>
+
+            <div class="info">
+                <h3>B+树规则</h3>
+                
+                <h4 style="color:#667eea; margin-top:15px;">1. 节点结构</h4>
+                <p>• 内部节点：只存储键值，不存储数据</p>
+                <p>• 叶子节点：存储所有数据和键值</p>
+                <p>• 叶子节点通过指针连接成链表</p>
+                
+                <h4 style="color:#667eea; margin-top:15px;">2. 分裂规则</h4>
+                <p>• 当节点关键字数达到阶数m时分裂</p>
+                <p>• 分裂时将中间关键字提升到父节点</p>
+                <p>• 叶子节点：将中间值作为索引提升</p>
+                <p>• 内部节点：将中间值上移，其余分裂</p>
+                
+                <h4 style="color:#667eea; margin-top:15px;">3. 合并规则</h4>
+                <p>• 当节点关键字数少于⌈m/2⌉-1时合并</p>
+                <p>• 优先向兄弟节点借关键字</p>
+                <p>• 兄弟节点也不足时，合并两个节点</p>
+                
+                <h4 style="color:#667eea; margin-top:15px;">4. 搜索规则</h4>
+                <p>• 从根节点开始，比较键值</p>
+                <p>• 大于等于当前键值，向右查找</p>
+                <p>• 小于当前键值，向左查找</p>
+                <p>• 到达叶子节点时检查是否存在</p>
+                
+                <h4 style="color:#667eea; margin-top:15px;">5. 平衡特性</h4>
+                <p>• 所有叶子节点在同一层</p>
+                <p>• 树的高度始终保持平衡</p>
+                <p>• 查询效率为O(log n)</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ORDER = 4;
+        const MIN_KEYS = Math.ceil(ORDER / 2) - 1;
+
+        class BPlusTreeNode {
+            constructor(isLeaf = false) {
+                this.keys = [];
+                this.children = [];
+                this.isLeaf = isLeaf;
+                this.next = null;
+                this.parent = null;
+            }
+
+            isFull() {
+                return this.keys.length >= ORDER - 1;
+            }
+
+            isUnderflow() {
+                return this.keys.length < MIN_KEYS && !this.isRoot();
+            }
+
+            isRoot() {
+                return this.parent === null;
+            }
+        }
+
+        class BPlusTree {
+            constructor() {
+                this.root = new BPlusTreeNode(true);
+            }
+
+            insert(key) {
+                const leaf = this.findLeaf(key);
+                this.insertIntoLeaf(leaf, key);
+                
+                if (leaf.isFull()) {
+                    this.splitLeaf(leaf);
+                }
+            }
+
+            findLeaf(key) {
+                let node = this.root;
+                while (!node.isLeaf) {
+                    let i = 0;
+                    while (i < node.keys.length && key >= node.keys[i]) {
+                        i++;
+                    }
+                    node = node.children[i];
+                }
+                return node;
+            }
+
+            insertIntoLeaf(leaf, key) {
+                let i = 0;
+                while (i < leaf.keys.length && key > leaf.keys[i]) {
+                    i++;
+                }
+                
+                if (i < leaf.keys.length && leaf.keys[i] === key) {
+                    return false;
+                }
+                
+                leaf.keys.splice(i, 0, key);
+                return true;
+            }
+
+            splitLeaf(leaf) {
+                const newLeaf = new BPlusTreeNode(true);
+                const mid = Math.floor(leaf.keys.length / 2);
+                
+                newLeaf.keys = leaf.keys.splice(mid);
+                newLeaf.next = leaf.next;
+                leaf.next = newLeaf;
+                newLeaf.parent = leaf.parent;
+
+                const splitKey = newLeaf.keys[0];
+
+                if (leaf.isRoot()) {
+                    const newRoot = new BPlusTreeNode(false);
+                    newRoot.keys.push(splitKey);
+                    newRoot.children.push(leaf, newLeaf);
+                    leaf.parent = newRoot;
+                    newLeaf.parent = newRoot;
+                    this.root = newRoot;
+                } else {
+                    this.insertIntoParent(leaf.parent, leaf, newLeaf, splitKey);
+                }
+            }
+
+            insertIntoParent(parent, leftChild, rightChild, key) {
+                const index = parent.children.indexOf(leftChild);
+                parent.children.splice(index + 1, 0, rightChild);
+                parent.keys.splice(index, 0, key);
+                rightChild.parent = parent;
+
+                if (parent.isFull()) {
+                    this.splitInternal(parent);
+                }
+            }
+
+            splitInternal(node) {
+                const mid = Math.floor(node.keys.length / 2);
+                const splitKey = node.keys[mid];
+                
+                const newNode = new BPlusTreeNode(false);
+                newNode.keys = node.keys.splice(mid + 1);
+                newNode.children = node.children.splice(mid + 1);
+                
+                node.keys.pop();
+                
+                newNode.children.forEach(child => {
+                    child.parent = newNode;
+                });
+
+                if (node.isRoot()) {
+                    const newRoot = new BPlusTreeNode(false);
+                    newRoot.keys.push(splitKey);
+                    newRoot.children.push(node, newNode);
+                    node.parent = newRoot;
+                    newNode.parent = newRoot;
+                    this.root = newRoot;
+                } else {
+                    this.insertIntoParent(node.parent, node, newNode, splitKey);
+                }
+            }
+
+            delete(key) {
+                const leaf = this.findLeaf(key);
+                const index = leaf.keys.indexOf(key);
+                
+                if (index === -1) {
+                    return false;
+                }
+
+                leaf.keys.splice(index, 1);
+
+                if (leaf.isUnderflow()) {
+                    this.handleUnderflow(leaf);
+                }
+
+                return true;
+            }
+
+            handleUnderflow(node) {
+                if (node.isRoot()) {
+                    if (node.keys.length === 0 && !node.isLeaf && node.children.length > 0) {
+                        this.root = node.children[0];
+                        this.root.parent = null;
+                    }
+                    return;
+                }
+
+                const parent = node.parent;
+                const index = parent.children.indexOf(node);
+                const leftSibling = index > 0 ? parent.children[index - 1] : null;
+                const rightSibling = index < parent.children.length - 1 ? parent.children[index + 1] : null;
+
+                if (leftSibling && leftSibling.keys.length > MIN_KEYS) {
+                    this.borrowFromLeft(node, leftSibling, parent, index - 1);
+                } else if (rightSibling && rightSibling.keys.length > MIN_KEYS) {
+                    this.borrowFromRight(node, rightSibling, parent, index);
+                } else if (leftSibling) {
+                    this.mergeNodes(leftSibling, node, parent, index - 1);
+                } else if (rightSibling) {
+                    this.mergeNodes(node, rightSibling, parent, index);
+                }
+            }
+
+            borrowFromLeft(node, leftSibling, parent, keyIndex) {
+                if (node.isLeaf) {
+                    node.keys.unshift(leftSibling.keys.pop());
+                    parent.keys[keyIndex] = node.keys[0];
+                } else {
+                    const borrowedKey = leftSibling.keys.pop();
+                    const borrowedChild = leftSibling.children.pop();
+                    
+                    node.keys.unshift(parent.keys[keyIndex]);
+                    node.children.unshift(borrowedChild);
+                    borrowedChild.parent = node;
+                    
+                    parent.keys[keyIndex] = borrowedKey;
+                }
+            }
+
+            borrowFromRight(node, rightSibling, parent, keyIndex) {
+                if (node.isLeaf) {
+                    node.keys.push(rightSibling.keys.shift());
+                    parent.keys[keyIndex] = rightSibling.keys[0];
+                } else {
+                    const borrowedKey = rightSibling.keys.shift();
+                    const borrowedChild = rightSibling.children.shift();
+                    
+                    node.keys.push(parent.keys[keyIndex]);
+                    node.children.push(borrowedChild);
+                    borrowedChild.parent = node;
+                    
+                    parent.keys[keyIndex] = borrowedKey;
+                }
+            }
+
+            mergeNodes(left, right, parent, keyIndex) {
+                if (left.isLeaf) {
+                    left.keys = left.keys.concat(right.keys);
+                    left.next = right.next;
+                } else {
+                    left.keys.push(parent.keys[keyIndex]);
+                    left.keys = left.keys.concat(right.keys);
+                    left.children = left.children.concat(right.children);
+                    
+                    right.children.forEach(child => {
+                        child.parent = left;
+                    });
+                }
+
+                parent.keys.splice(keyIndex, 1);
+                parent.children.splice(keyIndex + 1, 1);
+
+                if (parent.isUnderflow()) {
+                    this.handleUnderflow(parent);
+                }
+            }
+
+            search(key) {
+                let node = this.root;
+                const path = [];
+                
+                while (!node.isLeaf) {
+                    path.push(node);
+                    let i = 0;
+                    while (i < node.keys.length && key >= node.keys[i]) {
+                        i++;
+                    }
+                    node = node.children[i];
+                }
+                
+                path.push(node);
+                
+                const index = node.keys.indexOf(key);
+                return {
+                    found: index !== -1,
+                    path: path,
+                    node: node,
+                    index: index
+                };
+            }
+
+            clear() {
+                this.root = new BPlusTreeNode(true);
+            }
+
+            getStats() {
+                let nodeCount = 0;
+                let keyCount = 0;
+                let leafCount = 0;
+                let height = 0;
+
+                const traverse = (node, depth) => {
+                    nodeCount++;
+                    keyCount += node.keys.length;
+                    if (node.isLeaf) {
+                        leafCount++;
+                        height = Math.max(height, depth);
+                    }
+                    node.children.forEach(child => traverse(child, depth + 1));
+                };
+
+                traverse(this.root, 0);
+                height++;
+
+                return { nodeCount, keyCount, leafCount, height };
+            }
+
+            getLevels() {
+                const levels = [];
+                
+                const traverse = (node, depth) => {
+                    if (!levels[depth]) {
+                        levels[depth] = [];
+                    }
+                    levels[depth].push(node);
+                    node.children.forEach(child => traverse(child, depth + 1));
+                };
+
+                traverse(this.root, 0);
+                return levels;
+            }
+        }
+
+        let tree = new BPlusTree();
+        let searchPath = [];
+
+        const initialData = [50, 25, 75, 10, 30, 60, 80, 5, 15, 35, 70];
+        initialData.forEach(value => tree.insert(value));
+
+        function showMessage(text, type) {
+            const messageEl = document.getElementById('message');
+            messageEl.textContent = text;
+            messageEl.className = `message ${type}`;
+            messageEl.style.display = 'block';
+            
+            setTimeout(() => {
+                messageEl.style.display = 'none';
+            }, 3000);
+        }
+
+        function insertValue() {
+            const input = document.getElementById('inputValue');
+            const value = parseInt(input.value);
+            
+            if (isNaN(value)) {
+                showMessage('请输入有效的数值', 'error');
+                return;
+            }
+
+            tree.insert(value);
+            searchPath = [];
+            renderTree();
+            showMessage(`成功插入数值: ${value}`, 'success');
+            input.value = '';
+            updateStats();
+        }
+
+        function deleteValue() {
+            const input = document.getElementById('inputValue');
+            const value = parseInt(input.value);
+            
+            if (isNaN(value)) {
+                showMessage('请输入有效的数值', 'error');
+                return;
+            }
+
+            if (tree.delete(value)) {
+                searchPath = [];
+                renderTree();
+                showMessage(`成功删除数值: ${value}`, 'success');
+            } else {
+                showMessage(`数值 ${value} 不存在`, 'error');
+            }
+            
+            input.value = '';
+            updateStats();
+        }
+
+        function searchValue() {
+            const input = document.getElementById('inputValue');
+            const value = parseInt(input.value);
+            
+            if (isNaN(value)) {
+                showMessage('请输入有效的数值', 'error');
+                return;
+            }
+
+            const result = tree.search(value);
+            searchPath = result.path;
+            
+            renderTree();
+            
+            if (result.found) {
+                showMessage(`找到数值: ${value}`, 'success');
+            } else {
+                showMessage(`未找到数值: ${value}`, 'info');
+            }
+            
+            input.value = '';
+        }
+
+        function clearTree() {
+            tree.clear();
+            searchPath = [];
+            renderTree();
+            updateStats();
+            showMessage('B+树已清空', 'info');
+        }
+
+        function updateStats() {
+            const stats = tree.getStats();
+            document.getElementById('nodeCount').textContent = stats.nodeCount;
+            document.getElementById('treeHeight').textContent = stats.height;
+            document.getElementById('keyCount').textContent = stats.keyCount;
+            document.getElementById('leafCount').textContent = stats.leafCount;
+        }
+
+        function renderTree() {
+            const container = document.getElementById('treeContainer');
+            container.innerHTML = '';
+            
+            const svgContainer = document.createElement('div');
+            svgContainer.id = 'svgContainer';
+            container.appendChild(svgContainer);
+
+            const levels = tree.getLevels();
+            
+            if (levels.length === 0 || (levels.length === 1 && levels[0].length === 1 && levels[0][0].keys.length === 0)) {
+                container.innerHTML = '<div style="text-align:center; color:#999; padding:50px;">B+树为空，请插入数值开始</div>';
+                return;
+            }
+            
+            if (levels.length === 0 || (levels.length === 1 && levels[0].length === 1 && levels[0][0].keys.length === 0)) {
+                container.innerHTML = '<div style="text-align:center; color:#999; padding:50px;">B+树为空，请插入数值开始</div>';
+                return;
+            }
+            
+            levels.forEach((level, levelIndex) => {
+                const levelDiv = document.createElement('div');
+                levelDiv.className = 'tree-level';
+                
+                level.forEach(node => {
+                    const nodeDiv = document.createElement('div');
+                    nodeDiv.className = 'node' + (node.isLeaf ? ' leaf' : '');
+                    nodeDiv.dataset.nodeIndex = `${levelIndex}-${level.indexOf(node)}`;
+                    
+                    if (searchPath.includes(node)) {
+                        nodeDiv.classList.add('highlighted');
+                    }
+                    
+                    const keysDiv = document.createElement('div');
+                    keysDiv.className = 'node-keys';
+                    
+                    node.keys.forEach(key => {
+                        const keySpan = document.createElement('span');
+                        keySpan.className = 'key';
+                        keySpan.textContent = key;
+                        keysDiv.appendChild(keySpan);
+                    });
+                    
+                    nodeDiv.appendChild(keysDiv);
+                    levelDiv.appendChild(nodeDiv);
+                });
+                
+                container.appendChild(levelDiv);
+            });
+
+            setTimeout(() => drawEdges(), 50);
+        }
+
+        function drawEdges() {
+            const svgContainer = document.getElementById('svgContainer');
+            if (!svgContainer) return;
+
+            const container = document.getElementById('treeContainer');
+            if (!container) return;
+
+            const containerRect = container.getBoundingClientRect();
+            
+            svgContainer.innerHTML = '';
+
+            const levels = tree.getLevels();
+            const levelElements = container.querySelectorAll('.tree-level');
+
+            if (levelElements.length === 0) return;
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', container.offsetWidth);
+            svg.setAttribute('height', container.offsetHeight);
+            svgContainer.appendChild(svg);
+
+            const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+            
+            const arrowGray = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+            arrowGray.setAttribute('id', 'arrow-gray');
+            arrowGray.setAttribute('markerWidth', '10');
+            arrowGray.setAttribute('markerHeight', '7');
+            arrowGray.setAttribute('refX', '9');
+            arrowGray.setAttribute('refY', '3.5');
+            arrowGray.setAttribute('orient', 'auto');
+            const polygonGray = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+            polygonGray.setAttribute('points', '0 0, 10 3.5, 0 7');
+            polygonGray.setAttribute('fill', '#999');
+            arrowGray.appendChild(polygonGray);
+            defs.appendChild(arrowGray);
+            
+            const arrowRed = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+            arrowRed.setAttribute('id', 'arrow-red');
+            arrowRed.setAttribute('markerWidth', '10');
+            arrowRed.setAttribute('markerHeight', '7');
+            arrowRed.setAttribute('refX', '9');
+            arrowRed.setAttribute('refY', '3.5');
+            arrowRed.setAttribute('orient', 'auto');
+            const polygonRed = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+            polygonRed.setAttribute('points', '0 0, 10 3.5, 0 7');
+            polygonRed.setAttribute('fill', '#dc3545');
+            arrowRed.appendChild(polygonRed);
+            defs.appendChild(arrowRed);
+            
+            const arrowGreen = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+            arrowGreen.setAttribute('id', 'arrow-green');
+            arrowGreen.setAttribute('markerWidth', '10');
+            arrowGreen.setAttribute('markerHeight', '7');
+            arrowGreen.setAttribute('refX', '9');
+            arrowGreen.setAttribute('refY', '3.5');
+            arrowGreen.setAttribute('orient', 'auto');
+            const polygonGreen = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+            polygonGreen.setAttribute('points', '0 0, 10 3.5, 0 7');
+            polygonGreen.setAttribute('fill', '#28a745');
+            arrowGreen.appendChild(polygonGreen);
+            defs.appendChild(arrowGreen);
+            
+            svg.appendChild(defs);
+
+            levels.forEach((level, levelIndex) => {
+                const levelDiv = levelElements[levelIndex];
+                const nodeElements = levelDiv.querySelectorAll('.node');
+
+                level.forEach((node, nodeIndex) => {
+                    const nodeElement = nodeElements[nodeIndex];
+                    const nodeRect = nodeElement.getBoundingClientRect();
+                    
+                    const nodeCenterX = nodeRect.left + nodeRect.width / 2 - containerRect.left;
+                    const nodeBottomY = nodeRect.bottom - containerRect.top;
+                    const nodeTopY = nodeRect.top - containerRect.top;
+
+                    if (!node.isLeaf && levelIndex < levels.length - 1) {
+                        const nextLevelDiv = levelElements[levelIndex + 1];
+                        const nextLevelNodes = nextLevelDiv.querySelectorAll('.node');
+
+                        node.children.forEach((child, childIndex) => {
+                            const childInNextLevel = levels[levelIndex + 1].indexOf(child);
+                            if (childInNextLevel !== -1) {
+                                const childElement = nextLevelNodes[childInNextLevel];
+                            const childRect = childElement.getBoundingClientRect();
+                            const childCenterX = childRect.left + childRect.width / 2 - containerRect.left;
+                            const childTopY = childRect.top - containerRect.top;
+
+                            const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                            const midY = (nodeBottomY + childTopY) / 2;
+                            line.setAttribute('d', `M ${nodeCenterX} ${nodeBottomY} L ${nodeCenterX} ${midY} L ${childCenterX} ${midY} L ${childCenterX} ${childTopY - 5}`);
+                            line.setAttribute('stroke', searchPath.includes(node) && searchPath.includes(child) ? '#dc3545' : '#999');
+                            line.setAttribute('stroke-width', searchPath.includes(node) && searchPath.includes(child) ? '3' : '2');
+                            line.setAttribute('fill', 'none');
+                            line.setAttribute('marker-end', searchPath.includes(node) && searchPath.includes(child) ? 'url(#arrow-red)' : 'url(#arrow-gray)');
+                            svg.appendChild(line);
+                            }
+                        });
+                    }
+
+                    if (node.isLeaf && node.next) {
+                        const nextLevelNodes = levelDiv.querySelectorAll('.node');
+                        const nextIndex = levels[levelIndex].indexOf(node.next);
+                        if (nextIndex !== -1) {
+                        const nextElement = nextLevelNodes[nextIndex];
+                        const nextRect = nextElement.getBoundingClientRect();
+                        const nextCenterX = nextRect.left + nextRect.width / 2 - containerRect.left;
+                        const nextCenterY = nextRect.top + nextRect.height / 2 - containerRect.top;
+                        const nodeCenterY = nodeRect.top + nodeRect.height / 2 - containerRect.top;
+                        
+                        const arrowOffset = 10;
+                        const arrowX = nextCenterX - arrowOffset;
+
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('x1', nodeCenterX + 10);
+                        line.setAttribute('y1', nodeCenterY);
+                        line.setAttribute('x2', arrowX);
+                        line.setAttribute('y2', nextCenterY);
+                        line.setAttribute('stroke', '#28a745');
+                        line.setAttribute('stroke-width', '2');
+                        line.setAttribute('stroke-dasharray', '5,5');
+                        line.setAttribute('marker-end', 'url(#arrow-green)');
+                        svg.appendChild(line);
+                        }
+                    }
+                });
+            });
+        }
+
+        document.getElementById('inputValue').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                insertValue();
+            }
+        });
+
+        window.onload = function() {
+            renderTree();
+            updateStats();
+            console.log('B+树可视化已加载');
+        };
+
+        window.addEventListener('resize', () => {
+            renderTree();
+        });
+    </script>
+</body>
+</html>

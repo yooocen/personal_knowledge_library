@@ -1,0 +1,47 @@
+views:
+  - type: table
+    name: Linux学习
+    filters:
+      or:
+        - file.tags.containsAny("linux", "操作系统", "寄存器", "汇编")
+    order:
+      - file.name
+      - tags
+    sort:
+      - property: file.basename
+        direction: ASC
+    columnSize:
+      file.name: 196
+  - type: table
+    name: gdb相关
+    filters:
+      and:
+        - file.tags.contains("gdb")
+    order:
+      - file.name
+      - tags
+  - type: table
+    name: 大模型学习
+    filters:
+      and:
+        - file.tags.contains("ai")
+  - type: table
+    name: 文件系统
+    filters:
+      and:
+        - file.tags.contains("文件系统")
+  - type: table
+    name: 电子书
+    filters:
+      and:
+        - file.tags.contains("pdf")
+  - type: table
+    name: Skill
+    filters:
+      and:
+        - file.tags.contains("skill")
+  - type: table
+    name: Cassandra
+    filters:
+      and:
+        - file.tags.contains("Cassandra")

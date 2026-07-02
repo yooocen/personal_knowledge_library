@@ -1,0 +1,23 @@
+---
+tags:
+  - wsl
+---
+![[Pasted image 20260222130511.png]]
+
+[WSL2占用C盘空间释放_wsl占用c盘-CSDN博客](https://blog.csdn.net/2301_77554343/article/details/148557260#:~:text=%E3%80%90WSL%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E6%B8%85%E7%90%86%E6%8C%87%E5%8D%97%E3%80%91%E5%88%86%E4%B8%BA%E4%B8%A4%E4%B8%AA%E6%AD%A5%E9%AA%A4%EF%BC%9A1%EF%BC%89%E5%9C%A8WSL%E7%BB%88%E7%AB%AF%E4%B8%AD%E8%BF%90%E8%A1%8C%E6%B8%85%E7%90%86%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%8C%85%E6%8B%AC%E6%B8%85%E9%99%A4apt%E7%BC%93%E5%AD%98%E3%80%81%E5%88%A0%E9%99%A4%E6%97%A0%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%E3%80%81%E6%B8%85%E7%90%86%E6%97%A5%E5%BF%97%E5%92%8C%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6%EF%BC%9B2%EF%BC%89%E5%9C%A8Windows%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%8A%A8%E5%8E%8B%E7%BC%A9%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98%E6%96%87%E4%BB%B6ext4.vhdx%E3%80%82,%E5%8E%8B%E7%BC%A9%E5%89%8D%E9%9C%80%E5%81%9C%E6%AD%A2%E6%89%80%E6%9C%89WSL%E5%AE%9E%E4%BE%8B%EF%BC%8C%E9%80%9A%E8%BF%87diskpart%E5%B7%A5%E5%85%B7%E6%89%A7%E8%A1%8C%E7%A9%BA%E9%97%B4%E5%9B%9E%E6%94%B6%E3%80%82%20%E8%8B%A5%E9%81%87%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98%E6%9C%8D%E5%8A%A1%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8F%AF%E9%80%9A%E8%BF%87%E5%90%AF%E5%8A%A8VirtualDisk%E6%9C%8D%E5%8A%A1%E6%88%96%E5%90%AF%E7%94%A8Windows%E7%9B%B8%E5%85%B3%E5%8A%9F%E8%83%BD%EF%BC%88Hyper-V%E7%AD%89%EF%BC%89%E8%A7%A3%E5%86%B3%E3%80%82)
+
+diskpart
+
+select vdisk file="C:\Users\cc\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu24.04LTS_79rhkp1fndgsc\LocalState\ext4.vhdx"
+
+attach vdisk readonly
+compact vdisk
+detach vdisk
+
+如何分析Ubuntu里面的磁盘使用情况
+`du -h --max-depth=1`
+
+```
+rm -rf ~/.local/share/opencode/snapshot
+npm cache clean --force
+```

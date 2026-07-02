@@ -4,5 +4,9 @@
 		{"id":"a618b88822b56708","type":"text","text":"数据库连接池  1\n\n\n- 执行JDBC的增删改查的操作时，如果每一次操作都来一次打开连接，操作，关闭连接，那么创建和销毁JDBC连接的开销就太大了。为了避免频繁地创建和销毁JDBC连接，我们可以通过连接池（Connection Pool）复用已经创建好的连接\n- JDBC连接池有一个标准的接口`javax.sql.DataSource`，注意这个类位于Java标准库中，但仅仅是接口。要使用JDBC连接池，我们必须选择一个JDBC连接池的实现。常用的JDBC连接池有：\n\t-  HikariCP\n\t-   C3P0\n\t-   BoneCP\n\t-   Druid\n- ","x":-380,"y":-240,"width":490,"height":438},
 		{"id":"d8b8ab6032752ead","type":"file","file":"JDBC 1-1.md","x":-140,"y":457,"width":250,"height":274}
 	],
-	"edges":[]
+	"edges":[],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
 }

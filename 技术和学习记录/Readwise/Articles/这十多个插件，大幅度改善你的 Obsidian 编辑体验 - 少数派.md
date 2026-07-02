@@ -1,3 +1,7 @@
+---
+tags:
+  - obsidian
+---
 # 这十多个插件，大幅度改善你的 Obsidian 编辑体验 - 少数派
 
 tags:: source

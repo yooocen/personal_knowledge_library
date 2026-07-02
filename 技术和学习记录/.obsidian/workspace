@@ -1,0 +1,161 @@
+{
+  "main": {
+    "id": "b366fece6866646c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a72610f3b6a1ca36",
+        "type": "leaf",
+        "dimension": 39.92197659297789,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "外键和父ID.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "daf2fbab200cc216",
+        "type": "leaf",
+        "dimension": 60.07802340702211,
+        "pinned": true,
+        "state": {
+          "type": "book-view",
+          "state": {},
+          "pinned": true
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fa6b1fd26af811ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "d517e538712e6b5e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41bb37d4bad91402",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8e2dff63500770ba",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#word",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b78f159ddf6619d7",
+            "type": "leaf",
+            "state": {
+              "type": "book-explorer-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "b20dedf030413c8a",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 450.5
+  },
+  "right": {
+    "id": "3e1ff64513648795",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d4709cd4b599ae5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea657350a2ca4108",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "外键和父ID.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "4c7045556a86a4e4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "外键和父ID.md"
+              }
+            }
+          },
+          {
+            "id": "88269c01bc041233",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "869cf6c0cc6d5491",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "a72610f3b6a1ca36",
+  "lastOpenFiles": [
+    "Readwise/Articles/主键和外键约束 - SQL Server.md",
+    "数据建模.md",
+    "洞察salesfore CPQ.md",
+    "DDD的实战（第十一章）.md",
+    "resources/未命名思维导图.md",
+    "resources/Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org)-annotate.md",
+    "resources/Implementing_Domain_Driven_Design-annotate.md",
+    "Readwise/Articles/Mybatis源码解析之MapperProxy.md",
+    "obsidian用法汇总.md",
+    "obsidian 与代码仓.md"
+  ]
+}

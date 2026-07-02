@@ -1,0 +1,102 @@
+{
+  "main": {
+    "id": "b366fece6866646c",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c352252d2edf87c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "剧本.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fa6b1fd26af811ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "d517e538712e6b5e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41bb37d4bad91402",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8e2dff63500770ba",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3e1ff64513648795",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d4709cd4b599ae5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea657350a2ca4108",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "剧本.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2c352252d2edf87c",
+  "lastOpenFiles": [
+    "剧本.md",
+    "同步.md",
+    "值得关注的博主.md",
+    "债主.md",
+    "e2e测试框架关注.md",
+    "syncthing.md",
+    "tomcat.md",
+    "tomcat源码分析.md",
+    "vim相关问题.md"
+  ]
+}

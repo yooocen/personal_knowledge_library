@@ -1,5 +1,7 @@
 ---
 view-count: 1
+tags:
+  - obsidian
 ---
 # 将临时打开的Tabs保存为一个bookmark，以后可以快速恢复
 

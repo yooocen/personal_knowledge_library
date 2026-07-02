@@ -1,7 +1,16 @@
 [
   "obsidian-spaced-repetition",
-  "obsidian-excalidraw-plugin",
   "view-count",
   "templater-obsidian",
-  "obsidian-git"
+  "obsidian42-brat",
+  "obsidian-kanban",
+  "obsidian-image-toolkit",
+  "notebook-navigator",
+  "obsidian-excalidraw-plugin",
+  "editing-toolbar",
+  "obsidian-custom-frames",
+  "html-viewer-plus",
+  "mermaid-zoom",
+  "obsidian-hider",
+  "advanced-canvas"
 ]

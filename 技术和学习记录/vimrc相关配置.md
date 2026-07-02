@@ -1,5 +1,7 @@
 ---
 view-count: 3
+tags:
+  - vim
 ---
 ```lua
 set nu

@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: obsidian相关
+    filters:
+      and:
+        - file.tags.contains("obsidian")
+    order:
+      - file.name
+      - tags
+  - type: table
+    name: lazyvim
+    filters:
+      and:
+        - file.tags.containsAny("vim", "neovim")

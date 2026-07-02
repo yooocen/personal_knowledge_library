@@ -1,0 +1,87 @@
+{
+  "main": {
+    "id": "a56fc507635e79f2",
+    "type": "split",
+    "children": [
+      {
+        "id": "f1786b40b4880a5b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "包管理器.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8e9b44beaf90d6eb",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "ef7be422290c0d1d",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "6afb6fe279d9799b",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "c5eaa32f6508885f",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "8e6a6512d128b433",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "包管理器.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "f1786b40b4880a5b",
+  "lastOpenFiles": [
+    "包管理器.md",
+    "源码阅读.md",
+    "tomcat源码分析.md",
+    "未命名.md",
+    "值得关注的博主.sync-conflict-20220221-022529-C2K5EUC.md",
+    "值得关注的博主.sync-conflict-20220221-022531-C2K5EUC.md",
+    "值得关注的博主.md",
+    "vim的用法.md",
+    "债主.md",
+    "syncthing.md"
+  ]
+}

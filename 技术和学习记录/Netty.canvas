@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"9496d272067e399f","type":"text","text":"selector\n**Selector（选择器）是 Java NIO 中的一个核心组件，它允许一个单独的线程来监视多个 Channel（通道）上的事件（如连接就绪、读就绪、写就绪等）**","x":-240,"y":-180,"width":480,"height":140},
+		{"id":"92f63e1efbb70411","type":"text","text":"channel","x":-100,"y":80,"width":250,"height":60},
+		{"id":"5d53c4e9f8608093","type":"file","file":"resources/Pasted image 20251223144257.png","x":300,"y":80,"width":611,"height":200}
+	],
+	"edges":[]
+}

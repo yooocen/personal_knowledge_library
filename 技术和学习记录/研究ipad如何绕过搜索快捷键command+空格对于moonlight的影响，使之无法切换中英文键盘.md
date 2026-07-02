@@ -1,0 +1,2 @@
+使用alt+shift来替换 command+空格
+因为iPad这个快捷键属于是被系统接管了，所以只能在window里面换一种

@@ -1,3 +1,7 @@
+---
+tags:
+  - obsidian
+---
 [[undone]]
 
 tags do not link files to each other, they are soft links
