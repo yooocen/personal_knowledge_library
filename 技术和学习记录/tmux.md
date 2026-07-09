@@ -1,3 +1,7 @@
+---
+tags:
+  - tmux
+---
 cheatsheet
 
 [Tmux Cheat Sheet & Quick Reference | Session, window, pane and more](https://tmuxcheatsheet.com/)

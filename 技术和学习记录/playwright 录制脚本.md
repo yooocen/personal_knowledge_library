@@ -1,3 +1,8 @@
+---
+tags:
+  - playwright
+  - ai
+---
 在window打开就是打开window的默认chrome，在wsl打开就是打开wsl的chrome
 npx playwright codegen --channel chrome
 npx playwright codegen --channel chrome --user-data-dir="C:/temp/chrome-debug"

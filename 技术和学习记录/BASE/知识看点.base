@@ -12,3 +12,13 @@ views:
     filters:
       and:
         - file.tags.containsAny("vim", "neovim")
+  - type: table
+    name: lazygit
+    filters:
+      and:
+        - file.basename.contains("lazygit")
+  - type: table
+    name: tmux
+    filters:
+      and:
+        - file.basename.contains("tmux")

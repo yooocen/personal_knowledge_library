@@ -45,3 +45,8 @@ views:
     filters:
       and:
         - file.tags.contains("Cassandra")
+  - type: table
+    name: git
+    filters:
+      and:
+        - file.tags.contains("lazygit")

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radix Tree 可视化演示</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+.container { max-width: 1300px; margin: 0 auto; padding: 20px; }
+
+header { text-align: center; padding: 24px 0 16px; }
+header h1 { font-size: 28px; font-weight: 700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+header p { color: #94a3b8; margin-top: 4px; font-size: 14px; }
+
+.dashboard { display: grid; grid-template-columns: 1fr 320px; gap: 20px; }
+@media (max-width: 900px) { .dashboard { grid-template-columns: 1fr; } }
+
+.panel { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.controls label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #94a3b8; }
+.controls input[type=number] { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; color: #e2e8f0; width: 100px; font-size: 14px; }
+.controls input[type=text] { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; color: #e2e8f0; width: 160px; font-size: 14px; }
+.btn { padding: 7px 16px; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s; }
+.btn-primary { background: #3b82f6; color: #fff; }
+.btn-primary:hover { background: #2563eb; }
+.btn-danger { background: #ef4444; color: #fff; }
+.btn-danger:hover { background: #dc2626; }
+.btn-success { background: #22c55e; color: #fff; }
+.btn-success:hover { background: #16a34a; }
+.btn-outline { background: transparent; border: 1px solid #475569; color: #94a3b8; }
+.btn-outline:hover { border-color: #3b82f6; color: #60a5fa; }
+
+#tree-canvas { width: 100%; min-height: 500px; background: #0f172a; border-radius: 8px; }
+
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+.stat-box { background: #0f172a; border-radius: 8px; padding: 12px; text-align: center; }
+.stat-box .num { font-size: 24px; font-weight: 700; color: #60a5fa; }
+.stat-box .label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: .5px; margin-top: 2px; }
+
+.entry-list { max-height: 320px; overflow-y: auto; }
+.entry-list::-webkit-scrollbar { width: 6px; }
+.entry-list::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+.entry-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #0f172a; border-radius: 6px; margin-bottom: 4px; font-size: 13px; }
+.entry-item .idx { color: #60a5fa; font-weight: 600; font-family: monospace; }
+.entry-item .ptr { color: #a78bfa; }
+.entry-item .del-btn { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 16px; padding: 0 4px; }
+
+.bits-info { margin-top: 16px; padding: 12px; background: #0f172a; border-radius: 8px; font-family: monospace; font-size: 13px; line-height: 1.8; }
+.bits-info .hl { color: #facc15; font-weight: 700; }
+.bits-info .dim { color: #475569; }
+.bits-info .arrow { color: #22c55e; }
+
+.sidebar-section { margin-bottom: 16px; }
+.sidebar-section h3 { font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 8px; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #94a3b8; }
+.legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+
+.tab-bar { display: flex; gap: 4px; margin-bottom: 12px; }
+.tab-btn { padding: 6px 14px; border: 1px solid #334155; background: transparent; color: #94a3b8; border-radius: 6px 6px 0 0; cursor: pointer; font-size: 12px; }
+.tab-btn.active { background: #0f172a; border-bottom-color: #0f172a; color: #60a5fa; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>🌳 Radix Tree · 基数树可视化</h1>
+    <p>Linux 内核风格 · 每层 2 bits（4 slots） · 自动伸缩</p>
+  </header>
+
+  <div class="dashboard">
+    <div class="panel">
+      <div class="controls">
+        <label>索引 <input type="number" id="input-idx" value="0" min="0" max="255"></label>
+        <label>指针 <input type="text" id="input-ptr" value="obj_a" style="width:120px"></label>
+        <button class="btn btn-primary" onclick="insert()">插入</button>
+        <button class="btn btn-danger" onclick="del()">删除</button>
+        <button class="btn btn-success" onclick="lookup()">查找</button>
+        <button class="btn btn-outline" onclick="randomInsert()">随机插入</button>
+        <button class="btn btn-outline" onclick="clearAll()">清空</button>
+      </div>
+      <canvas id="tree-canvas"></canvas>
+
+      <div class="bits-info" id="bits-display">
+        <span class="dim">插入/查找后，这里显示索引的 bit 分解路径</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel" style="margin-bottom:16px">
+        <div class="stats-grid">
+          <div class="stat-box"><div class="num" id="stat-entries">0</div><div class="label">Entries</div></div>
+          <div class="stat-box"><div class="num" id="stat-nodes">0</div><div class="label">Nodes</div></div>
+          <div class="stat-box"><div class="num" id="stat-height">0</div><div class="label">Height</div></div>
+          <div class="stat-box"><div class="num" id="stat-slots">0</div><div class="label">Slots Used</div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="tab-bar">
+          <div class="tab-btn active" onclick="switchTab(this,'entries-tab')">Entries</div>
+          <div class="tab-btn" onclick="switchTab(this,'guide-tab')">说明</div>
+        </div>
+
+        <div id="entries-tab" class="tab-content active">
+          <div class="entry-list" id="entry-list"></div>
+        </div>
+
+        <div id="guide-tab" class="tab-content">
+          <div style="font-size:13px;line-height:1.8;color:#94a3b8">
+            <p><strong style="color:#e2e8f0">Radix Tree</strong> 是一种按 bit 分层的字典树。</p>
+            <br>
+            <p>本演示中，索引为 0–255 的 8-bit 无符号整数，<br>每层取 <strong style="color:#facc15">2 bits</strong>（4 个 slot）：</p>
+            <pre style="background:#0f172a;padding:10px;border-radius:6px;margin:8px 0;font-size:12px">
+索引 42 = 0b<span style="color:#60a5fa">10</span><span style="color:#a78bfa">10</span><span style="color:#facc15">10</span><span style="color:#22c55e">10</span>
+  Level 2 (bits 6-7): <span style="color:#60a5fa">10</span> → slot 2
+  Level 1 (bits 4-5): <span style="color:#a78bfa">10</span> → slot 2
+  Level 0 (bits 2-3): <span style="color:#facc15">10</span> → slot 2
+  Leaf   (bits 0-1): <span style="color:#22c55e">10</span> → slot 2</pre>
+            <br>
+            <p><strong style="color:#e2e8f0">操作：</strong></p>
+            <ul style="padding-left:18px">
+              <li>插入 — 给定索引和指针，沿路径创建缺失节点</li>
+              <li>查找 — 沿路径走到叶节点，返回指针</li>
+              <li>删除 — 移除指针，自动收缩空节点</li>
+            </ul>
+            <br>
+            <p><span style="color:#60a5fa;font-weight:700">蓝色高亮</span> = 查找/插入路径，<br>
+            <span style="color:#22c55e;font-weight:700">绿色边框</span> = 目标 slot。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ========== Radix Tree 实现 ==========
+const BITS = 2;          // 每层 2 bits
+const SLOTS = 1 << BITS; // 4 个 slot
+const MASK = SLOTS - 1;  // 0b11
+const MAX_BITS = 8;      // 0-255
+
+class Node {
+  constructor(shift) {
+    this.shift = shift;   // 当前层关注的 bits 数
+    this.slots = new Array(SLOTS).fill(null);
+    this.count = 0;
+    this.parent = null;
+    this.offset = 0;
+  }
+}
+
+class RadixTree {
+  constructor() {
+    this.root = null;  // null | Node | entry
+    this.nodes = new Set();
+  }
+
+  // 取 index 在当前层应该看的 bits
+  _offset(idx, shift) {
+    return (idx >> (shift - BITS)) & MASK;
+  }
+
+  _isEntry(v) { return v !== null && typeof v === 'object' && !(v instanceof Node); }
+
+  insert(idx, ptr) {
+    if (idx < 0 || idx >= (1 << MAX_BITS)) return false;
+
+    // 空树：直接存 entry
+    if (this.root === null) {
+      this.root = { idx, ptr };
+      return true;
+    }
+
+    // 只有 1 个 entry 且索引相同 → 覆盖
+    if (this._isEntry(this.root)) {
+      if (this.root.idx === idx) { this.root.ptr = ptr; return true; }
+      // 需要生长
+      this.root = this._expandNode(this.root, Math.max(this.root.idx, idx));
+    }
+
+    let shift = MAX_BITS;
+    let node = this.root;
+    const path = [];
+
+    while (shift > BITS) {
+      const off = this._offset(idx, shift);
+      path.push({ node, off, shift });
+      const child = node.slots[off];
+      if (child === null) {
+        // 创建子树
+        const leafShift = shift - BITS;
+        if (leafShift === BITS) {
+          // 下一层就是叶子
+          node.slots[off] = { idx, ptr };
+          node.count++;
+        } else {
+          // 需要中间节点
+          const sub = new Node(shift - BITS);
+          sub.parent = node;
+          sub.offset = off;
+          this.nodes.add(sub);
+          const leafOff = this._offset(idx, shift - BITS);
+          sub.slots[leafOff] = { idx, ptr };
+          sub.count++;
+          node.slots[off] = sub;
+          node.count++;
+        }
+        this._updateStats();
+        return true;
+      }
+      if (this._isEntry(child)) {
+        // 冲突：该位置已有 entry，需要生长
+        const entry = child;
+        if (entry.idx === idx) { entry.ptr = ptr; return true; }
+        const sub = new Node(shift - BITS);
+        sub.parent = node;
+        sub.offset = off;
+        this.nodes.add(sub);
+        const eOff = this._offset(entry.idx, shift - BITS);
+        sub.slots[eOff] = entry;
+        sub.count++;
+        const nOff = this._offset(idx, shift - BITS);
+        const leafShift = shift - BITS;
+        if (leafShift === BITS) {
+          sub.slots[nOff] = { idx, ptr };
+          sub.count++;
+        } else {
+          // need deeper
+          const sub2 = new Node(leafShift - BITS);
+          sub2.parent = sub;
+          sub2.offset = nOff;
+          this.nodes.add(sub2);
+          sub2.slots[this._offset(idx, leafShift - BITS)] = { idx, ptr };
+          sub2.count++;
+          sub.slots[nOff] = sub2;
+          sub.count++;
+        }
+        node.slots[off] = sub;
+        node.count++;
+        this._updateStats();
+        return true;
+      }
+      // child is Node
+      node = child;
+      shift -= BITS;
+    }
+
+    // shift == BITS，当前 node 的 slot 直接存 entry
+    const off = this._offset(idx, shift);
+    path.push({ node, off, shift });
+    if (node.slots[off] !== null && this._isEntry(node.slots[off])) {
+      node.slots[off].ptr = ptr;
+    } else {
+      node.slots[off] = { idx, ptr };
+      if (node.slots[off] !== null) node.count++;
+    }
+    this._updateStats();
+    return true;
+  }
+
+  _expandNode(existing, newIdx) {
+    const shift = MAX_BITS;
+    const root = new Node(shift);
+    this.nodes.add(root);
+    const off1 = this._offset(existing.idx, shift);
+    root.slots[off1] = existing;
+    root.count++;
+    return root;
+  }
+
+  lookup(idx) {
+    if (this.root === null) return null;
+    if (this._isEntry(this.root)) return this.root.idx === idx ? this.root.ptr : null;
+    return this._lookupNode(this.root, idx, MAX_BITS);
+  }
+
+  _lookupNode(node, idx, shift) {
+    if (node === null) return null;
+    const off = this._offset(idx, shift);
+    const child = node.slots[off];
+    if (child === null) return null;
+    if (this._isEntry(child)) return child.idx === idx ? child.ptr : null;
+    return this._lookupNode(child, idx, shift - BITS);
+  }
+
+  remove(idx) {
+    if (this.root === null) return null;
+    if (this._isEntry(this.root)) {
+      if (this.root.idx === idx) { const p = this.root.ptr; this.root = null; this._updateStats(); return p; }
+      return null;
+    }
+    const res = this._removeNode(this.root, idx, MAX_BITS, null);
+    // 如果 root 只剩一个 entry，压缩
+    if (this.root && !this._isEntry(this.root) && this.root.count === 1) {
+      const only = this.root.slots.find(s => s !== null);
+      if (only && this._isEntry(only)) {
+        this.root = only;
+      }
+    }
+    this._updateStats();
+    return res;
+  }
+
+  _removeNode(node, idx, shift, parent) {
+    const off = this._offset(idx, shift);
+    const child = node.slots[off];
+    if (child === null) return null;
+    if (this._isEntry(child)) {
+      if (child.idx !== idx) return null;
+      node.slots[off] = null;
+      node.count--;
+      if (node.count === 0 && parent) {
+        parent.slots[parent.offset] = null;
+        parent.count--;
+        this.nodes.delete(node);
+      }
+      return child.ptr;
+    }
+    // child is Node
+    const res = this._removeNode(child, idx, shift - BITS, node);
+    if (child.count === 0) {
+      node.slots[off] = null;
+      node.count--;
+      this.nodes.delete(child);
+      if (node.count === 0 && parent) {
+        parent.slots[parent.offset] = null;
+        parent.count--;
+        this.nodes.delete(node);
+      }
+    }
+    return res;
+  }
+
+  forEach(fn) {
+    this._traverse(this.root, fn);
+  }
+
+  _traverse(node, fn) {
+    if (node === null) return;
+    if (this._isEntry(node)) { fn(node.idx, node.ptr); return; }
+    for (const child of node.slots) {
+      if (child !== null) this._traverse(child, fn);
+    }
+  }
+
+  getStats() {
+    const entries = [];
+    this.forEach((idx, ptr) => entries.push({ idx, ptr }));
+    return {
+      entries,
+      entryCount: entries.length,
+      nodeCount: this.nodes.size + (this.root && !this._isEntry(this.root) ? 0 : 0),
+      height: this._getHeight(),
+      slotsUsed: this._countSlots(),
+    };
+  }
+
+  _getHeight() {
+    if (this.root === null) return 0;
+    if (this._isEntry(this.root)) return 0;
+    let h = 0;
+    let n = this.root;
+    while (n instanceof Node) { h++; n = n.slots.find(c => c instanceof Node); }
+    return h;
+  }
+
+  _countSlots() {
+    let c = 0;
+    const walk = (n) => {
+      if (!(n instanceof Node)) return;
+      c += n.count;
+      for (const ch of n.slots) { if (ch instanceof Node) walk(ch); }
+    };
+    if (this.root instanceof Node) walk(this.root);
+    return c;
+  }
+
+  _updateStats() {
+    // 由外部 render 调用
+  }
+
+  // 返回查找/插入路径信息，用于可视化
+  getPath(idx) {
+    const path = [];
+    if (this.root === null) return path;
+    if (this._isEntry(this.root)) {
+      path.push({ shift: 0, off: 0, found: this.root.idx === idx });
+      return path;
+    }
+    let shift = MAX_BITS;
+    let node = this.root;
+    while (node !== null && shift > 0) {
+      const off = this._offset(idx, shift);
+      const child = node.slots[off];
+      path.push({ shift, off, found: false });
+      if (child === null) break;
+      if (this._isEntry(child)) {
+        path[path.length-1].found = child.idx === idx;
+        path[path.length-1].isEntry = true;
+        break;
+      }
+      node = child;
+      shift -= BITS;
+    }
+    return path;
+  }
+}
+
+// ========== Visualization ==========
+const canvas = document.getElementById('tree-canvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = Math.max(500, tree.getStats().nodeCount * 120 + 200);
+}
+
+const tree = new RadixTree();
+
+function getColor(i) {
+  const colors = ['#60a5fa','#a78bfa','#facc15','#22c55e'];
+  return colors[i % colors.length];
+}
+
+function drawTree(pathIndices) {
+  resizeCanvas();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  const W = canvas.width;
+  let stats = tree.getStats();
+
+  if (tree.root === null) {
+    ctx.fillStyle = '#475569';
+    ctx.font = '16px system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('空树 — 插入一些 entry 吧', W/2, 60);
+    return;
+  }
+
+  const LEVEL_GAP = 140;
+  const SLOT_RADIUS = 18;
+  const NODE_GAP_X = 8;
+
+  // ========== 树布局 ==========
+  // 统一构建树（entries 也作为叶子节点纳入 children）
+  function buildTree(node, depth, parentSlot, parent) {
+    if (node === null) return null;
+    const isEntry = typeof node === 'object' && !(node instanceof Node);
+    const info = { node, depth, children: [], x: 0, parentSlot, parent, isEntry };
+    if (!isEntry) {
+      for (let i = 0; i < SLOTS; i++) {
+        const ch = node.slots[i];
+        if (ch !== null) {
+          const childInfo = buildTree(ch, depth + 1, i, info);
+          if (childInfo) info.children.push(childInfo);
+        }
+      }
+    }
+    return info;
+  }
+
+  const rootInfo = buildTree(tree.root, 0, -1, null);
+  if (!rootInfo) return;
+
+  // 收集所有叶子 entry（按 DFS 遍历顺序）
+  const allEntries = [];
+  (function collect(e) {
+    if (e.isEntry) allEntries.push(e);
+    else e.children.forEach(collect);
+  })(rootInfo);
+
+  // 全局均匀分配 entry 的 x 坐标
+  if (allEntries.length > 0) {
+    const spacing = Math.max(100, (W - 40) / allEntries.length);
+    const totalW = spacing * (allEntries.length - 1);
+    const startX = (W - totalW) / 2;
+    allEntries.forEach((e, i) => { e.x = startX + i * spacing; });
+  }
+
+  // 自底向上：将内部节点居中于所有子节点之上
+  const allLevels = [];
+  (function collectLevels(info, d) {
+    if (info.isEntry) return;
+    if (!allLevels[d]) allLevels[d] = [];
+    allLevels[d].push(info);
+    info.children.forEach(c => collectLevels(c, d + 1));
+  })(rootInfo, 0);
+
+  for (let d = allLevels.length - 1; d >= 0; d--) {
+    for (const info of allLevels[d]) {
+      if (info.children.length > 0) {
+        const childXs = info.children.map(c => c.x);
+        info.x = (Math.min(...childXs) + Math.max(...childXs)) / 2;
+      } else {
+        info.x = W / 2;
+      }
+    }
+  }
+
+  // 检测并解决兄弟子树水平重叠
+  function subtreeBounds(info) {
+    if (info.isEntry) return { min: info.x - 40, max: info.x + 40 };
+    let min = info.x - 55, max = info.x + 55;
+    for (const c of info.children) {
+      const b = subtreeBounds(c);
+      min = Math.min(min, b.min);
+      max = Math.max(max, b.max);
+    }
+    return { min, max };
+  }
+
+  function shiftSubtree(info, dx) {
+    info.x += dx;
+    info.children.forEach(c => shiftSubtree(c, dx));
+  }
+
+  // 自顶向下扫描每层，将重叠的子树推开
+  for (let d = 0; d < allLevels.length; d++) {
+    const lvl = [...allLevels[d]].sort((a, b) => a.x - b.x);
+    for (let i = 1; i < lvl.length; i++) {
+      const left = lvl[i - 1];
+      const right = lvl[i];
+      const lBound = subtreeBounds(left);
+      const rBound = subtreeBounds(right);
+      const gap = rBound.min - lBound.max;
+      if (gap < 20) {
+        const shift = 20 - gap;
+        shiftSubtree(right, shift);
+      }
+    }
+    // 居中回正
+    if (lvl.length > 0) {
+      const allBounds = lvl.map(n => subtreeBounds(n));
+      const globalMin = Math.min(...allBounds.map(b => b.min));
+      const globalMax = Math.max(...allBounds.map(b => b.max));
+      const extra = (W - 40) - (globalMax - globalMin);
+      if (extra > 0) {
+        const offset = (W / 2) - (globalMin + globalMax) / 2;
+        lvl.forEach(n => shiftSubtree(n, offset));
+      }
+    }
+  }
+
+  // 重新居中受影响的父节点（子节点位移后）
+  for (let d = allLevels.length - 1; d >= 0; d--) {
+    for (const info of allLevels[d]) {
+      if (info.children.length > 0) {
+        const childXs = info.children.map(c => c.x);
+        info.x = (Math.min(...childXs) + Math.max(...childXs)) / 2;
+      }
+    }
+  }
+
+  // 构建 levels / entryNodes 兼容原绘图代码
+  const levels = [];
+  const entryNodes = [];
+  (function populate(info, d) {
+    if (info.isEntry) {
+      entryNodes.push(info);
+    } else {
+      if (!levels[d]) levels[d] = [];
+      levels[d].push(info);
+      info.children.forEach(c => populate(c, d + 1));
+    }
+  })(rootInfo, 0);
+
+  // ========== 绘图 ==========
+
+  // 构建路径高亮映射（shift → target slot）
+  const pathMap = {};
+  if (pathIndices !== undefined) {
+    const p = tree.getPath(pathIndices);
+    for (const step of p) {
+      pathMap[step.shift] = { off: step.off, isEntry: !!step.isEntry };
+    }
+  }
+
+  // 画连接线
+  ctx.lineWidth = 1.5;
+  for (let d = 0; d < levels.length; d++) {
+    for (const info of levels[d]) {
+      const x = info.x;
+      const y = 50 + d * LEVEL_GAP;
+      if (d > 0 && info.parent) {
+        const px = info.parent.x;
+        const py = 50 + (d - 1) * LEVEL_GAP;
+        const parentShift = info.parent.node.shift;
+        const onPath = pathMap[parentShift] && pathMap[parentShift].off === info.parentSlot;
+        ctx.strokeStyle = onPath ? '#22c55e' : '#334155';
+        ctx.lineWidth = onPath ? 2.5 : 1.5;
+        ctx.beginPath();
+        ctx.moveTo(px, py + SLOT_RADIUS);
+        ctx.lineTo(x, y - SLOT_RADIUS);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // 画节点
+  for (let d = 0; d < levels.length; d++) {
+    for (const info of levels[d]) {
+      const x = info.x;
+      const y = 50 + d * LEVEL_GAP;
+      const node = info.node;
+
+      const targetSlot = pathMap[node.shift];
+      const isOnPath = targetSlot !== undefined;
+
+      ctx.fillStyle = '#1e293b';
+      ctx.strokeStyle = isOnPath ? '#22c55e' : '#334155';
+      ctx.lineWidth = isOnPath ? 2.5 : 1.5;
+      ctx.beginPath();
+      ctx.roundRect(x - 55, y - 20, 110, 40, 6);
+      ctx.fill();
+      ctx.stroke();
+
+      // shift label
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'center';
+      const shiftText = `shift=${node.shift}`;
+      const tw = ctx.measureText(shiftText).width;
+      ctx.fillStyle = '#0f172a';
+      ctx.beginPath();
+      ctx.roundRect(x - tw/2 - 4, y - 42, tw + 8, 14, 3);
+      ctx.fill();
+      ctx.fillStyle = '#facc15';
+      ctx.fillText(shiftText, x, y - 31);
+
+      // slots
+      const slotW = 16;
+      const totalSlotsW = slotW * SLOTS + (SLOTS - 1) * 2;
+      const startX = x - totalSlotsW / 2 + slotW / 2;
+
+      for (let s = 0; s < SLOTS; s++) {
+        const sx = startX + s * (slotW + 2);
+        const sy = y + 8;
+        const val = node.slots[s];
+        const filled = val !== null;
+        const isTargetSlot = isOnPath && targetSlot.off === s;
+
+        if (isTargetSlot) {
+          ctx.fillStyle = '#22c55e';
+          ctx.shadowColor = '#22c55e60';
+          ctx.shadowBlur = 10;
+        } else if (filled) {
+          ctx.fillStyle = getColor(s);
+          ctx.shadowColor = getColor(s) + '40';
+          ctx.shadowBlur = 6;
+        } else {
+          ctx.fillStyle = '#0f172a';
+          ctx.shadowBlur = 0;
+        }
+
+        ctx.strokeStyle = isTargetSlot ? '#22c55e' : '#334155';
+        ctx.lineWidth = isTargetSlot ? 2 : 1;
+        ctx.beginPath();
+        ctx.roundRect(sx - slotW/2, sy - 6, slotW, 12, 3);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.shadowBlur = 0;
+
+        ctx.fillStyle = isTargetSlot ? '#22c55e' : '#475569';
+        ctx.font = '7px monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText(s.toString(16), sx, sy + 14);
+      }
+
+      if (info.parentSlot >= 0) {
+        ctx.fillStyle = isOnPath ? '#22c55e' : '#64748b';
+        ctx.font = '9px monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText(`slot[${info.parentSlot}]`, x, y - 22);
+      }
+    }
+  }
+
+  // 画 leaf entries
+  for (const en of entryNodes) {
+    const d = en.depth;
+    const y = 50 + d * LEVEL_GAP;
+    const x = en.x;
+
+    // 连接线到 entry
+    const isEntryOnPath = pathIndices !== undefined && en.node.idx === pathIndices;
+    if (en.parent) {
+      ctx.strokeStyle = isEntryOnPath ? '#22c55e' : '#334155';
+      ctx.lineWidth = isEntryOnPath ? 2.5 : 1.5;
+      ctx.beginPath();
+      ctx.moveTo(en.parent.x, y - LEVEL_GAP + SLOT_RADIUS);
+      ctx.lineTo(x, y - 12);
+      ctx.stroke();
+    }
+
+    const isHighlighted = isEntryOnPath;
+    ctx.fillStyle = isHighlighted ? '#1a3a2a' : '#0f172a';
+    ctx.strokeStyle = isHighlighted ? '#22c55e' : '#334155';
+    ctx.lineWidth = isHighlighted ? 2.5 : 1;
+    ctx.beginPath();
+    ctx.roundRect(x - 40, y - 10, 80, 24, 8);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = isHighlighted ? '#22c55e' : '#e2e8f0';
+    ctx.font = '11px monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(`[${en.node.idx}] ${en.node.ptr}`, x, y + 5);
+  }
+
+  // 路径计算标注（仅对查找/插入的索引）
+  if (pathIndices !== undefined) {
+    const p = tree.getPath(pathIndices);
+    const bin = pathIndices.toString(2).padStart(MAX_BITS, '0');
+    for (const step of p) {
+      if (step.isEntry) continue;
+      const d = (MAX_BITS - step.shift) / BITS;
+      if (d >= levels.length) continue;
+      const info = levels[d] && levels[d].find(n => n.node.shift === step.shift);
+      if (!info) continue;
+      const x = info.x;
+      const y = 50 + d * LEVEL_GAP;
+      const shiftAmt = step.shift - BITS;
+      const bits = (pathIndices >> shiftAmt) & MASK;
+      const raw = (pathIndices >> shiftAmt);
+
+      ctx.font = '9px monospace';
+      ctx.textAlign = 'center';
+      const lines = [
+        `(idx >> ${shiftAmt}) & 3`,
+        `= (${bin} >> ${shiftAmt}) & 3`,
+        `= 0b${raw.toString(2).padStart(Math.max(1, raw.toString(2).length), '0')} & 3`,
+        `= ${bits}  →  slot ${bits}`,
+      ];
+      const lh = 12;
+      const bw = 160;
+      const bh = lines.length * lh + 8;
+      ctx.fillStyle = '#0f172a';
+      ctx.strokeStyle = '#334155';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(x - bw/2, y + 24, bw, bh, 4);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#94a3b8';
+      lines.forEach((line, i) => {
+        ctx.fillText(line, x, y + 28 + i * lh + 8);
+      });
+    }
+  }
+
+  // 图例
+  ctx.fillStyle = '#64748b';
+  ctx.font = '11px system-ui, sans-serif';
+  ctx.textAlign = 'left';
+  let lx = 20;
+  let ly = canvas.height - 30;
+  for (let i = 0; i < SLOTS; i++) {
+    ctx.fillStyle = getColor(i);
+    ctx.fillRect(lx, ly - 6, 10, 10);
+    ctx.fillStyle = '#94a3b8';
+    ctx.font = '10px monospace';
+    ctx.textAlign = 'left';
+    ctx.fillText(`slot ${i.toString(16)} (bits=${i.toString(2).padStart(BITS,'0')})`, lx + 14, ly + 2);
+    lx += 100;
+  }
+
+  // 统计
+  ctx.fillStyle = '#475569';
+  ctx.font = '12px system-ui, sans-serif';
+  ctx.textAlign = 'right';
+  ctx.fillText(`${stats.entryCount} entries · ${levels.length} levels · ${stats.slotsUsed} slots used`, W - 20, 30);
+}
+
+// roundRect polyfill
+if (!CanvasRenderingContext2D.prototype.roundRect) {
+  CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
+    if (r > w/2) r = w/2;
+    if (r > h/2) r = h/2;
+    this.moveTo(x + r, y);
+    this.lineTo(x + w - r, y);
+    this.quadraticCurveTo(x + w, y, x + w, y + r);
+    this.lineTo(x + w, y + h - r);
+    this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    this.lineTo(x + r, y + h);
+    this.quadraticCurveTo(x, y + h, x, y + h - r);
+    this.lineTo(x, y + r);
+    this.quadraticCurveTo(x, y, x + r, y);
+    return this;
+  };
+}
+
+// ========== 交互逻辑 ==========
+function getInputs() {
+  const idx = parseInt(document.getElementById('input-idx').value);
+  const ptr = document.getElementById('input-ptr').value.trim() || 'obj';
+  return { idx, ptr };
+}
+
+function insert() {
+  const { idx, ptr } = getInputs();
+  tree.insert(idx, ptr);
+  showPath(idx);
+  render(idx);
+}
+
+function del() {
+  const { idx } = getInputs();
+  tree.remove(idx);
+  render();
+}
+
+function showPath(idx) {
+  const res = tree.lookup(idx);
+  const display = document.getElementById('bits-display');
+  const path = tree.getPath(idx);
+  const bin = idx.toString(2).padStart(MAX_BITS, '0');
+  let bitsStr = `索引 ${idx} = 0b`;
+  for (let b = 0; b < MAX_BITS; b += BITS) {
+    bitsStr += `<span style="color:${getColor((MAX_BITS - b) / BITS - 1)}">${bin.slice(b, b + BITS)}</span>`;
+  }
+  bitsStr += `<br><br><span class="dim">// 公式: (idx >> (shift - BITS)) & 0b11</span>`;
+  if (path.length > 0) {
+    bitsStr += `<br>路径分解：`;
+    for (const step of path) {
+      const shift = step.shift;
+      const shiftAmt = shift - BITS;
+      const bits = (idx >> shiftAmt) & MASK;
+      const raw = (idx >> shiftAmt);
+      const color = getColor(shift / BITS - 1);
+      bitsStr += `<br><br>`;
+      bitsStr += `<span class="hl" style="color:${color}">shift=${shift}</span>`;
+      bitsStr += `  <span class="dim">idx>>(</span>${shift}<span class="dim">-</span>${BITS}<span class="dim">) = idx>></span>${shiftAmt}`;
+      bitsStr += `<br>&nbsp;&nbsp;&nbsp;`;
+      bitsStr += `<span class="dim">0b</span>${bin}<span class="dim"> >> ${shiftAmt} = 0b</span>${raw.toString(2).padStart(Math.max(1, raw.toString(2).length), '0')}`;
+      bitsStr += `<br>&nbsp;&nbsp;&nbsp;`;
+      bitsStr += `<span class="dim">0b</span>${raw.toString(2).padStart(Math.max(1, raw.toString(2).length), '0')}<span class="dim"> & 0b11 = </span><span class="hl">${bits}</span>`;
+      bitsStr += ` <span class="dim">→ slot </span><span class="hl">${bits}</span>`;
+      if (step.isEntry) {
+        bitsStr += step.found ? ` <span class="arrow">✓ 结果: ${res}</span>` : ` <span class="arrow">✗ 不匹配</span>`;
+      }
+    }
+  }
+  if (res !== null && path.length > 0 && !path[path.length-1].isEntry) {
+    bitsStr += `<br><br><span class="arrow">✓ 结果: ${res}</span>`;
+  } else if (res === null) {
+    bitsStr += `<br><br><span style="color:#ef4444">✗ 未找到</span>`;
+  }
+  display.innerHTML = bitsStr;
+}
+
+function lookup() {
+  const { idx } = getInputs();
+  showPath(idx);
+  render(idx);
+}
+
+function randomInsert() {
+  const idx = Math.floor(Math.random() * 256);
+  const ptr = 'obj_' + 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random()*26)];
+  tree.insert(idx, ptr);
+  showPath(idx);
+  render(idx);
+}
+
+function clearAll() {
+  tree.root = null;
+  tree.nodes.clear();
+  render();
+  document.getElementById('bits-display').innerHTML = '<span class="dim">已清空</span>';
+}
+
+function render(highlightIdx) {
+  drawTree(highlightIdx);
+  updateStats();
+  updateEntryList();
+}
+
+function updateStats() {
+  const s = tree.getStats();
+  document.getElementById('stat-entries').textContent = s.entryCount;
+  document.getElementById('stat-nodes').textContent = s.nodeCount;
+  document.getElementById('stat-height').textContent = s.height;
+  document.getElementById('stat-slots').textContent = s.slotsUsed;
+}
+
+function updateEntryList() {
+  const el = document.getElementById('entry-list');
+  const s = tree.getStats();
+  if (s.entries.length === 0) {
+    el.innerHTML = '<div style="color:#475569;text-align:center;padding:20px;font-size:13px">暂无 entry</div>';
+    return;
+  }
+  el.innerHTML = s.entries.map(e =>
+    `<div class="entry-item">
+      <span><span class="idx">${e.idx}</span> → <span class="ptr">${e.ptr}</span></span>
+      <button class="del-btn" onclick="removeEntry(${e.idx})">×</button>
+    </div>`
+  ).join('');
+}
+
+function removeEntry(idx) {
+  tree.remove(idx);
+  render();
+}
+
+function switchTab(el, id) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+
+// 初始化
+render();
+
+// 窗口 resize 时重绘
+window.addEventListener('resize', () => render());
+</script>
+</body>
+</html>

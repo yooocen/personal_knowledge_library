@@ -1,3 +1,7 @@
+---
+tags:
+  - lazygit
+---
 shift + / 可以打开Help面板
 在分支按p，是push
 

@@ -2,6 +2,9 @@
 tags:
   - aiagent
   - ai控制浏览器
+  - browser
+  - playwright
+  - ai
 ---
 很多人第一次接触这两个项目都会混淆，因为它们都来自 Browser Use 生态，但定位其实不一样。
 
