@@ -1,3 +1,8 @@
+---
+tags:
+  - vim
+  - intellij
+---
 # Emulated Plugins · JetBrains/ideavim Wiki
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - 设计模式
+  - 命令模式
+---
 # 秒懂设计模式之命令模式（Command Pattern） - ShuSheng007
 
 tags:: source

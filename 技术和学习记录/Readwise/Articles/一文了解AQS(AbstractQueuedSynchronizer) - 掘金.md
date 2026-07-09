@@ -1,3 +1,9 @@
+---
+tags:
+  - 并发
+  - java
+  - AQS
+---
 # 一文了解AQS(AbstractQueuedSynchronizer) - 掘金
 
 tags:: source

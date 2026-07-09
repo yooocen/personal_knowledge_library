@@ -1,3 +1,8 @@
+---
+tags:
+  - springboot
+  - 微服务
+---
 # 一起玩转微服务（12）——揭密starter - 腾讯云开发者社区-腾讯云
 
 tags:: source

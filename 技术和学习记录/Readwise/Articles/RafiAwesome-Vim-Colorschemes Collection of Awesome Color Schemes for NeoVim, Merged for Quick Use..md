@@ -1,3 +1,8 @@
+---
+tags:
+  - vim
+  - 主题配色
+---
 # Rafi/Awesome-Vim-Colorschemes: Collection of Awesome Color Schemes for Neo/Vim, Merged for Quick Use.
 
 tags:: source

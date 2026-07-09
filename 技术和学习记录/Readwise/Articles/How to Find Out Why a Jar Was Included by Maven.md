@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - java
+---
 # How to Find Out Why a Jar Was Included by Maven?
 
 tags:: source

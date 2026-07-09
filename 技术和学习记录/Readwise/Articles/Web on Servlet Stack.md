@@ -1,3 +1,9 @@
+---
+tags:
+  - spring
+  - servlet
+  - web
+---
 # Web on Servlet Stack
 
 tags:: source

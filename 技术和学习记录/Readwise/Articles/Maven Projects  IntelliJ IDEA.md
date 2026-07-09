@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - intellij-idea
+---
 # Maven Projects | IntelliJ IDEA
 
 tags:: source

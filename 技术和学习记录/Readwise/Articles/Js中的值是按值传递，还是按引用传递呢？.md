@@ -1,3 +1,8 @@
+---
+tags:
+  - javascript
+  - 值传递
+---
 # Js中的值是按值传递，还是按引用传递呢？
 
 tags:: source

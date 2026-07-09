@@ -1,3 +1,7 @@
+---
+tags:
+  - springboot
+---
 # Spring Boot - 手把手教小师妹自定义Spring Boot Starter - 腾讯云开发者社区-腾讯云
 
 tags:: source

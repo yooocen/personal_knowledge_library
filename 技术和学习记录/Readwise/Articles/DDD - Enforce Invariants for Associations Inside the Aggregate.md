@@ -1,3 +1,8 @@
+---
+tags:
+  - ddd
+  - 领域建模
+---
 # DDD - Enforce Invariants for Associations Inside the Aggregate
 
 tags:: source

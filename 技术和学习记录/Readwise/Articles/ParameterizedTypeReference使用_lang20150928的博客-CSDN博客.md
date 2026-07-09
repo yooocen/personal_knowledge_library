@@ -1,3 +1,9 @@
+---
+tags:
+  - java
+  - 泛型
+  - spring
+---
 # ParameterizedTypeReference使用_lang20150928的博客-CSDN博客
 
 tags:: source

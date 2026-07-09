@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - spi
+---
 # Java常用机制 - SPI机制详解
 
 tags:: source

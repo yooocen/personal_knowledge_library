@@ -1,3 +1,7 @@
+---
+tags:
+  - intellij
+---
 # IDEA启动无响应，但使用idea.bat能启动的问题解决【亲测已解决】_灰小猿的博客-CSDN博客_idea.bat
 
 tags:: source

@@ -1,3 +1,7 @@
+---
+tags:
+  - vim
+---
 # Vim Colorscheme Shows Wrong Color
 
 tags:: source

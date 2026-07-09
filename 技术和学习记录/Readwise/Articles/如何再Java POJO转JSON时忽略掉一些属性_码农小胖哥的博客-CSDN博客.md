@@ -1,3 +1,9 @@
+---
+tags:
+  - java
+  - json
+  - jackson
+---
 # 如何再Java POJO转JSON时忽略掉一些属性_码农小胖哥的博客-CSDN博客
 
 tags:: source

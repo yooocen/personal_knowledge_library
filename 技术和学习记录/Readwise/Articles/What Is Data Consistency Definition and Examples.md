@@ -1,3 +1,8 @@
+---
+tags:
+  - 数据一致性
+  - 数据库
+---
 # What Is Data Consistency? Definition and Examples
 
 tags:: source

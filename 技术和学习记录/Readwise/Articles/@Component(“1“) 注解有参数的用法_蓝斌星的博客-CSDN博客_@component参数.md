@@ -1,3 +1,7 @@
+---
+tags:
+  - spring
+---
 # @Component(“1“) 注解有参数的用法_蓝斌星的博客-CSDN博客_@component参数
 
 tags:: source

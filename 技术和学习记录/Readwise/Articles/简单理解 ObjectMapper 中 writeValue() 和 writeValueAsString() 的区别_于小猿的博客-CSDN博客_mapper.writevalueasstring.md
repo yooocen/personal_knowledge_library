@@ -1,3 +1,9 @@
+---
+tags:
+  - java
+  - json
+  - jackson
+---
 # 简单理解 ObjectMapper 中 writeValue() 和 writeValueAsString() 的区别_于小猿的博客-CSDN博客_mapper.writevalueasstring
 
 tags:: source

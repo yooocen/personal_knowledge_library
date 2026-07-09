@@ -1,3 +1,8 @@
+---
+tags:
+  - io模型
+  - 操作系统
+---
 # IO 模型 - Unix IO 模型
 
 tags:: source

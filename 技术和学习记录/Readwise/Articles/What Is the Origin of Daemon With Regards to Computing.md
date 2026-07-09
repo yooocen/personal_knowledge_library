@@ -1,3 +1,8 @@
+---
+tags:
+  - daemon
+  - 操作系统
+---
 # What Is the Origin of "Daemon" With Regards to Computing?
 
 tags:: source

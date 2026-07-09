@@ -1,3 +1,8 @@
+---
+tags:
+  - apache cxf
+  - 负载均衡
+---
 # Apache CXF Load Balancing and Failover - Java Code Geeks - 2022
 
 tags:: source

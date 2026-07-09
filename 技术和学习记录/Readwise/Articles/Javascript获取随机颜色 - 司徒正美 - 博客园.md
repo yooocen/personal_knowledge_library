@@ -1,3 +1,8 @@
+---
+tags:
+  - javascript
+  - 前端
+---
 # Javascript获取随机颜色 - 司徒正美 - 博客园
 
 tags:: source

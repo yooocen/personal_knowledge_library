@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - 依赖管理
+---
 # Maven Managed Dependencies - Resolving ${project.version} From Parent Pom
 
 tags:: source

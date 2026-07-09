@@ -1,3 +1,8 @@
+---
+tags:
+  - intellij-idea
+  - 快捷键
+---
 # IntelliJ IDEA Tutorial - Shortcuts to Ditch Your Mouse Today
 
 tags:: source

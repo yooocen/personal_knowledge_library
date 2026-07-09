@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - 配置
+---
 # 用户对问题“application.properties与applicationContext.xml”的回答 - 问答 - 腾讯云开发者社区-腾讯云
 
 tags:: source

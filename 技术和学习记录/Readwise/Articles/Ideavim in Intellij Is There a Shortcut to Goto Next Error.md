@@ -1,3 +1,8 @@
+---
+tags:
+  - vim
+  - intellij
+---
 # Ideavim in Intellij Is There a Shortcut to Goto Next Error?
 
 tags:: source

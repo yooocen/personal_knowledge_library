@@ -1,3 +1,9 @@
+---
+tags:
+  - vim
+  - wsl
+  - 剪贴板
+---
 # Vim,wsl,剪切板,复制粘贴, - IT Blog
 
 tags:: source

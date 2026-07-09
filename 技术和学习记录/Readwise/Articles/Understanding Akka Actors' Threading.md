@@ -1,3 +1,8 @@
+---
+tags:
+  - akka
+  - 并发
+---
 # Understanding Akka Actors' Threading
 
 tags:: source

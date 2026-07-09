@@ -1,3 +1,8 @@
+---
+tags:
+  - swagger
+  - java
+---
 # (17条消息) SwaggerAPI注解详解_bgn190215的博客-CSDN博客
 
 tags:: source

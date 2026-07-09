@@ -1,3 +1,8 @@
+---
+tags:
+  - guava
+  - java
+---
 # UsingAndAvoidingNullExplained · Google/Guava Wiki
 
 tags:: source

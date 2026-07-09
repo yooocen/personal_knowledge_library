@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - 依赖管理
+---
 # Maven Dependency中scope=compile 和 Provided区别_憧憬的专栏-CSDN博客_provided Scope
 
 tags:: source

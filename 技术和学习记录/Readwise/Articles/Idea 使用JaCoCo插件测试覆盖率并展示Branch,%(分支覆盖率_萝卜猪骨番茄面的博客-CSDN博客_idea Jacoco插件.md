@@ -1,3 +1,8 @@
+---
+tags:
+  - intellij
+  - 测试覆盖率
+---
 # Idea 使用JaCoCo插件测试覆盖率并展示Branch,%(分支覆盖率_萝卜猪骨番茄面的博客-CSDN博客_idea Jacoco插件
 
 tags:: source

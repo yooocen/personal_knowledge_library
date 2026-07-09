@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - java
+---
 # Spring FactoryBean详解
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - 异常处理
+---
 # 怎么解决java.lang.NoClassDefFoundError错误_AlwaysOnMyWay的博客-CSDN博客_noclassdeffounderror
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - mybatis
+  - 源码分析
+---
 # Mybatis源码解析之MapperProxy
 
 tags:: source

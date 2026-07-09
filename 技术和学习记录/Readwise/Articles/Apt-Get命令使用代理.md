@@ -1,3 +1,8 @@
+---
+tags:
+  - linux
+  - 网络代理
+---
 # Apt-Get命令使用代理
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - DDD
+  - 领域模型
+---
 # The Difference Between Domains, Domain Models, Object Models and Domain Objects - Code With Jason
 
 tags:: source

@@ -1,3 +1,7 @@
+---
+tags:
+  - java
+---
 # (17条消息) Java中静态内部类和非静态内部类有什么区别？_vcliy的博客-Csdn博客_静态内部类
 
 tags:: source

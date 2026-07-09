@@ -1,3 +1,7 @@
+---
+tags:
+  - spring
+---
 # Spring Bean Alias的使用场景
 
 tags:: source

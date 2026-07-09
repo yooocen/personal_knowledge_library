@@ -1,3 +1,7 @@
+---
+tags:
+  - vim
+---
 # Set Up Ctrl-V in Ideavim
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - intellij
+  - java
+---
 # Compile and Build Applications With IntelliJ IDEA | IntelliJ IDEA
 
 tags:: source

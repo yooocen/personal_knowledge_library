@@ -1,3 +1,9 @@
+---
+tags:
+  - vue
+  - vscode
+  - 前端
+---
 # 【搬砖百宝箱】使用vscode Debuge Vue 源码 - 掘金
 
 tags:: source

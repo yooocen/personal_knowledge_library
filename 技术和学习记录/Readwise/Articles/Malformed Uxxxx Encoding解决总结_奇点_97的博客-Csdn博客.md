@@ -1,3 +1,9 @@
+---
+tags:
+  - maven
+  - 报错解决
+  - intellij-idea
+---
 # Malformed \Uxxxx Encoding解决总结_奇点_97的博客-Csdn博客
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - 镜像仓库
+---
 # Maven的mirror和repository加载顺序 - Syxsdhy - 博客园
 
 tags:: source

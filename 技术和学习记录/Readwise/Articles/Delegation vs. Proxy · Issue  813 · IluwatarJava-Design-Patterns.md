@@ -1,3 +1,8 @@
+---
+tags:
+  - 设计模式
+  - java
+---
 # Delegation vs. Proxy · Issue #813 · Iluwatar/Java-Design-Patterns
 
 tags:: source

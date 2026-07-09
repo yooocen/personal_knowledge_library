@@ -1,3 +1,9 @@
+---
+tags:
+  - flow
+  - 类型系统
+  - javascript
+---
 # How to Declare That a Var Has Now Been Initialized, if Flow Can't Infer It Automatically?
 
 tags:: source

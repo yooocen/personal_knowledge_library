@@ -1,3 +1,8 @@
+---
+tags:
+  - neovim
+  - vim
+---
 # Neovim for Beginners — Color Scheme
 
 tags:: source

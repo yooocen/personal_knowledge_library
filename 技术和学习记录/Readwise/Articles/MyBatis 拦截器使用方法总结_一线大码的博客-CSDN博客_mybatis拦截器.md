@@ -1,3 +1,8 @@
+---
+tags:
+  - mybatis
+  - 设计模式
+---
 # MyBatis 拦截器使用方法总结_一线大码的博客-CSDN博客_mybatis拦截器
 
 tags:: source

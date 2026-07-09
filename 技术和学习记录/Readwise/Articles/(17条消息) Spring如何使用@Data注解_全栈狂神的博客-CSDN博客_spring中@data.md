@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - lombok
+---
 # (17条消息) Spring如何使用@Data注解_全栈狂神的博客-CSDN博客_spring中@data
 
 tags:: source

@@ -1,3 +1,7 @@
+---
+tags:
+  - java
+---
 # What Is the Difference (Or Relation) Between JLS, JSR and JEP?
 
 tags:: source

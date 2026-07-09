@@ -1,3 +1,9 @@
+---
+tags:
+  - spring
+  - 设计模式
+  - 源码
+---
 # 【Spring源码】14. 消息多播器（观察者模式）_AQin1012的博客-Csdn博客
 
 tags:: source

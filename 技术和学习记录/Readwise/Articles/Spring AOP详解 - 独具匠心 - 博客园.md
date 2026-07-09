@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - aop
+---
 # Spring AOP详解 - 独具匠心 - 博客园
 
 tags:: source

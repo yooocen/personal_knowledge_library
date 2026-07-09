@@ -1,3 +1,9 @@
+---
+tags:
+  - 日志
+  - slf4j
+  - java
+---
 # Slf4j中的桥接器是如何运作的？-阿里云开发者社区
 
 tags:: source

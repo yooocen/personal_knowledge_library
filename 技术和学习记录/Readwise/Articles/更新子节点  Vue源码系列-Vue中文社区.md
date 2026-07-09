@@ -1,3 +1,9 @@
+---
+tags:
+  - vue
+  - 前端
+  - 虚拟dom
+---
 # 更新子节点 | Vue源码系列-Vue中文社区
 
 tags:: source

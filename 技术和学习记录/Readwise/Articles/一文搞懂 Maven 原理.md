@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - java
+---
 # 一文搞懂 Maven 原理
 
 tags:: source

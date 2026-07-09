@@ -1,3 +1,8 @@
+---
+tags:
+  - jakarta-ee
+  - java
+---
 # Jakarta EE - Java EE的终结者
 
 tags:: source

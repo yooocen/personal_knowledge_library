@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - 多模块
+---
 # Maven提高篇系列之（一）——多模块 vs 继承 - 无知者云 - 博客园
 
 tags:: source

@@ -1,3 +1,7 @@
+---
+tags:
+  - vim
+---
 # Can I Map Alt Key in Vim?
 
 tags:: source

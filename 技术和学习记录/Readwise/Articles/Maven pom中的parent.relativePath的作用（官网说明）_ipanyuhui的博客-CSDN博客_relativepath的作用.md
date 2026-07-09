@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - 依赖管理
+---
 # Maven pom中的parent.relativePath的作用（官网说明）_ipanyuhui的博客-CSDN博客_relativepath的作用
 
 tags:: source

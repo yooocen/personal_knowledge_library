@@ -1,3 +1,8 @@
+---
+tags:
+  - scrum
+  - 敏捷开发
+---
 # Scrum Guide | Scrum Guides
 
 tags:: source

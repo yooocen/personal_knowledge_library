@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - 多模块
+---
 # Maven Parent Pom vs Modules Pom
 
 tags:: source

@@ -1,3 +1,9 @@
+---
+tags:
+  - jersey
+  - rest
+  - java
+---
 # Jersey Hello World Example - 入门小站-rumenz.com
 
 tags:: source

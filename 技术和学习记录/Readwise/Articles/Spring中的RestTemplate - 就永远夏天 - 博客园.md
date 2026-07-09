@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - restclient
+---
 # Spring中的RestTemplate - 就永远夏天 - 博客园
 
 tags:: source

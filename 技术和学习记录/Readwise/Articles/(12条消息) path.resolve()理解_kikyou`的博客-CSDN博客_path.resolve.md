@@ -1,3 +1,8 @@
+---
+tags:
+  - nodejs
+  - 前端
+---
 # (12条消息) path.resolve()理解_kikyou`的博客-CSDN博客_path.resolve
 
 tags:: source

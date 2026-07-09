@@ -1,3 +1,9 @@
+---
+tags:
+  - servlet
+  - 并发
+  - jvm
+---
 # Servlet与多线程的关系是什么？ - 知乎
 
 tags:: source

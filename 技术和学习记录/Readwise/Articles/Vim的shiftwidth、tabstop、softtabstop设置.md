@@ -1,3 +1,8 @@
+---
+tags:
+  - vim
+  - 缩进
+---
 # Vim的shiftwidth、tabstop、softtabstop设置
 
 tags:: source

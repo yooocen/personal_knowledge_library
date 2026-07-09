@@ -1,3 +1,8 @@
+---
+tags:
+  - javascript
+  - 前端
+---
 # (12条消息) 浅谈箭头函数和function的区别_蛞蝓不孤寡的博客-CSDN博客_箭头函数和function的区别
 
 tags:: source

@@ -1,3 +1,9 @@
+---
+tags:
+  - spring
+  - jpa
+  - 数据库
+---
 # Spring Data JPA中常用的注解详解
 
 tags:: source

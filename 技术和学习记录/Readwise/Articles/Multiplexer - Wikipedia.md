@@ -1,3 +1,7 @@
+---
+tags:
+  - 数字电路
+---
 # Multiplexer - Wikipedia
 
 tags:: source

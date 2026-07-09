@@ -1,3 +1,8 @@
+---
+tags:
+  - docker
+  - 配置
+---
 # 【Docker】daemon.json的作用（八）_2021 真实-CSDN博客_daemon.json
 
 tags:: source

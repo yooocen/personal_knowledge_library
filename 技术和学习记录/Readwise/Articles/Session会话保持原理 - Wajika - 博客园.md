@@ -1,3 +1,8 @@
+---
+tags:
+  - 网络协议
+  - session
+---
 # Session会话保持原理 - Wajika - 博客园
 
 tags:: source

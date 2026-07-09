@@ -1,3 +1,7 @@
+---
+tags:
+  - mybatis
+---
 # Mybatis – MyBatis 3 | 入门
 
 tags:: source

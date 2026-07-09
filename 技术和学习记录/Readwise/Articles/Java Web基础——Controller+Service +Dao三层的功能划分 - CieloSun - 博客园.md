@@ -1,3 +1,9 @@
+---
+tags:
+  - java
+  - 分层架构
+  - web开发
+---
 # Java Web基础——Controller+Service +Dao三层的功能划分 - CieloSun - 博客园
 
 tags:: source

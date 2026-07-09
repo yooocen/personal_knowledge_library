@@ -1,3 +1,8 @@
+---
+tags:
+  - wsl
+  - 开发环境
+---
 # Win10 配置 Wsl2 终极开发环境 | Server 运维论坛
 
 tags:: source

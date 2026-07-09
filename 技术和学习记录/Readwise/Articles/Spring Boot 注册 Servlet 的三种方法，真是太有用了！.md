@@ -1,3 +1,8 @@
+---
+tags:
+  - springboot
+  - servlet
+---
 # Spring Boot 注册 Servlet 的三种方法，真是太有用了！
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - springboot
+  - servlet
+---
 # Spring Boot注解学习之@ServletComponentScan及扩展 - 掘金
 
 tags:: source

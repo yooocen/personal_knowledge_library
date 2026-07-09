@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - 分层架构
+---
 # 【Spring】Model，Util，Dao，Service，Controller_南方有乔木的博客-CSDN博客_util
 
 tags:: source

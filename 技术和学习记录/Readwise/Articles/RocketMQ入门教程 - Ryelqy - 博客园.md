@@ -1,3 +1,8 @@
+---
+tags:
+  - rocketmq
+  - 消息队列
+---
 # RocketMQ入门教程 - Ryelqy - 博客园
 
 tags:: source

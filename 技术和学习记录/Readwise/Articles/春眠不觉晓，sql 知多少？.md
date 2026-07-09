@@ -1,3 +1,8 @@
+---
+tags:
+  - sql
+  - 数据库
+---
 # 春眠不觉晓，sql 知多少？
 
 tags:: source

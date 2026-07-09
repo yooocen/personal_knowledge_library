@@ -1,3 +1,8 @@
+---
+tags:
+  - mybatis
+  - 源码分析
+---
 # MyBatis源码解读（2）——MapperProxy - OKevin - 博客园
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - servlet
+---
 # What Is Dispatcher Servlet in Spring? - GeeksforGeeks
 
 tags:: source

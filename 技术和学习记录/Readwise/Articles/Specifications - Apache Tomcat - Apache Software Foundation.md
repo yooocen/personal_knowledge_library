@@ -1,3 +1,8 @@
+---
+tags:
+  - tomcat
+  - servlet
+---
 # Specifications - Apache Tomcat - Apache Software Foundation
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - linux
+  - 软件打包
+---
 # (12条消息) Snap, AppImage和 Flatpak之间差异_BigDataToAI的博客-CSDN博客_flatpak与snap哪个更好
 
 tags:: source

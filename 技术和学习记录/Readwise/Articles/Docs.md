@@ -1,3 +1,8 @@
+---
+tags:
+  - obsidian
+  - 插件
+---
 # Docs
 
 tags:: source

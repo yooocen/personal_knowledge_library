@@ -1,3 +1,8 @@
+---
+tags:
+  - springboot
+  - 自动配置
+---
 # 第5章 Spring Boot自动配置原理
 
 tags:: source

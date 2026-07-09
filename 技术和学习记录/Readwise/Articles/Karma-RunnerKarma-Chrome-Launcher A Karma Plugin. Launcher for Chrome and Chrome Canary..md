@@ -1,3 +1,9 @@
+---
+tags:
+  - karma
+  - 单元测试
+  - 前端
+---
 # Karma-Runner/Karma-Chrome-Launcher: A Karma Plugin. Launcher for Chrome and Chrome Canary.
 
 tags:: source

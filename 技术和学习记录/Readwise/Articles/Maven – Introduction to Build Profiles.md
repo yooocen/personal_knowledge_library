@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - profile
+---
 # Maven – Introduction to Build Profiles
 
 tags:: source

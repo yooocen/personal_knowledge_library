@@ -1,3 +1,8 @@
+---
+tags:
+  - 前端
+  - Vue
+---
 # 说说 Vue.js 中的 Functional 函数化组件 - 掘金
 
 tags:: source

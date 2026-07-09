@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - 匿名类
+---
 # What Is the $1 in Class File Names?
 
 tags:: source

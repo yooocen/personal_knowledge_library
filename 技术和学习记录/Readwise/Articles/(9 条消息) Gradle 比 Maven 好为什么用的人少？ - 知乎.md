@@ -1,3 +1,9 @@
+---
+tags:
+  - gradle
+  - maven
+  - 构建工具
+---
 # (9 条消息) Gradle 比 Maven 好为什么用的人少？ - 知乎
 
 tags:: source

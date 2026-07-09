@@ -1,3 +1,8 @@
+---
+tags:
+  - ddd
+  - cqrs
+---
 # DDD里面的CQRS到底是什么？-51CTO.COM
 
 tags:: source

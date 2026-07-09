@@ -1,3 +1,8 @@
+---
+tags:
+  - rss阅读器
+  - 工具
+---
 # Inoreader - The Content Reader for Power Users Who Want to Save Time.
 
 tags:: source

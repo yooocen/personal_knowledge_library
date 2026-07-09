@@ -1,3 +1,7 @@
+---
+tags:
+  - 数据库
+---
 # About数据库表的物理主键与逻辑主键 - SwitchBlade - 博客园
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - vimium
+  - 浏览器插件
+---
 # Vimium - Chrome 网上应用店
 
 tags:: source

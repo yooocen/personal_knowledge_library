@@ -1,3 +1,8 @@
+---
+tags:
+  - uml
+  - 建模
+---
 # UML（二）component 组件图_dengjingg的博客-CSDN博客_uml Component
 
 tags:: source

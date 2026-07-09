@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - nio
+---
 # (22条消息) Java NIO？看这一篇就够了！_归海一刀之渔舟唱晚的博客-CSDN博客
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - 泛型
+---
 # AngelikaLanger.com - Java Generics FAQs - Generic and Parameterized Types - Angelika Langer Training/Consulting
 
 tags:: source

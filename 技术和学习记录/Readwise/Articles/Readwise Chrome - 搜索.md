@@ -1,3 +1,8 @@
+---
+tags:
+  - readwise
+  - 浏览器插件
+---
 # Readwise Chrome - 搜索
 
 tags:: source

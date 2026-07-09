@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - 方法引用
+---
 # Java 中的双冒号“::”_Just-ForStudy的博客-CSDN博客_java 双冒号
 
 tags:: source

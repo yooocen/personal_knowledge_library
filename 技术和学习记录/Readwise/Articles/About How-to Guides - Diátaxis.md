@@ -1,3 +1,8 @@
+---
+tags:
+  - 文档写作
+  - diataxis
+---
 # About How-to Guides - Diátaxis
 
 tags:: source

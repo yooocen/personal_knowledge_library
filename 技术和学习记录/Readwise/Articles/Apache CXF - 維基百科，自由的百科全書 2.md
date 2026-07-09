@@ -1,3 +1,8 @@
+---
+tags:
+  - apache cxf
+  - web服务
+---
 # Apache CXF - 維基百科，自由的百科全書
 
 tags:: source

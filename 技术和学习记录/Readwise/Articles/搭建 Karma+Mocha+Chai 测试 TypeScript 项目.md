@@ -1,3 +1,9 @@
+---
+tags:
+  - typescript
+  - 测试
+  - 前端
+---
 # 搭建 Karma+Mocha+Chai 测试 TypeScript 项目
 tags:: source
 ## Metadata

@@ -1,3 +1,8 @@
+---
+tags:
+  - nodejs
+  - linux
+---
 # 如何在 Ubuntu 20.04 上安装 Node.js 和 Npm-阿里云开发者社区
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - 架构模式
+  - mvc
+---
 # Service and DAO vs MVC
 
 tags:: source

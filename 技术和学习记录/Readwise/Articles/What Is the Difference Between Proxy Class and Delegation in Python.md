@@ -1,3 +1,8 @@
+---
+tags:
+  - python
+  - 设计模式
+---
 # What Is the Difference Between Proxy Class and Delegation in Python?
 
 tags:: source

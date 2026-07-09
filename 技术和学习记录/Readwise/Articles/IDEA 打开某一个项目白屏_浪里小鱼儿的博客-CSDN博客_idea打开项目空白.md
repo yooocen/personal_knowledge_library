@@ -1,3 +1,7 @@
+---
+tags:
+  - intellij
+---
 # IDEA 打开某一个项目白屏_浪里小鱼儿的博客-CSDN博客_idea打开项目空白
 
 tags:: source

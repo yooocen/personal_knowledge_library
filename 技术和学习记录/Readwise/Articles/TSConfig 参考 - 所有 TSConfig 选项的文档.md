@@ -1,3 +1,8 @@
+---
+tags:
+  - typescript
+  - 配置
+---
 # TSConfig 参考 - 所有 TSConfig 选项的文档
 
 tags:: source

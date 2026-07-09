@@ -1,3 +1,7 @@
+---
+tags:
+  - linux
+---
 # Can't Symlink to Machine ID
 
 tags:: source

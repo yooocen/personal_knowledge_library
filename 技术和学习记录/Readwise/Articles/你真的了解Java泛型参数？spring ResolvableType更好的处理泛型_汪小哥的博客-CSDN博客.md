@@ -1,3 +1,9 @@
+---
+tags:
+  - java
+  - spring
+  - 泛型
+---
 # 你真的了解Java泛型参数？spring ResolvableType更好的处理泛型_汪小哥的博客-CSDN博客
 
 tags:: source

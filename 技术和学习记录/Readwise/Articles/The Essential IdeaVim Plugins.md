@@ -1,3 +1,9 @@
+---
+tags:
+  - vim
+  - ideavim
+  - 插件
+---
 # The Essential IdeaVim Plugins
 
 tags:: source

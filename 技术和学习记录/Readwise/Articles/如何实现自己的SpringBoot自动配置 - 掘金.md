@@ -1,3 +1,8 @@
+---
+tags:
+  - springboot
+  - 自动配置
+---
 # 如何实现自己的SpringBoot自动配置 - 掘金
 
 tags:: source

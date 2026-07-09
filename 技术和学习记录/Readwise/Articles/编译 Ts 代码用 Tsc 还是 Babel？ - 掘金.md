@@ -1,3 +1,9 @@
+---
+tags:
+  - 前端
+  - TypeScript
+  - 构建工具
+---
 # 编译 Ts 代码用 Tsc 还是 Babel？ - 掘金
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - DDD
+  - 领域驱动设计
+---
 # 领域驱动设计中国（ddd-China）
 
 tags:: source

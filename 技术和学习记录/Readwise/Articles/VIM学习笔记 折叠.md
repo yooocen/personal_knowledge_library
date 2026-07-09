@@ -1,3 +1,7 @@
+---
+tags:
+  - vim
+---
 # VIM学习笔记 折叠
 
 tags:: source

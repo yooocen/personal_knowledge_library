@@ -1,3 +1,9 @@
+---
+tags:
+  - typescript
+  - vue
+  - 前端
+---
 # Why Do I See TypeScript in Vue.js Source Code?
 
 tags:: source

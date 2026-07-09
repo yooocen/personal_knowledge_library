@@ -1,3 +1,7 @@
+---
+tags:
+  - intellij idea
+---
 # Add Frameworks (Facets) | IntelliJ IDEA
 
 tags:: source

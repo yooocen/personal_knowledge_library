@@ -1,3 +1,7 @@
+---
+tags:
+  - maven
+---
 # (18条消息) Maven 本地仓库更新策略_dianfenglianyaoshi的博客-CSDN博客_更新maven本地仓库
 
 tags:: source

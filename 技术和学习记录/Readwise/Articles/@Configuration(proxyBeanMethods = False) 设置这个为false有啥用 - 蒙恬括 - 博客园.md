@@ -1,3 +1,7 @@
+---
+tags:
+  - spring
+---
 # @Configuration(proxyBeanMethods = False) 设置这个为false有啥用 - 蒙恬括 - 博客园
 
 tags:: source

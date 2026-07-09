@@ -1,3 +1,8 @@
+---
+tags:
+  - 接口设计
+  - 幂等性
+---
 # 接口的幂等性_Ruo_Xiao的博客-Csdn博客_接口幂等性
 
 tags:: source

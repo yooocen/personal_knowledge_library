@@ -1,3 +1,8 @@
+---
+tags:
+  - typescript
+  - 前端
+---
 # 声明文件 · TypeScript 入门教程
 
 tags:: source

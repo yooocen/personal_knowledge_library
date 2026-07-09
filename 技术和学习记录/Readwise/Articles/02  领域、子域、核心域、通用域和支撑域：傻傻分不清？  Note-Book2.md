@@ -1,3 +1,7 @@
+---
+tags:
+  - DDD
+---
 # 02 | 领域、子域、核心域、通用域和支撑域：傻傻分不清？ | Note-Book2
 
 tags:: source

@@ -1,3 +1,9 @@
+---
+tags:
+  - java
+  - 并发
+  - threadlocal
+---
 # 使用ThreadLocal
 
 tags:: source

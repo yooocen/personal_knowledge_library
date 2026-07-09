@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - springboot
+---
 # 配置Spring Boot通过@ConditionalOnProperty来控制Configuration是否生效_大浪中航行的博客-CSDN博客_conditionalonproperty
 
 tags:: source

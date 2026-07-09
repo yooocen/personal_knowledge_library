@@ -1,3 +1,8 @@
+---
+tags:
+  - typescript
+  - 前端构建
+---
 # False Expression: Non-String Value Passed to `ts.resolveTypeReferenceDirective` in Typescript
 
 tags:: source

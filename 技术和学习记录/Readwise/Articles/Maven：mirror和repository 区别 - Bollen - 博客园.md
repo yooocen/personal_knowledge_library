@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - 镜像仓库
+---
 # Maven：mirror和repository 区别 - Bollen - 博客园
 
 tags:: source

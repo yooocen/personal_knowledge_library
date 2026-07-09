@@ -1,3 +1,9 @@
+---
+tags:
+  - 日志
+  - slf4j
+  - java
+---
 # Log4j Bridge
 
 tags:: source

@@ -1,3 +1,9 @@
+---
+tags:
+  - jersey
+  - springmvc
+  - rest
+---
 # Jersey框架和springmvc框架_苍煜的博客-Csdn博客
 
 tags:: source

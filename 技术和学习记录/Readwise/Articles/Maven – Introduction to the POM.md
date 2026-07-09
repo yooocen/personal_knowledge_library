@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - pom
+---
 # Maven – Introduction to the POM
 
 tags:: source

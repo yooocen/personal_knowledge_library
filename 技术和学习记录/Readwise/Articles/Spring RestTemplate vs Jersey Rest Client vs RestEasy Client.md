@@ -1,3 +1,9 @@
+---
+tags:
+  - spring
+  - restclient
+  - java
+---
 # Spring RestTemplate vs Jersey Rest Client vs RestEasy Client
 
 tags:: source

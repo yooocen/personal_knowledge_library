@@ -1,3 +1,7 @@
+---
+tags:
+  - docker
+---
 # Docker for Mac and Windows Beta: The Simplest Way to Use Docker on Your Laptop - Docker Blog
 
 tags:: source

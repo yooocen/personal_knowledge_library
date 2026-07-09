@@ -1,3 +1,8 @@
+---
+tags:
+  - springboot
+  - spring
+---
 # SpringBoot设置@Configuration的加载顺序
 
 tags:: source

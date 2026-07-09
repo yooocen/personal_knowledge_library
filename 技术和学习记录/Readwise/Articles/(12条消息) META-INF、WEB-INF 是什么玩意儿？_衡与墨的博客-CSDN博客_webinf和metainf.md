@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - web
+---
 # (12条消息) META-INF、WEB-INF 是什么玩意儿？_衡与墨的博客-CSDN博客_webinf和metainf
 
 tags:: source

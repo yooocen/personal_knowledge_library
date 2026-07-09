@@ -1,3 +1,9 @@
+---
+tags:
+  - flow
+  - 类型系统
+  - 前端
+---
 # Types Are Not Recognized When Imported From Locally Declared Modules · Issue 98 · Flow/Flow-for-Vscode
 
 tags:: source

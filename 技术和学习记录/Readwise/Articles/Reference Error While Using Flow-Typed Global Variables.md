@@ -1,3 +1,9 @@
+---
+tags:
+  - flow
+  - javascript
+  - 前端
+---
 # Reference Error While Using Flow-Typed Global Variables
 
 tags:: source

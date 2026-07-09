@@ -1,3 +1,8 @@
+---
+tags:
+  - springcloud
+  - eureka
+---
 # Spring Cloud Edgware新特性之一：解决Eureka中Jersey 1.x版本过旧的问题-不使用Jersey | 周立的博客 - 关注Spring Cloud、Docker
 
 tags:: source

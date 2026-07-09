@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - 配置
+---
 # application.properties Versus applicationContext.xml
 
 tags:: source

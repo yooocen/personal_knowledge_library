@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - maven
+---
 # How to Get My applicationContext.xml File Pull a Value From a Properties File?
 
 tags:: source

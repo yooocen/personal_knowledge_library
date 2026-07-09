@@ -1,3 +1,9 @@
+---
+tags:
+  - yarn
+  - 包管理
+  - 前端
+---
 # yarn.lock 你锁明白了吗？
 
 tags:: source

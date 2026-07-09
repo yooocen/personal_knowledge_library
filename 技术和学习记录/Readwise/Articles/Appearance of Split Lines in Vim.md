@@ -1,3 +1,7 @@
+---
+tags:
+  - vim
+---
 # Appearance of Split Lines in Vim
 
 tags:: source

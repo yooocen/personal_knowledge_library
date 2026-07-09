@@ -1,3 +1,8 @@
+---
+tags:
+  - wsl
+  - 自动化测试
+---
 # ChromeDriver in WSL2
 
 tags:: source

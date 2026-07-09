@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - 反射
+---
 # Class.forName用法（详解）_活抓一只程序员的博客-CSDN博客_class.forname
 
 tags:: source

@@ -1,3 +1,7 @@
+---
+tags:
+  - vim
+---
 # How to "Copy to Clipboard" in Vim of Bash on Windows?
 
 tags:: source

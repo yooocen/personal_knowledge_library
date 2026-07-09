@@ -1,3 +1,9 @@
+---
+tags:
+  - spring
+  - 源码
+  - 注解
+---
 # Spring源码解析 – @Configuration配置类及注解Bean的解析 - 互联网荒漠 - 博客园
 
 tags:: source

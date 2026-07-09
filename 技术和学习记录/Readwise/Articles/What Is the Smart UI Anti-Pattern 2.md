@@ -1,3 +1,8 @@
+---
+tags:
+  - DDD
+  - 架构设计
+---
 # What Is the "Smart UI Anti-Pattern"?
 
 tags:: processing

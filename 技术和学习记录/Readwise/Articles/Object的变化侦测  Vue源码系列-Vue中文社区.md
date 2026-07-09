@@ -1,3 +1,9 @@
+---
+tags:
+  - vue
+  - 前端
+  - 源码分析
+---
 # Object的变化侦测 | Vue源码系列-Vue中文社区
 
 tags:: source

@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - ci
+---
 # Maven – Maven CI Friendly Versions
 
 tags:: source

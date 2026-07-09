@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - aop
+---
 # Spring AOP——Spring 中面向切面编程 - SharpCJ - 博客园
 
 tags:: source

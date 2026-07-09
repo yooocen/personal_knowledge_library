@@ -1,3 +1,9 @@
+---
+tags:
+  - vim
+  - 浏览器
+  - 效率工具
+---
 # 让你用 Chrome 上网快到想哭：Vimium - 少数派
 
 tags:: processing

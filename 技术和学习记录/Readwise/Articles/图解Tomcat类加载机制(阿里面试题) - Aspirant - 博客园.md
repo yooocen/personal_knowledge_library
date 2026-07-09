@@ -1,3 +1,9 @@
+---
+tags:
+  - tomcat
+  - java
+  - 类加载
+---
 # 图解Tomcat类加载机制(阿里面试题) - Aspirant - 博客园
 
 tags:: source

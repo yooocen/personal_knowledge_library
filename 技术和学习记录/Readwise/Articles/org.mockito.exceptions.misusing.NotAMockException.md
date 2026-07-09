@@ -1,3 +1,9 @@
+---
+tags:
+  - mockito
+  - 单元测试
+  - java
+---
 # org.mockito.exceptions.misusing.NotAMockException
 
 tags:: source

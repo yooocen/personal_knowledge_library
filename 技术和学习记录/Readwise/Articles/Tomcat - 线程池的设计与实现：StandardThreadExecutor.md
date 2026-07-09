@@ -1,3 +1,8 @@
+---
+tags:
+  - tomcat
+  - 线程池
+---
 # Tomcat - 线程池的设计与实现：StandardThreadExecutor
 
 tags:: source

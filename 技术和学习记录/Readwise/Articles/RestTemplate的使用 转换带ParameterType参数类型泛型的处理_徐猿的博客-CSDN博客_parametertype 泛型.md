@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - 泛型
+---
 # RestTemplate的使用 转换带ParameterType/参数类型/泛型的处理_徐猿的博客-CSDN博客_parametertype 泛型
 
 tags:: source

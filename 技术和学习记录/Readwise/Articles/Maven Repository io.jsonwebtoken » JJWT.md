@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - jwt
+---
 # Maven Repository: io.jsonwebtoken » JJWT
 
 tags:: source

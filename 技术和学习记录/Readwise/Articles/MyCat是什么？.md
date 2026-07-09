@@ -1,3 +1,8 @@
+---
+tags:
+  - 数据库
+  - 分库分表
+---
 # MyCat是什么？
 
 tags:: source

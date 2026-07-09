@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - 设计模式
+---
 # (19条消息) Java私有构造函数的使用_fabowang的博客-Csdn博客_私有构造函数
 
 tags:: source

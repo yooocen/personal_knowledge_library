@@ -1,3 +1,9 @@
+---
+tags:
+  - spring
+  - springboot
+  - 注解
+---
 # 接近8000字的Spring/SpringBoot常用注解总结！安排！
 
 tags:: source

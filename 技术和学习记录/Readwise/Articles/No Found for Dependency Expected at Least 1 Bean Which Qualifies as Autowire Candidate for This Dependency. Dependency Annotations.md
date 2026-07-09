@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - 依赖注入
+---
 # No Found for Dependency: Expected at Least 1 Bean Which Qualifies as Autowire Candidate for This Dependency. Dependency Annotations:
 
 tags:: source

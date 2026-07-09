@@ -1,3 +1,8 @@
+---
+tags:
+  - 数据库
+  - SQL-Server
+---
 # 主键和外键约束 - SQL Server
 
 tags:: source

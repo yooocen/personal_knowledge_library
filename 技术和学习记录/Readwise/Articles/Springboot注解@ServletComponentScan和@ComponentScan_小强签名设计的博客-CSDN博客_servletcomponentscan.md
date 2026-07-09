@@ -1,3 +1,9 @@
+---
+tags:
+  - springboot
+  - servlet
+  - 注解
+---
 # Springboot注解@ServletComponentScan和@ComponentScan_小强签名设计的博客-CSDN博客_servletcomponentscan
 
 tags:: source

@@ -1,3 +1,7 @@
+---
+tags:
+  - docker
+---
 # (12条消息) 删除Docker镜像报错image Is Being Used by Stopped Container_镇杰。的博客-Csdn博客
 
 tags:: source

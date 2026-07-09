@@ -1,3 +1,8 @@
+---
+tags:
+  - javascript
+  - 前端
+---
 # (12条消息) ES6 （二十三）Module 的语法、静态加载、export`和`import、export Default、import动态加载_ChrisP3616的博客-Csdn博客
 
 tags:: source

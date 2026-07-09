@@ -1,3 +1,8 @@
+---
+tags:
+  - typescript
+  - 类型系统
+---
 # Documentation - Deep Dive
 
 tags:: source

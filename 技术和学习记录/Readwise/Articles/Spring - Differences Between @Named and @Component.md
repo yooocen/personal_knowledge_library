@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - 依赖注入
+---
 # Spring - Differences Between @Named and @Component
 
 tags:: source

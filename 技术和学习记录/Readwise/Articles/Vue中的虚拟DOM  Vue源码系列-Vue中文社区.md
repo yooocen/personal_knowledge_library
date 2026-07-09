@@ -1,3 +1,9 @@
+---
+tags:
+  - vue
+  - 虚拟DOM
+  - 源码
+---
 # Vue中的虚拟DOM | Vue源码系列-Vue中文社区
 
 tags:: source

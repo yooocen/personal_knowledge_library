@@ -1,3 +1,7 @@
+---
+tags:
+  - java
+---
 # What Is the Difference Between `Public Class` and Just `Class`?
 
 tags:: source

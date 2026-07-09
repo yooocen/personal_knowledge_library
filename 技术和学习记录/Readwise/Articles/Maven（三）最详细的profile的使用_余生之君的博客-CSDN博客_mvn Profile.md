@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - profile
+---
 # Maven（三）最详细的profile的使用_余生之君的博客-CSDN博客_mvn Profile
 
 tags:: source

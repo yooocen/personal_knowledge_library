@@ -1,3 +1,8 @@
+---
+tags:
+  - java
+  - 并发
+---
 # 使用wait和notify
 
 tags:: source

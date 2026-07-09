@@ -1,3 +1,8 @@
+---
+tags:
+  - 编程基础
+  - c
+---
 # Difference Between Definition and Declaration - GeeksforGeeks
 
 tags:: source

@@ -1,3 +1,9 @@
+---
+tags:
+  - karma
+  - 单元测试
+  - 前端
+---
 # Karma+mocha+webpack 自动化单测实践
 
 tags:: source

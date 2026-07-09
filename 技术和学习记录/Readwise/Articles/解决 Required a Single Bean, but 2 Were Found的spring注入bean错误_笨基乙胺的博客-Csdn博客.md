@@ -1,3 +1,8 @@
+---
+tags:
+  - spring
+  - Java
+---
 # 解决 Required a Single Bean, but 2 Were Found的spring注入bean错误_笨基乙胺的博客-Csdn博客
 
 tags:: source

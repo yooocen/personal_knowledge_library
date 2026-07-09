@@ -1,3 +1,8 @@
+---
+tags:
+  - intellij idea
+  - java
+---
 # (17条消息) Idea查看继承关系或其图表的两种方法_流楚丶格念的博客-CSDN博客_idea查看继承关系
 
 tags:: source

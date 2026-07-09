@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - 镜像仓库
+---
 # Maven中配置mirrorOf
 
 tags:: source

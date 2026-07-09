@@ -1,3 +1,8 @@
+---
+tags:
+  - systemd
+  - linux
+---
 # Systemd 入门教程：命令篇 - 阮一峰的网络日志
 
 tags:: source

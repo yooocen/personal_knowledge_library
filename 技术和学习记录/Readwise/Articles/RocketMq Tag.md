@@ -1,3 +1,8 @@
+---
+tags:
+  - rocketmq
+  - 消息队列
+---
 # RocketMq Tag
 
 tags:: source

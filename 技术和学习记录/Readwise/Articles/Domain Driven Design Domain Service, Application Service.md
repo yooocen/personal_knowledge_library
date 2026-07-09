@@ -1,3 +1,8 @@
+---
+tags:
+  - ddd
+  - 领域建模
+---
 # Domain Driven Design: Domain Service, Application Service
 
 tags:: source

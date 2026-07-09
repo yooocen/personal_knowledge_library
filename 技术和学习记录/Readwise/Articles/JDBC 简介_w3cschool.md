@@ -1,3 +1,9 @@
+---
+tags:
+  - jdbc
+  - 数据库
+  - java
+---
 # JDBC 简介_w3cschool
 
 tags:: source

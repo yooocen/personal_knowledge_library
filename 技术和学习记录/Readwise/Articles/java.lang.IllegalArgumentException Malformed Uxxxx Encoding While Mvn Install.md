@@ -1,3 +1,8 @@
+---
+tags:
+  - maven
+  - java
+---
 # java.lang.IllegalArgumentException: Malformed \Uxxxx Encoding While Mvn Install
 
 tags:: source

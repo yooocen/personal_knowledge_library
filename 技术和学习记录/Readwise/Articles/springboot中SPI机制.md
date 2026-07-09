@@ -1,3 +1,9 @@
+---
+tags:
+  - springboot
+  - SPI
+  - java
+---
 # springboot中SPI机制
 
 tags:: source
