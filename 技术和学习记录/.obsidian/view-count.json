@@ -183,11 +183,11 @@
     },
     {
       "path": "DDD 的实战（第十一章）.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 5,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 6,
       "openLogs": [
         {
-          "timestampMillis": 1768009723428
+          "timestampMillis": 1784990681168
         }
       ]
     },
@@ -365,11 +365,14 @@
     },
     {
       "path": "包管理器.md",
-      "uniqueDaysOpened": 3,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 4,
+      "totalTimesOpened": 5,
       "openLogs": [
         {
-          "timestampMillis": 1773543428290
+          "timestampMillis": 1784897085005
+        },
+        {
+          "timestampMillis": 1784897110248
         }
       ]
     },
@@ -882,17 +885,11 @@
     },
     {
       "path": "DDD 的基本要素（第六章）.md",
-      "uniqueDaysOpened": 4,
-      "totalTimesOpened": 4,
+      "uniqueDaysOpened": 5,
+      "totalTimesOpened": 5,
       "openLogs": [
         {
-          "timestampMillis": 1768009775790
-        },
-        {
-          "timestampMillis": 1768807697782
-        },
-        {
-          "timestampMillis": 1770603171843
+          "timestampMillis": 1784990679015
         }
       ]
     },
@@ -1281,8 +1278,8 @@
     },
     {
       "path": "tmux.md",
-      "uniqueDaysOpened": 21,
-      "totalTimesOpened": 28,
+      "uniqueDaysOpened": 24,
+      "totalTimesOpened": 32,
       "openLogs": [
         {
           "timestampMillis": 1783130686366
@@ -1298,6 +1295,18 @@
         },
         {
           "timestampMillis": 1783560972364
+        },
+        {
+          "timestampMillis": 1783819584617
+        },
+        {
+          "timestampMillis": 1783821861922
+        },
+        {
+          "timestampMillis": 1783999078475
+        },
+        {
+          "timestampMillis": 1784100384590
         }
       ]
     },
@@ -1363,14 +1372,11 @@
     },
     {
       "path": "editors/vim in wsl 如何与window进行复制粘贴.md",
-      "uniqueDaysOpened": 6,
-      "totalTimesOpened": 13,
+      "uniqueDaysOpened": 7,
+      "totalTimesOpened": 14,
       "openLogs": [
         {
-          "timestampMillis": 1781322518523
-        },
-        {
-          "timestampMillis": 1781322539702
+          "timestampMillis": 1784959453955
         }
       ]
     },
@@ -1467,21 +1473,27 @@
     },
     {
       "path": "oh my tmux的安装.md",
-      "uniqueDaysOpened": 6,
-      "totalTimesOpened": 6,
+      "uniqueDaysOpened": 7,
+      "totalTimesOpened": 7,
       "openLogs": [
         {
           "timestampMillis": 1783131178457
+        },
+        {
+          "timestampMillis": 1784959320439
         }
       ]
     },
     {
       "path": "lazyvim的配置.md",
-      "uniqueDaysOpened": 11,
-      "totalTimesOpened": 15,
+      "uniqueDaysOpened": 12,
+      "totalTimesOpened": 16,
       "openLogs": [
         {
           "timestampMillis": 1782977163333
+        },
+        {
+          "timestampMillis": 1784102437909
         }
       ]
     },
@@ -1774,11 +1786,11 @@
     },
     {
       "path": "为什么启动微服务的命令在codeagent中会掉进死循环，但是家里的glm4.7不会.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 4,
       "openLogs": [
         {
-          "timestampMillis": 1780623936629
+          "timestampMillis": 1784959354231
         }
       ]
     },
@@ -2245,17 +2257,20 @@
     },
     {
       "path": "nvim 写java的实践.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 4,
+      "uniqueDaysOpened": 4,
+      "totalTimesOpened": 8,
       "openLogs": [
         {
-          "timestampMillis": 1775928052582
+          "timestampMillis": 1784102821530
         },
         {
-          "timestampMillis": 1775982469925
+          "timestampMillis": 1784102855392
         },
         {
-          "timestampMillis": 1775982470051
+          "timestampMillis": 1784102859150
+        },
+        {
+          "timestampMillis": 1784187354683
         }
       ]
     },
@@ -2650,8 +2665,8 @@
     },
     {
       "path": "LLM疑云.md",
-      "uniqueDaysOpened": 6,
-      "totalTimesOpened": 7,
+      "uniqueDaysOpened": 7,
+      "totalTimesOpened": 9,
       "openLogs": [
         {
           "timestampMillis": 1781686600310
@@ -2664,6 +2679,12 @@
         },
         {
           "timestampMillis": 1782827082055
+        },
+        {
+          "timestampMillis": 1783823027138
+        },
+        {
+          "timestampMillis": 1783825919110
         }
       ]
     },
@@ -3164,8 +3185,8 @@
     },
     {
       "path": "lazyvim 代码跳转.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 4,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 6,
       "openLogs": [
         {
           "timestampMillis": 1782977122218
@@ -3175,6 +3196,12 @@
         },
         {
           "timestampMillis": 1782977150633
+        },
+        {
+          "timestampMillis": 1784102452449
+        },
+        {
+          "timestampMillis": 1784116955905
         }
       ]
     },
@@ -3349,75 +3376,9 @@
     },
     {
       "path": "BASE/知识看点.base",
-      "uniqueDaysOpened": 10,
-      "totalTimesOpened": 40,
+      "uniqueDaysOpened": 13,
+      "totalTimesOpened": 46,
       "openLogs": [
-        {
-          "timestampMillis": 1780623997729
-        },
-        {
-          "timestampMillis": 1780624001637
-        },
-        {
-          "timestampMillis": 1780624054504
-        },
-        {
-          "timestampMillis": 1780624058729
-        },
-        {
-          "timestampMillis": 1780624077054
-        },
-        {
-          "timestampMillis": 1780624085748
-        },
-        {
-          "timestampMillis": 1780624087096
-        },
-        {
-          "timestampMillis": 1780624088329
-        },
-        {
-          "timestampMillis": 1780624144137
-        },
-        {
-          "timestampMillis": 1780624144996
-        },
-        {
-          "timestampMillis": 1780624148654
-        },
-        {
-          "timestampMillis": 1780624153926
-        },
-        {
-          "timestampMillis": 1780624422454
-        },
-        {
-          "timestampMillis": 1780624447513
-        },
-        {
-          "timestampMillis": 1780624448746
-        },
-        {
-          "timestampMillis": 1780624455805
-        },
-        {
-          "timestampMillis": 1780624462037
-        },
-        {
-          "timestampMillis": 1780624466085
-        },
-        {
-          "timestampMillis": 1780624587049
-        },
-        {
-          "timestampMillis": 1780734718237
-        },
-        {
-          "timestampMillis": 1781257021379
-        },
-        {
-          "timestampMillis": 1781921224830
-        },
         {
           "timestampMillis": 1782404919024
         },
@@ -3456,6 +3417,24 @@
         },
         {
           "timestampMillis": 1783324353014
+        },
+        {
+          "timestampMillis": 1783821815300
+        },
+        {
+          "timestampMillis": 1783822973738
+        },
+        {
+          "timestampMillis": 1784187278380
+        },
+        {
+          "timestampMillis": 1784959319074
+        },
+        {
+          "timestampMillis": 1784959489791
+        },
+        {
+          "timestampMillis": 1784963243528
         }
       ]
     },
@@ -3667,34 +3646,40 @@
     },
     {
       "path": "Readwise/Articles/(9 条消息) Gradle 比 Maven 好为什么用的人少？ - 知乎.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 1,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 3,
       "openLogs": [
         {
-          "timestampMillis": 1780624634830
+          "timestampMillis": 1784959412239
+        },
+        {
+          "timestampMillis": 1784959496407
         }
       ]
     },
     {
       "path": "Readwise/Articles/(17条消息) Java中静态内部类和非静态内部类有什么区别？_vcliy的博客-Csdn博客_静态内部类.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 4,
       "openLogs": [
         {
           "timestampMillis": 1783596550293
         },
         {
           "timestampMillis": 1783596660973
+        },
+        {
+          "timestampMillis": 1784959503424
         }
       ]
     },
     {
       "path": "Readwise/Articles/(17条消息) Spring的注解@Qualifier注解_流楚丶格念的博客-Csdn博客.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 1,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 2,
       "openLogs": [
         {
-          "timestampMillis": 1780624649009
+          "timestampMillis": 1784959508837
         }
       ]
     },
@@ -3816,189 +3801,9 @@
     },
     {
       "path": "BASE/linux.base",
-      "uniqueDaysOpened": 15,
-      "totalTimesOpened": 101,
+      "uniqueDaysOpened": 24,
+      "totalTimesOpened": 155,
       "openLogs": [
-        {
-          "timestampMillis": 1781257029912
-        },
-        {
-          "timestampMillis": 1781257155568
-        },
-        {
-          "timestampMillis": 1781314645637
-        },
-        {
-          "timestampMillis": 1781316226063
-        },
-        {
-          "timestampMillis": 1781316533823
-        },
-        {
-          "timestampMillis": 1781322386770
-        },
-        {
-          "timestampMillis": 1781332996763
-        },
-        {
-          "timestampMillis": 1781333033717
-        },
-        {
-          "timestampMillis": 1781333051822
-        },
-        {
-          "timestampMillis": 1781333079330
-        },
-        {
-          "timestampMillis": 1781333140764
-        },
-        {
-          "timestampMillis": 1781333152996
-        },
-        {
-          "timestampMillis": 1781337900996
-        },
-        {
-          "timestampMillis": 1781339618212
-        },
-        {
-          "timestampMillis": 1781339798428
-        },
-        {
-          "timestampMillis": 1781339851028
-        },
-        {
-          "timestampMillis": 1781340310332
-        },
-        {
-          "timestampMillis": 1781340316752
-        },
-        {
-          "timestampMillis": 1781340335208
-        },
-        {
-          "timestampMillis": 1781340345588
-        },
-        {
-          "timestampMillis": 1781340822361
-        },
-        {
-          "timestampMillis": 1781343701703
-        },
-        {
-          "timestampMillis": 1781345601215
-        },
-        {
-          "timestampMillis": 1781346289484
-        },
-        {
-          "timestampMillis": 1781346353836
-        },
-        {
-          "timestampMillis": 1781346364836
-        },
-        {
-          "timestampMillis": 1781662844235
-        },
-        {
-          "timestampMillis": 1781662850084
-        },
-        {
-          "timestampMillis": 1781685995103
-        },
-        {
-          "timestampMillis": 1781686012119
-        },
-        {
-          "timestampMillis": 1781686024122
-        },
-        {
-          "timestampMillis": 1781686130561
-        },
-        {
-          "timestampMillis": 1781921222831
-        },
-        {
-          "timestampMillis": 1781921229049
-        },
-        {
-          "timestampMillis": 1781921230919
-        },
-        {
-          "timestampMillis": 1781921280824
-        },
-        {
-          "timestampMillis": 1781927856889
-        },
-        {
-          "timestampMillis": 1781927867713
-        },
-        {
-          "timestampMillis": 1781933893259
-        },
-        {
-          "timestampMillis": 1781934128835
-        },
-        {
-          "timestampMillis": 1781934701566
-        },
-        {
-          "timestampMillis": 1781934744128
-        },
-        {
-          "timestampMillis": 1781934756239
-        },
-        {
-          "timestampMillis": 1781934767647
-        },
-        {
-          "timestampMillis": 1781934775256
-        },
-        {
-          "timestampMillis": 1781935336806
-        },
-        {
-          "timestampMillis": 1781935953930
-        },
-        {
-          "timestampMillis": 1781940251245
-        },
-        {
-          "timestampMillis": 1781940645261
-        },
-        {
-          "timestampMillis": 1781940669526
-        },
-        {
-          "timestampMillis": 1781940705290
-        },
-        {
-          "timestampMillis": 1781940741166
-        },
-        {
-          "timestampMillis": 1782053175004
-        },
-        {
-          "timestampMillis": 1782053198337
-        },
-        {
-          "timestampMillis": 1782053220752
-        },
-        {
-          "timestampMillis": 1782057261990
-        },
-        {
-          "timestampMillis": 1782060976417
-        },
-        {
-          "timestampMillis": 1782060986073
-        },
-        {
-          "timestampMillis": 1782061410501
-        },
-        {
-          "timestampMillis": 1782098140737
-        },
         {
           "timestampMillis": 1782268995449
         },
@@ -4121,6 +3926,168 @@
         },
         {
           "timestampMillis": 1783324354330
+        },
+        {
+          "timestampMillis": 1783822970008
+        },
+        {
+          "timestampMillis": 1783822976818
+        },
+        {
+          "timestampMillis": 1783823019119
+        },
+        {
+          "timestampMillis": 1783823033281
+        },
+        {
+          "timestampMillis": 1783826219591
+        },
+        {
+          "timestampMillis": 1783826247986
+        },
+        {
+          "timestampMillis": 1783826357260
+        },
+        {
+          "timestampMillis": 1784102462244
+        },
+        {
+          "timestampMillis": 1784187281786
+        },
+        {
+          "timestampMillis": 1784187322181
+        },
+        {
+          "timestampMillis": 1784187355555
+        },
+        {
+          "timestampMillis": 1784203588755
+        },
+        {
+          "timestampMillis": 1784203892609
+        },
+        {
+          "timestampMillis": 1784203913761
+        },
+        {
+          "timestampMillis": 1784204093667
+        },
+        {
+          "timestampMillis": 1784279627109
+        },
+        {
+          "timestampMillis": 1784279712633
+        },
+        {
+          "timestampMillis": 1784289002506
+        },
+        {
+          "timestampMillis": 1784338464876
+        },
+        {
+          "timestampMillis": 1784338727995
+        },
+        {
+          "timestampMillis": 1784338771781
+        },
+        {
+          "timestampMillis": 1784338802223
+        },
+        {
+          "timestampMillis": 1784339378176
+        },
+        {
+          "timestampMillis": 1784341108946
+        },
+        {
+          "timestampMillis": 1784358285530
+        },
+        {
+          "timestampMillis": 1784358462997
+        },
+        {
+          "timestampMillis": 1784358503009
+        },
+        {
+          "timestampMillis": 1784360334854
+        },
+        {
+          "timestampMillis": 1784367024134
+        },
+        {
+          "timestampMillis": 1784367433463
+        },
+        {
+          "timestampMillis": 1784370400221
+        },
+        {
+          "timestampMillis": 1784371513249
+        },
+        {
+          "timestampMillis": 1784375089044
+        },
+        {
+          "timestampMillis": 1784375217727
+        },
+        {
+          "timestampMillis": 1784449686251
+        },
+        {
+          "timestampMillis": 1784482759169
+        },
+        {
+          "timestampMillis": 1784557326362
+        },
+        {
+          "timestampMillis": 1784878928586
+        },
+        {
+          "timestampMillis": 1784879262893
+        },
+        {
+          "timestampMillis": 1784888009739
+        },
+        {
+          "timestampMillis": 1784893498037
+        },
+        {
+          "timestampMillis": 1784896504354
+        },
+        {
+          "timestampMillis": 1784897048367
+        },
+        {
+          "timestampMillis": 1784903385979
+        },
+        {
+          "timestampMillis": 1784910701481
+        },
+        {
+          "timestampMillis": 1784942586542
+        },
+        {
+          "timestampMillis": 1784942628434
+        },
+        {
+          "timestampMillis": 1784942637559
+        },
+        {
+          "timestampMillis": 1784963244563
+        },
+        {
+          "timestampMillis": 1784968727162
+        },
+        {
+          "timestampMillis": 1784974843147
+        },
+        {
+          "timestampMillis": 1784974861769
+        },
+        {
+          "timestampMillis": 1784980562748
+        },
+        {
+          "timestampMillis": 1784990366234
         }
       ]
     },
@@ -4250,50 +4217,20 @@
     },
     {
       "path": "resources/gdb.pdf",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 14,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 16,
       "openLogs": [
-        {
-          "timestampMillis": 1781316872268
-        },
-        {
-          "timestampMillis": 1781316872431
-        },
-        {
-          "timestampMillis": 1781317538221
-        },
-        {
-          "timestampMillis": 1781317563438
-        },
-        {
-          "timestampMillis": 1781317627473
-        },
-        {
-          "timestampMillis": 1781317640764
-        },
-        {
-          "timestampMillis": 1781317657380
-        },
-        {
-          "timestampMillis": 1781318218999
-        },
-        {
-          "timestampMillis": 1781318873318
-        },
-        {
-          "timestampMillis": 1781318873470
-        },
-        {
-          "timestampMillis": 1781319008695
-        },
-        {
-          "timestampMillis": 1781339609630
-        },
         {
           "timestampMillis": 1781921517703
         },
         {
           "timestampMillis": 1781921518005
+        },
+        {
+          "timestampMillis": 1784117008984
+        },
+        {
+          "timestampMillis": 1784117009256
         }
       ]
     },
@@ -5036,8 +4973,8 @@
     },
     {
       "path": "resources/html-show/radix-tree-demo.html",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 11,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 14,
       "openLogs": [
         {
           "timestampMillis": 1781934031360
@@ -5071,13 +5008,22 @@
         },
         {
           "timestampMillis": 1781934827050
+        },
+        {
+          "timestampMillis": 1784203554025
+        },
+        {
+          "timestampMillis": 1784203571459
+        },
+        {
+          "timestampMillis": 1784203577575
         }
       ]
     },
     {
       "path": "resources/html-show/sector.html",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 5,
       "openLogs": [
         {
           "timestampMillis": 1781935070296
@@ -5087,6 +5033,12 @@
         },
         {
           "timestampMillis": 1781935807316
+        },
+        {
+          "timestampMillis": 1784203556098
+        },
+        {
+          "timestampMillis": 1784203572351
         }
       ]
     },
@@ -5364,8 +5316,8 @@
     },
     {
       "path": "百炼API.md",
-      "uniqueDaysOpened": 3,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 4,
+      "totalTimesOpened": 4,
       "openLogs": [
         {
           "timestampMillis": 1782358988707
@@ -5375,6 +5327,9 @@
         },
         {
           "timestampMillis": 1782977356761
+        },
+        {
+          "timestampMillis": 1784876999183
         }
       ]
     },
@@ -5450,8 +5405,8 @@
     },
     {
       "path": "安娜的档案 zlibrary.md",
-      "uniqueDaysOpened": 5,
-      "totalTimesOpened": 13,
+      "uniqueDaysOpened": 7,
+      "totalTimesOpened": 17,
       "openLogs": [
         {
           "timestampMillis": 1782827156937
@@ -5491,13 +5446,25 @@
         },
         {
           "timestampMillis": 1783607772636
+        },
+        {
+          "timestampMillis": 1784117129991
+        },
+        {
+          "timestampMillis": 1784187115700
+        },
+        {
+          "timestampMillis": 1784187263636
+        },
+        {
+          "timestampMillis": 1784187353533
         }
       ]
     },
     {
       "path": "数学.md",
-      "uniqueDaysOpened": 3,
-      "totalTimesOpened": 5,
+      "uniqueDaysOpened": 4,
+      "totalTimesOpened": 6,
       "openLogs": [
         {
           "timestampMillis": 1782827304719
@@ -5513,13 +5480,16 @@
         },
         {
           "timestampMillis": 1782977085211
+        },
+        {
+          "timestampMillis": 1784359722788
         }
       ]
     },
     {
       "path": "SKILL 推荐.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 6,
+      "totalTimesOpened": 10,
       "openLogs": [
         {
           "timestampMillis": 1782871069633
@@ -5529,6 +5499,27 @@
         },
         {
           "timestampMillis": 1782980668582
+        },
+        {
+          "timestampMillis": 1784616935202
+        },
+        {
+          "timestampMillis": 1784622137155
+        },
+        {
+          "timestampMillis": 1784693758110
+        },
+        {
+          "timestampMillis": 1784693761352
+        },
+        {
+          "timestampMillis": 1784771126683
+        },
+        {
+          "timestampMillis": 1784874100024
+        },
+        {
+          "timestampMillis": 1784874100278
         }
       ]
     },
@@ -5921,21 +5912,39 @@
     },
     {
       "path": "DDD 的实战（第十章）.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 2,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 8,
       "openLogs": [
         {
           "timestampMillis": 1782977812402
         },
         {
           "timestampMillis": 1782980441127
+        },
+        {
+          "timestampMillis": 1784990404652
+        },
+        {
+          "timestampMillis": 1784990511229
+        },
+        {
+          "timestampMillis": 1784990679736
+        },
+        {
+          "timestampMillis": 1784990682178
+        },
+        {
+          "timestampMillis": 1784990710447
+        },
+        {
+          "timestampMillis": 1784990770769
         }
       ]
     },
     {
       "path": "线性代数.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 6,
       "openLogs": [
         {
           "timestampMillis": 1783134847098
@@ -5945,6 +5954,15 @@
         },
         {
           "timestampMillis": 1783136525843
+        },
+        {
+          "timestampMillis": 1784187314917
+        },
+        {
+          "timestampMillis": 1784187352852
+        },
+        {
+          "timestampMillis": 1784359715038
         }
       ]
     },
@@ -5960,8 +5978,8 @@
     },
     {
       "path": "lazygit 技巧.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 5,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 6,
       "openLogs": [
         {
           "timestampMillis": 1783324417081
@@ -5977,13 +5995,16 @@
         },
         {
           "timestampMillis": 1783476072729
+        },
+        {
+          "timestampMillis": 1784102444505
         }
       ]
     },
     {
       "path": "pmux.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 4,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 7,
       "openLogs": [
         {
           "timestampMillis": 1783476086790
@@ -5996,26 +6017,44 @@
         },
         {
           "timestampMillis": 1783560978062
+        },
+        {
+          "timestampMillis": 1783819672383
+        },
+        {
+          "timestampMillis": 1783821822721
+        },
+        {
+          "timestampMillis": 1783821953617
         }
       ]
     },
     {
       "path": "Readwise/Articles/(12条消息) 浅谈箭头函数和function的区别_蛞蝓不孤寡的博客-CSDN博客_箭头函数和function的区别.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 1,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 3,
       "openLogs": [
         {
           "timestampMillis": 1783596517729
+        },
+        {
+          "timestampMillis": 1784959413343
+        },
+        {
+          "timestampMillis": 1784959497047
         }
       ]
     },
     {
       "path": "Readwise/Articles/(12条消息) ES6 （二十三）Module 的语法、静态加载、export`和`import、export Default、import动态加载_ChrisP3616的博客-Csdn博客.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 1,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 2,
       "openLogs": [
         {
           "timestampMillis": 1783596524261
+        },
+        {
+          "timestampMillis": 1784959497797
         }
       ]
     },
@@ -6047,11 +6086,14 @@
     },
     {
       "path": "Readwise/Articles/(12条消息) 删除Docker镜像报错image Is Being Used by Stopped Container_镇杰。的博客-Csdn博客.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 1,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 2,
       "openLogs": [
         {
           "timestampMillis": 1783596548410
+        },
+        {
+          "timestampMillis": 1784959414476
         }
       ]
     },
@@ -6378,8 +6420,8 @@
     },
     {
       "path": "resources/image-tags/Pasted image 20220331002303.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 3,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 4,
       "openLogs": [
         {
           "timestampMillis": 1783607564592
@@ -6389,6 +6431,9 @@
         },
         {
           "timestampMillis": 1783607874615
+        },
+        {
+          "timestampMillis": 1784116765658
         }
       ]
     },
@@ -6797,6 +6842,1372 @@
       "openLogs": [
         {
           "timestampMillis": 1783608538662
+        }
+      ]
+    },
+    {
+      "path": "promptPilot.md",
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 3,
+      "openLogs": [
+        {
+          "timestampMillis": 1783822962145
+        },
+        {
+          "timestampMillis": 1783823003410
+        },
+        {
+          "timestampMillis": 1784974852530
+        }
+      ]
+    },
+    {
+      "path": "resources/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
+      "uniqueDaysOpened": 6,
+      "totalTimesOpened": 26,
+      "openLogs": [
+        {
+          "timestampMillis": 1783826195401
+        },
+        {
+          "timestampMillis": 1783826196045
+        },
+        {
+          "timestampMillis": 1783826355410
+        },
+        {
+          "timestampMillis": 1783826355987
+        },
+        {
+          "timestampMillis": 1783826359344
+        },
+        {
+          "timestampMillis": 1783826384560
+        },
+        {
+          "timestampMillis": 1783828034144
+        },
+        {
+          "timestampMillis": 1783913377766
+        },
+        {
+          "timestampMillis": 1783913584311
+        },
+        {
+          "timestampMillis": 1783914019855
+        },
+        {
+          "timestampMillis": 1783914655086
+        },
+        {
+          "timestampMillis": 1784117021099
+        },
+        {
+          "timestampMillis": 1784117021768
+        },
+        {
+          "timestampMillis": 1784449695847
+        },
+        {
+          "timestampMillis": 1784476206218
+        },
+        {
+          "timestampMillis": 1784477351570
+        },
+        {
+          "timestampMillis": 1784942189010
+        },
+        {
+          "timestampMillis": 1784942349183
+        },
+        {
+          "timestampMillis": 1784942828614
+        },
+        {
+          "timestampMillis": 1784981362107
+        },
+        {
+          "timestampMillis": 1784981362849
+        },
+        {
+          "timestampMillis": 1784981433163
+        },
+        {
+          "timestampMillis": 1784981560123
+        },
+        {
+          "timestampMillis": 1784981595166
+        },
+        {
+          "timestampMillis": 1784990774220
+        },
+        {
+          "timestampMillis": 1784990978531
+        }
+      ]
+    },
+    {
+      "path": "网络隔离域.md",
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 4,
+      "openLogs": [
+        {
+          "timestampMillis": 1783927958457
+        },
+        {
+          "timestampMillis": 1783927982559
+        },
+        {
+          "timestampMillis": 1783999057485
+        },
+        {
+          "timestampMillis": 1783999074991
+        }
+      ]
+    },
+    {
+      "path": "resources/Pasted image 20221009234419.png",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784117005068
+        }
+      ]
+    },
+    {
+      "path": "线性代数绪论.md",
+      "uniqueDaysOpened": 7,
+      "totalTimesOpened": 58,
+      "openLogs": [
+        {
+          "timestampMillis": 1784187344483
+        },
+        {
+          "timestampMillis": 1784187356219
+        },
+        {
+          "timestampMillis": 1784204097642
+        },
+        {
+          "timestampMillis": 1784279627550
+        },
+        {
+          "timestampMillis": 1784279713065
+        },
+        {
+          "timestampMillis": 1784280993866
+        },
+        {
+          "timestampMillis": 1784281091573
+        },
+        {
+          "timestampMillis": 1784281530387
+        },
+        {
+          "timestampMillis": 1784281587463
+        },
+        {
+          "timestampMillis": 1784281621642
+        },
+        {
+          "timestampMillis": 1784289003362
+        },
+        {
+          "timestampMillis": 1784298043951
+        },
+        {
+          "timestampMillis": 1784298101732
+        },
+        {
+          "timestampMillis": 1784300303167
+        },
+        {
+          "timestampMillis": 1784300351625
+        },
+        {
+          "timestampMillis": 1784306908515
+        },
+        {
+          "timestampMillis": 1784306908977
+        },
+        {
+          "timestampMillis": 1784306909366
+        },
+        {
+          "timestampMillis": 1784306935232
+        },
+        {
+          "timestampMillis": 1784307268551
+        },
+        {
+          "timestampMillis": 1784307283410
+        },
+        {
+          "timestampMillis": 1784307289966
+        },
+        {
+          "timestampMillis": 1784307441753
+        },
+        {
+          "timestampMillis": 1784307545253
+        },
+        {
+          "timestampMillis": 1784307662116
+        },
+        {
+          "timestampMillis": 1784337843829
+        },
+        {
+          "timestampMillis": 1784338465376
+        },
+        {
+          "timestampMillis": 1784338730549
+        },
+        {
+          "timestampMillis": 1784338780734
+        },
+        {
+          "timestampMillis": 1784338804639
+        },
+        {
+          "timestampMillis": 1784338912175
+        },
+        {
+          "timestampMillis": 1784356897846
+        },
+        {
+          "timestampMillis": 1784359333807
+        },
+        {
+          "timestampMillis": 1784361994347
+        },
+        {
+          "timestampMillis": 1784363879956
+        },
+        {
+          "timestampMillis": 1784364058539
+        },
+        {
+          "timestampMillis": 1784364120343
+        },
+        {
+          "timestampMillis": 1784364351390
+        },
+        {
+          "timestampMillis": 1784364774762
+        },
+        {
+          "timestampMillis": 1784367025360
+        },
+        {
+          "timestampMillis": 1784367025714
+        },
+        {
+          "timestampMillis": 1784371681397
+        },
+        {
+          "timestampMillis": 1784374982308
+        },
+        {
+          "timestampMillis": 1784375092807
+        },
+        {
+          "timestampMillis": 1784375300720
+        },
+        {
+          "timestampMillis": 1784376828201
+        },
+        {
+          "timestampMillis": 1784377100250
+        },
+        {
+          "timestampMillis": 1784377116077
+        },
+        {
+          "timestampMillis": 1784378332436
+        },
+        {
+          "timestampMillis": 1784389025635
+        },
+        {
+          "timestampMillis": 1784449644532
+        },
+        {
+          "timestampMillis": 1784449654792
+        },
+        {
+          "timestampMillis": 1784771132474
+        },
+        {
+          "timestampMillis": 1784874359668
+        },
+        {
+          "timestampMillis": 1784874360124
+        },
+        {
+          "timestampMillis": 1784942775259
+        },
+        {
+          "timestampMillis": 1784942808745
+        },
+        {
+          "timestampMillis": 1784963250492
+        }
+      ]
+    },
+    {
+      "path": "resources/html-show/matrix-four-subspaces.html",
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1784279665602
+        },
+        {
+          "timestampMillis": 1784376210323
+        }
+      ]
+    },
+    {
+      "path": "矩阵乘法技巧.md",
+      "uniqueDaysOpened": 5,
+      "totalTimesOpened": 10,
+      "openLogs": [
+        {
+          "timestampMillis": 1784300575376
+        },
+        {
+          "timestampMillis": 1784301179203
+        },
+        {
+          "timestampMillis": 1784306907350
+        },
+        {
+          "timestampMillis": 1784337880559
+        },
+        {
+          "timestampMillis": 1784340509310
+        },
+        {
+          "timestampMillis": 1784359725139
+        },
+        {
+          "timestampMillis": 1784389013488
+        },
+        {
+          "timestampMillis": 1784557854996
+        },
+        {
+          "timestampMillis": 1784616930209
+        },
+        {
+          "timestampMillis": 1784880996749
+        }
+      ]
+    },
+    {
+      "path": "向量空间.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 9,
+      "openLogs": [
+        {
+          "timestampMillis": 1784339379226
+        },
+        {
+          "timestampMillis": 1784339592700
+        },
+        {
+          "timestampMillis": 1784339662830
+        },
+        {
+          "timestampMillis": 1784340518916
+        },
+        {
+          "timestampMillis": 1784358927447
+        },
+        {
+          "timestampMillis": 1784359544200
+        },
+        {
+          "timestampMillis": 1784359732392
+        },
+        {
+          "timestampMillis": 1784364878827
+        },
+        {
+          "timestampMillis": 1784366267563
+        }
+      ]
+    },
+    {
+      "path": "四个基本子空间.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 25,
+      "openLogs": [
+        {
+          "timestampMillis": 1784339789160
+        },
+        {
+          "timestampMillis": 1784340090343
+        },
+        {
+          "timestampMillis": 1784340531450
+        },
+        {
+          "timestampMillis": 1784340628070
+        },
+        {
+          "timestampMillis": 1784340712316
+        },
+        {
+          "timestampMillis": 1784340921358
+        },
+        {
+          "timestampMillis": 1784358318530
+        },
+        {
+          "timestampMillis": 1784358470645
+        },
+        {
+          "timestampMillis": 1784358511098
+        },
+        {
+          "timestampMillis": 1784358637963
+        },
+        {
+          "timestampMillis": 1784358942064
+        },
+        {
+          "timestampMillis": 1784359240306
+        },
+        {
+          "timestampMillis": 1784359546443
+        },
+        {
+          "timestampMillis": 1784359675111
+        },
+        {
+          "timestampMillis": 1784360335348
+        },
+        {
+          "timestampMillis": 1784361378267
+        },
+        {
+          "timestampMillis": 1784366273514
+        },
+        {
+          "timestampMillis": 1784366437513
+        },
+        {
+          "timestampMillis": 1784367438967
+        },
+        {
+          "timestampMillis": 1784367439636
+        },
+        {
+          "timestampMillis": 1784375352022
+        },
+        {
+          "timestampMillis": 1784375419081
+        },
+        {
+          "timestampMillis": 1784375480851
+        },
+        {
+          "timestampMillis": 1784377118067
+        },
+        {
+          "timestampMillis": 1784389006634
+        }
+      ]
+    },
+    {
+      "path": "分量数.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 8,
+      "openLogs": [
+        {
+          "timestampMillis": 1784340288734
+        },
+        {
+          "timestampMillis": 1784340496461
+        },
+        {
+          "timestampMillis": 1784340512328
+        },
+        {
+          "timestampMillis": 1784357036890
+        },
+        {
+          "timestampMillis": 1784358318141
+        },
+        {
+          "timestampMillis": 1784358854195
+        },
+        {
+          "timestampMillis": 1784389014691
+        },
+        {
+          "timestampMillis": 1784389015196
+        }
+      ]
+    },
+    {
+      "path": "主元与秩.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 6,
+      "openLogs": [
+        {
+          "timestampMillis": 1784341110257
+        },
+        {
+          "timestampMillis": 1784341554209
+        },
+        {
+          "timestampMillis": 1784341755734
+        },
+        {
+          "timestampMillis": 1784356873733
+        },
+        {
+          "timestampMillis": 1784359728864
+        },
+        {
+          "timestampMillis": 1784359729222
+        }
+      ]
+    },
+    {
+      "path": "线性无关.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 7,
+      "openLogs": [
+        {
+          "timestampMillis": 1784341837593
+        },
+        {
+          "timestampMillis": 1784341866238
+        },
+        {
+          "timestampMillis": 1784341893684
+        },
+        {
+          "timestampMillis": 1784342240055
+        },
+        {
+          "timestampMillis": 1784342474361
+        },
+        {
+          "timestampMillis": 1784346657336
+        },
+        {
+          "timestampMillis": 1784356008767
+        }
+      ]
+    },
+    {
+      "path": "阶梯形非零行无关证明.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784356298874
+        }
+      ]
+    },
+    {
+      "path": "行空间与列空间可视化.html",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784360971295
+        }
+      ]
+    },
+    {
+      "path": "resources/html-show/matrix-four-subspaces-rank2.html",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 3,
+      "openLogs": [
+        {
+          "timestampMillis": 1784375028927
+        },
+        {
+          "timestampMillis": 1784375393514
+        },
+        {
+          "timestampMillis": 1784376208447
+        }
+      ]
+    },
+    {
+      "path": "第1章-向量引论.md",
+      "uniqueDaysOpened": 4,
+      "totalTimesOpened": 27,
+      "openLogs": [
+        {
+          "timestampMillis": 1784480345636
+        },
+        {
+          "timestampMillis": 1784480861423
+        },
+        {
+          "timestampMillis": 1784481046107
+        },
+        {
+          "timestampMillis": 1784482857399
+        },
+        {
+          "timestampMillis": 1784482877651
+        },
+        {
+          "timestampMillis": 1784517514055
+        },
+        {
+          "timestampMillis": 1784522261642
+        },
+        {
+          "timestampMillis": 1784557463685
+        },
+        {
+          "timestampMillis": 1784775775508
+        },
+        {
+          "timestampMillis": 1784778790749
+        },
+        {
+          "timestampMillis": 1784878217699
+        },
+        {
+          "timestampMillis": 1784878247722
+        },
+        {
+          "timestampMillis": 1784878476046
+        },
+        {
+          "timestampMillis": 1784879375106
+        },
+        {
+          "timestampMillis": 1784880997505
+        },
+        {
+          "timestampMillis": 1784882084305
+        },
+        {
+          "timestampMillis": 1784893220347
+        },
+        {
+          "timestampMillis": 1784895102714
+        },
+        {
+          "timestampMillis": 1784895212280
+        },
+        {
+          "timestampMillis": 1784896004420
+        },
+        {
+          "timestampMillis": 1784896013880
+        },
+        {
+          "timestampMillis": 1784896072148
+        },
+        {
+          "timestampMillis": 1784896087655
+        },
+        {
+          "timestampMillis": 1784896495246
+        },
+        {
+          "timestampMillis": 1784896514996
+        },
+        {
+          "timestampMillis": 1784910709922
+        },
+        {
+          "timestampMillis": 1784911761636
+        }
+      ]
+    },
+    {
+      "path": "Agent开发.md",
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 4,
+      "openLogs": [
+        {
+          "timestampMillis": 1784790410242
+        },
+        {
+          "timestampMillis": 1784790427950
+        },
+        {
+          "timestampMillis": 1784861516913
+        },
+        {
+          "timestampMillis": 1784863897134
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/codex/2026-07-24_10-48-57_019f9206-a72b-76b3-9fc3-ffba7d7af2d1.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 12,
+      "openLogs": [
+        {
+          "timestampMillis": 1784874940407
+        },
+        {
+          "timestampMillis": 1784874945625
+        },
+        {
+          "timestampMillis": 1784874948191
+        },
+        {
+          "timestampMillis": 1784874948859
+        },
+        {
+          "timestampMillis": 1784874949533
+        },
+        {
+          "timestampMillis": 1784874949909
+        },
+        {
+          "timestampMillis": 1784875319359
+        },
+        {
+          "timestampMillis": 1784875320582
+        },
+        {
+          "timestampMillis": 1784875323192
+        },
+        {
+          "timestampMillis": 1784875324925
+        },
+        {
+          "timestampMillis": 1784875327391
+        },
+        {
+          "timestampMillis": 1784876994365
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/7adiu-d2vq6/2026-07-24_15-13-38_a98f0951-130f-4fbf-ad93-612ecc6f428a.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 6,
+      "openLogs": [
+        {
+          "timestampMillis": 1784877298913
+        },
+        {
+          "timestampMillis": 1784878159392
+        },
+        {
+          "timestampMillis": 1784879722713
+        },
+        {
+          "timestampMillis": 1784880463771
+        },
+        {
+          "timestampMillis": 1784880465998
+        },
+        {
+          "timestampMillis": 1784906247170
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-24_15-49-33_019f9319-2ea8-73d2-8736-8dc630da4c5f.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 4,
+      "openLogs": [
+        {
+          "timestampMillis": 1784879717471
+        },
+        {
+          "timestampMillis": 1784879723988
+        },
+        {
+          "timestampMillis": 1784880131164
+        },
+        {
+          "timestampMillis": 1784880467123
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/7adiu-d2vq6/2026-07-24_16-07-01_a6e6a42b-521d-473b-8bfc-4abf5a26063b.md",
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 9,
+      "openLogs": [
+        {
+          "timestampMillis": 1784880458187
+        },
+        {
+          "timestampMillis": 1784880464572
+        },
+        {
+          "timestampMillis": 1784893740869
+        },
+        {
+          "timestampMillis": 1784906250492
+        },
+        {
+          "timestampMillis": 1784906252426
+        },
+        {
+          "timestampMillis": 1784907504606
+        },
+        {
+          "timestampMillis": 1784910295363
+        },
+        {
+          "timestampMillis": 1784942621575
+        },
+        {
+          "timestampMillis": 1784942626562
+        }
+      ]
+    },
+    {
+      "path": "agents/L1/codex/为Codex与OpenCode配置全局AGENTS规则.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784890009897
+        }
+      ]
+    },
+    {
+      "path": "agents/L1/技术和学习记录/claudian无法连接opencode排查.md",
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 9,
+      "openLogs": [
+        {
+          "timestampMillis": 1784890020684
+        },
+        {
+          "timestampMillis": 1784890030789
+        },
+        {
+          "timestampMillis": 1784890032163
+        },
+        {
+          "timestampMillis": 1784895027881
+        },
+        {
+          "timestampMillis": 1784903998277
+        },
+        {
+          "timestampMillis": 1784905734114
+        },
+        {
+          "timestampMillis": 1784906041016
+        },
+        {
+          "timestampMillis": 1784906167740
+        },
+        {
+          "timestampMillis": 1784959380550
+        }
+      ]
+    },
+    {
+      "path": "agents/L1/7adiu-d2vq6/创建项目级AGENTS与L0到L1总结规则.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 5,
+      "openLogs": [
+        {
+          "timestampMillis": 1784890024827
+        },
+        {
+          "timestampMillis": 1784890035189
+        },
+        {
+          "timestampMillis": 1784893736670
+        },
+        {
+          "timestampMillis": 1784894428672
+        },
+        {
+          "timestampMillis": 1784894443060
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/7adiu-d2vq6/2026-07-24_18-13-38_cc9ba8c4-d74d-4c33-9ea4-7e3d1336030b.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 4,
+      "openLogs": [
+        {
+          "timestampMillis": 1784890049863
+        },
+        {
+          "timestampMillis": 1784893218527
+        },
+        {
+          "timestampMillis": 1784893743269
+        },
+        {
+          "timestampMillis": 1784906251576
+        }
+      ]
+    },
+    {
+      "path": "AGENTS.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 4,
+      "openLogs": [
+        {
+          "timestampMillis": 1784894158264
+        },
+        {
+          "timestampMillis": 1784895411572
+        },
+        {
+          "timestampMillis": 1784895964988
+        },
+        {
+          "timestampMillis": 1784896002538
+        }
+      ]
+    },
+    {
+      "path": "agents/L1/7adiu-d2vq6/_index.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 3,
+      "openLogs": [
+        {
+          "timestampMillis": 1784894421460
+        },
+        {
+          "timestampMillis": 1784894431606
+        },
+        {
+          "timestampMillis": 1784894462721
+        }
+      ]
+    },
+    {
+      "path": "agents/L1/7adiu-d2vq6/Claudian连接opencode根因确认与L0到L1总结维护.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 5,
+      "openLogs": [
+        {
+          "timestampMillis": 1784894444883
+        },
+        {
+          "timestampMillis": 1784894447982
+        },
+        {
+          "timestampMillis": 1784894577714
+        },
+        {
+          "timestampMillis": 1784903856371
+        },
+        {
+          "timestampMillis": 1784903953754
+        }
+      ]
+    },
+    {
+      "path": "agents/L1/7adiu-d2vq6/L1总结文件名改为摘要并用超链接关联L0源文件.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784894446421
+        }
+      ]
+    },
+    {
+      "path": "agents/L1/personal_knowledge_library/Claudian无法连接opencode因cliPath空与GUI未继承PATH.md",
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 9,
+      "openLogs": [
+        {
+          "timestampMillis": 1784895037367
+        },
+        {
+          "timestampMillis": 1784895092314
+        },
+        {
+          "timestampMillis": 1784942140327
+        },
+        {
+          "timestampMillis": 1784942155837
+        },
+        {
+          "timestampMillis": 1784942346933
+        },
+        {
+          "timestampMillis": 1784942349573
+        },
+        {
+          "timestampMillis": 1784942574407
+        },
+        {
+          "timestampMillis": 1784942583736
+        },
+        {
+          "timestampMillis": 1784942831958
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-25_00-27-34_019f94f3-ae44-7e10-9cac-83e960c9c4ad.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 4,
+      "openLogs": [
+        {
+          "timestampMillis": 1784911806491
+        },
+        {
+          "timestampMillis": 1784941729646
+        },
+        {
+          "timestampMillis": 1784941738266
+        },
+        {
+          "timestampMillis": 1784941835835
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-24_22-39-19_85956bf5-93b0-4942-bbd5-2c94c6442d14.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784941736956
+        }
+      ]
+    },
+    {
+      "path": "第2章 求解线性方程组.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 17,
+      "openLogs": [
+        {
+          "timestampMillis": 1784942618618
+        },
+        {
+          "timestampMillis": 1784942624602
+        },
+        {
+          "timestampMillis": 1784942631724
+        },
+        {
+          "timestampMillis": 1784942656652
+        },
+        {
+          "timestampMillis": 1784942686996
+        },
+        {
+          "timestampMillis": 1784942976614
+        },
+        {
+          "timestampMillis": 1784950993772
+        },
+        {
+          "timestampMillis": 1784951755514
+        },
+        {
+          "timestampMillis": 1784980578488
+        },
+        {
+          "timestampMillis": 1784980880799
+        },
+        {
+          "timestampMillis": 1784990035929
+        },
+        {
+          "timestampMillis": 1784990068014
+        },
+        {
+          "timestampMillis": 1784990087301
+        },
+        {
+          "timestampMillis": 1784990633474
+        },
+        {
+          "timestampMillis": 1784990666775
+        },
+        {
+          "timestampMillis": 1784990774743
+        },
+        {
+          "timestampMillis": 1784990813871
+        }
+      ]
+    },
+    {
+      "path": "agents/L1/技术和学习记录/首次执行L0到L1定期总结规则.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959381322
+        }
+      ]
+    },
+    {
+      "path": "Readwise/Articles/【内源故事】陈云峰：作为一个1984年就开始写代码的人，我终于见识到了内源的魅力-华为内源技术社区-OpenX.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959390719
+        }
+      ]
+    },
+    {
+      "path": "Readwise/Articles/阿里二面：为什么要分库分表？ - TeqNG.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959407147
+        }
+      ]
+    },
+    {
+      "path": "front-end/【karma】为什么不能watch.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959445689
+        }
+      ]
+    },
+    {
+      "path": "front-end/【karma】无法识别class-component和decoration语法.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959446755
+        }
+      ]
+    },
+    {
+      "path": "front-end/【karma】sourcemap怎么开启.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959447522
+        }
+      ]
+    },
+    {
+      "path": "back-end/ConfigurablewebApplicationContext.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959464236
+        }
+      ]
+    },
+    {
+      "path": "back-end/DefaultSingletonBeanRegistry普通类.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959465630
+        }
+      ]
+    },
+    {
+      "path": "back-end/DefaultListableBeanFactory普通类-重要.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959466483
+        }
+      ]
+    },
+    {
+      "path": "back-end/ListableBeanFactory接口.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959468063
+        }
+      ]
+    },
+    {
+      "path": "back-end/ServletWebServerApplicationContext.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959469506
+        }
+      ]
+    },
+    {
+      "path": "back-end/SingletonBeanRegistry接口.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959471708
+        },
+        {
+          "timestampMillis": 1784959480594
+        }
+      ]
+    },
+    {
+      "path": "Readwise/Articles/(17条消息) Idea查看继承关系或其图表的两种方法_流楚丶格念的博客-CSDN博客_idea查看继承关系.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959500280
+        }
+      ]
+    },
+    {
+      "path": "Readwise/Articles/(18条消息) Maven 本地仓库更新策略_dianfenglianyaoshi的博客-CSDN博客_更新maven本地仓库.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959506942
+        }
+      ]
+    },
+    {
+      "path": "Readwise/Articles/(17条消息) SwaggerAPI注解详解_bgn190215的博客-CSDN博客.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959508078
+        }
+      ]
+    },
+    {
+      "path": "Readwise/Articles/【Docker】daemon.json的作用（八）_2021 真实-CSDN博客_daemon.json.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959510730
+        }
+      ]
+    },
+    {
+      "path": "Readwise/Articles/【Spring】Model，Util，Dao，Service，Controller_南方有乔木的博客-CSDN博客_util.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959512689
+        }
+      ]
+    },
+    {
+      "path": "Readwise/Articles/【Spring源码】14. 消息多播器（观察者模式）_AQin1012的博客-Csdn博客.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1784959515358
+        },
+        {
+          "timestampMillis": 1784974822890
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-25_16-35-14_2e138406-6c43-454f-8777-87029b3b63c0.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784968732055
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-25_15-10-11_48addfd8-8a30-4656-87b7-7d3555676525.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784968752137
+        }
+      ]
+    },
+    {
+      "path": "BM25 检索原理.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 3,
+      "openLogs": [
+        {
+          "timestampMillis": 1784974826918
+        },
+        {
+          "timestampMillis": 1784974860191
+        },
+        {
+          "timestampMillis": 1784990026040
+        }
+      ]
+    },
+    {
+      "path": "booknote/books-data/resources/(annots)分布式服务架构：原理、设计与实战 by 李艳鹏 杨彪 (z-lib.org).pdf/p26r91.850,166.320,379.360,344.990z2i(235cb7f4-2978-269c-8e8a-a23d71f6900f).png",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784990382822
+        }
+      ]
+    },
+    {
+      "path": "booknote/books-data/resources/(annots)分布式服务架构：原理、设计与实战 by 李艳鹏 杨彪 (z-lib.org).pdf/p28r72.350,290.880,416.470,564.550z2i(21801944-3f10-6971-34a8-51d4204a974f).png",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1784990383710
+        }
+      ]
+    },
+    {
+      "path": "booknote/books-data/resources/(annots)领域驱动设计 软件核心复杂性应对之道 修订版 by （美）EricEvans著 (z-lib.org).pdf/p57r13.530,246.200,434.400,558.350z2i(cd683868-0233-3118-fb4c-558f62a15f68).png",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1784990385861
+        },
+        {
+          "timestampMillis": 1784990391468
+        }
+      ]
+    },
+    {
+      "path": "DML.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1784990827373
+        },
+        {
+          "timestampMillis": 1784990975622
         }
       ]
     }

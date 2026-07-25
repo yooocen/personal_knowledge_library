@@ -35,7 +35,8 @@ var DEFAULT_SETTINGS = {
   customCss: "",
   enableClickToZoom: true,
   modalWidthPercent: 80,
-  modalHeightPercent: 80
+  modalHeightPercent: 80,
+  defaultZoomLevel: 100
 };
 var STRINGS = {
   en: {
@@ -54,7 +55,9 @@ var STRINGS = {
     reset: "Reset to default",
     downloadPng: "Download PNG",
     zoom: "Zoom",
-    converting: "Converting..."
+    converting: "Converting...",
+    defaultZoomLevel: "Default zoom level",
+    defaultZoomLevelDesc: "Initial zoom level when opening a Mermaid diagram (percentage)"
   },
   zh: {
     settingsTitle: "Better Mermaid \u8BBE\u7F6E",
@@ -72,7 +75,9 @@ var STRINGS = {
     reset: "\u91CD\u7F6E\u4E3A\u9ED8\u8BA4\u503C",
     downloadPng: "\u4E0B\u8F7D PNG",
     zoom: "\u7F29\u653E",
-    converting: "\u8F6C\u6362\u4E2D..."
+    converting: "\u8F6C\u6362\u4E2D...",
+    defaultZoomLevel: "\u9ED8\u8BA4\u7F29\u653E\u7EA7\u522B",
+    defaultZoomLevelDesc: "\u6253\u5F00 Mermaid \u56FE\u8868\u65F6\u7684\u521D\u59CB\u7F29\u653E\u7EA7\u522B\uFF08\u767E\u5206\u6BD4\uFF09"
   }
 };
 function i18n(lang, key) {
@@ -106,9 +111,10 @@ var BetterMermaidSettingTab = class extends import_obsidian.PluginSettingTab {
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian.Setting(containerEl).setName(this.t("modalWidth")).setDesc(this.t("modalWidthDesc")).addSlider(
-      (slider) => slider.setLimits(30, 100, 5).setValue(s.modalWidthPercent).onChange(async (value) => {
+    const modalWidthSetting = new import_obsidian.Setting(containerEl).setName(this.t("modalWidth")).setDesc(`${this.t("modalWidthDesc")} (${s.modalWidthPercent}%)`).addSlider(
+      (slider) => slider.setLimits(30, 100, 5).setValue(s.modalWidthPercent).setDynamicTooltip().onChange(async (value) => {
         s.modalWidthPercent = value;
+        modalWidthSetting.descEl.innerText = `${this.t("modalWidthDesc")} (${value}%)`;
         await this.plugin.saveSettings();
       })
     ).addButton(
@@ -118,14 +124,28 @@ var BetterMermaidSettingTab = class extends import_obsidian.PluginSettingTab {
         this.display();
       })
     );
-    new import_obsidian.Setting(containerEl).setName(this.t("modalHeight")).setDesc(this.t("modalHeightDesc")).addSlider(
-      (slider) => slider.setLimits(30, 100, 5).setValue(s.modalHeightPercent).onChange(async (value) => {
+    const modalHeightSetting = new import_obsidian.Setting(containerEl).setName(this.t("modalHeight")).setDesc(`${this.t("modalHeightDesc")} (${s.modalHeightPercent}%)`).addSlider(
+      (slider) => slider.setLimits(30, 100, 5).setValue(s.modalHeightPercent).setDynamicTooltip().onChange(async (value) => {
         s.modalHeightPercent = value;
+        modalHeightSetting.descEl.innerText = `${this.t("modalHeightDesc")} (${value}%)`;
         await this.plugin.saveSettings();
       })
     ).addButton(
       (btn) => btn.setButtonText(this.t("reset")).onClick(async () => {
         s.modalHeightPercent = DEFAULT_SETTINGS.modalHeightPercent;
+        await this.plugin.saveSettings();
+        this.display();
+      })
+    );
+    const zoomSetting = new import_obsidian.Setting(containerEl).setName(this.t("defaultZoomLevel")).setDesc(`${this.t("defaultZoomLevelDesc")} (${s.defaultZoomLevel}%)`).addSlider(
+      (slider) => slider.setLimits(20, 200, 5).setValue(s.defaultZoomLevel).setDynamicTooltip().onChange(async (value) => {
+        s.defaultZoomLevel = value;
+        zoomSetting.descEl.innerText = `${this.t("defaultZoomLevelDesc")} (${value}%)`;
+        await this.plugin.saveSettings();
+      })
+    ).addButton(
+      (btn) => btn.setButtonText(this.t("reset")).onClick(async () => {
+        s.defaultZoomLevel = DEFAULT_SETTINGS.defaultZoomLevel;
         await this.plugin.saveSettings();
         this.display();
       })
@@ -205,6 +225,7 @@ var MermaidImageModal = class extends import_obsidian2.Modal {
     };
     this.svg = svg;
     this.settings = settings;
+    this.scale = settings.defaultZoomLevel / 100;
     this.modalEl.addClass("better-mermaid-modal-size");
   }
   t(key) {
@@ -228,13 +249,15 @@ var MermaidImageModal = class extends import_obsidian2.Modal {
       option.value = String(opt.value);
       option.text = opt.label;
     });
-    this.zoomSelect.value = "1";
+    this.zoomSelect.value = String(this.scale);
     this.zoomSelect.addEventListener("change", () => {
       const gen = this.zoomSelect.querySelector("[data-generated]");
       if (gen)
         gen.remove();
       this.setZoom(parseFloat(this.zoomSelect.value));
     });
+    this.applyTransform();
+    this.syncZoomDisplay(this.scale);
     const btn = controls.createEl("button", { text: this.t("downloadPng") });
     btn.addEventListener("click", () => {
       void this.handleDownload(btn);

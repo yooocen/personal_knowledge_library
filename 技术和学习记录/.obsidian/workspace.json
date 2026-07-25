@@ -30,7 +30,7 @@
               "type": "bases",
               "state": {
                 "file": "BASE/linux.base",
-                "viewName": "git"
+                "viewName": "math"
               },
               "pinned": true,
               "icon": "lucide-table",
@@ -38,35 +38,63 @@
             }
           },
           {
-            "id": "cde512c5a23e58fa",
+            "id": "cf213f5f12f2405d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tmux.md",
+                "file": "BM25 检索原理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tmux"
+              "title": "BM25 检索原理"
             }
           },
           {
-            "id": "93d362b814711f84",
+            "id": "3e44fb5be472b2f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resources/image-tags/Pasted image 20260315110750.md",
+                "file": "promptPilot.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pasted image 20260315110750"
+              "title": "promptPilot"
+            }
+          },
+          {
+            "id": "8b340ae8f8d08af2",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "技术和学习记录/agents/L1/.l0_snapshot.json",
+                "bFile": "技术和学习记录/agents/L1/.l0_snapshot.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: .l0_snapshot.json  (Working Tree)"
+            }
+          },
+          {
+            "id": "527ad31e607870ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DDD 的实战（第十章）.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DDD 的实战（第十章）"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -116,26 +144,19 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-bookmark",
               "title": "书签"
-            }
-          },
-          {
-            "id": "ed67bae0c04c2532",
-            "type": "leaf",
-            "state": {
-              "type": "notebook-navigator",
-              "state": {},
-              "icon": "notebook-navigator",
-              "title": "笔记本导航器"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 484.78526306152344
+    "width": 370.3000183105469
   },
   "right": {
     "id": "3e1ff64513648795",
@@ -144,7 +165,6 @@
       {
         "id": "2d4709cd4b599ae5",
         "type": "tabs",
-        "dimension": 20.02002002002002,
         "children": [
           {
             "id": "09194c49f446f66b",
@@ -189,7 +209,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "resources/image-tags/Pasted image 20260315110750.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -271,7 +290,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "resources/image-tags/Pasted image 20220501133659.png.md",
+                "file": "booknote/线性代数引论第五版/第二章 求解线性方程组.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -286,7 +305,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "resources/image-tags/Pasted image 20260315110750.md"
+                "file": "resources/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf"
               },
               "icon": "lucide-info",
               "title": "笔记属性"
@@ -301,17 +320,9 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          }
-        ],
-        "currentTab": 8
-      },
-      {
-        "id": "d83811abd2ee5641",
-        "type": "tabs",
-        "dimension": 79.97997997997997,
-        "children": [
+          },
           {
-            "id": "9c77596056aace3b",
+            "id": "7e6de8ea078d075a",
             "type": "leaf",
             "state": {
               "type": "claudian-view",
@@ -320,11 +331,12 @@
               "title": "Claudian"
             }
           }
-        ]
+        ],
+        "currentTab": 9
       }
     ],
     "direction": "horizontal",
-    "width": 614.6593017578125
+    "width": 694.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -342,57 +354,58 @@
       "obsidian-kanban:创建新看板": false,
       "notebook-navigator:笔记本导航器": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "realclaudian:Open Claudian": false
+      "realclaudian:Open Claudian": false,
+      "obsidian-booknote-plugin:书库": false
     }
   },
-  "active": "41bb37d4bad91402",
+  "active": "8b340ae8f8d08af2",
   "lastOpenFiles": [
-    "resources/Parsing Techniques_ A Practical Guide .pdf",
-    "resources/223005882-6632c997-b9a6-445b-800c-77a4b76a6325.mov",
-    "resources/image-tags/Pasted image 20260308132701.md",
-    "resources/image-tags/Pasted image 20260308132627.md",
-    "resources/image-tags/Pasted image 20260304105629.md",
-    "resources/image-tags/Pasted image 20260315110750.md",
-    "resources/image-tags/Pasted image 20260525195840.md",
-    "resources/image-tags/Pasted image 20260513214909.md",
-    "resources/image-tags/Pasted image 20220612160815.md",
-    "resources/image-tags/Pasted image 20220612160638.md",
-    "resources/image-tags/Pasted image 20260508195421.md",
-    "resources/image-tags/Pasted image 20220612160400.md",
-    "resources/image-tags/Pasted image 20220612160235.md",
-    "resources/image-tags/Pasted image 20220612160112.md",
-    "resources/image-tags/Pasted image 20220612155935.md",
-    "resources/image-tags/Pasted image 20220612154821.md",
-    "resources/image-tags/Pasted image 20260325094459.md",
-    "resources/image-tags/Pasted image 20220612154713.md",
-    "resources/image-tags/Pasted image 20220612154424.md",
-    "resources/image-tags/Pasted image 20220612154314.md",
-    "resources/image-tags/Pasted image 20220612153946.md",
-    "resources/image-tags/Pasted image 20260224165439.md",
-    "resources/image-tags/Pasted image 20260224165439.md.tmp.20568.bcdf9de9d094",
-    "resources/image-tags/Pasted image 20220612153917.md",
-    "resources/image-tags/Pasted image 20220612153537.md",
-    "resources/image-tags/Pasted image 20220612153449.md",
-    "resources/image-tags/Pasted image 20260325094414.md",
-    "resources/image-tags/Pasted image 20220611234847.md",
-    "resources/image-tags/Pasted image 20260211004300.md.tmp.20568.9bf0af97e420",
-    "resources/Pasted image 20221218132527.png",
-    "resources/images/Pasted Image 20260614124018_523.png",
-    "resources/image-tags/Pasted image 20220612162841.md.tmp.20568.f8077f76f654",
-    "resources/image-tags/Pasted image 20220612162352.md.tmp.20568.e340eb662f78",
-    "resources/image-tags/Pasted image 20220612161006.md.tmp.20568.ff7c61a9ca3a",
-    "resources/images/Pasted image 20260211012006.png",
-    "resources/images/Pasted image 20260304100047.png",
-    "resources/images/Pasted image 20260304103646.png",
-    "resources/images/Pasted image 20260222234458.png",
-    "resources/image-tags/_batches/r_04",
-    "resources/image-tags/_batches/r_03",
-    "resources/image-tags/_batches/r_02",
-    "resources/image-tags/_batches/r_01",
-    "resources/images/echoserver-startup-sequence.png",
-    "resources/images/Pasted image 20220612154713.png",
-    "resources/images/Pasted image 20220612162757.png",
-    "resources/images/Pasted image 20220612163059.png",
+    "resources/_la_tmp.pdf",
+    "resources/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
+    "DML.md",
+    "第2章 求解线性方程组.md",
+    "DDD 的实战（第十章）.md",
+    "DDD 的实战（第十一章）.md",
+    "DDD 的基本要素（第六章）.md",
+    "booknote/books-data/resources/(annots)Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org).pdf/p179r122.800,377.090,172.860,418.960z2i(90771e12-f7c9-b7f4-4687-b99ce767637f).png",
+    "booknote/books-data/resources/(annots)Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org).pdf/p179r253.290,363.670,560.620,490.910z2i(c64d26a2-86d4-663e-2aa1-635223e8b63b).png",
+    "booknote/books-data/resources/(annots)领域驱动设计 软件核心复杂性应对之道 修订版 by （美）EricEvans著 (z-lib.org).pdf/p57r13.530,246.200,434.400,558.350z2i(cd683868-0233-3118-fb4c-558f62a15f68).png",
+    "booknote/books-data/resources/(annots)分布式服务架构：原理、设计与实战 by 李艳鹏 杨彪 (z-lib.org).pdf/p28r72.350,290.880,416.470,564.550z2i(21801944-3f10-6971-34a8-51d4204a974f).png",
+    "booknote/books-data/resources/(annots)分布式服务架构：原理、设计与实战 by 李艳鹏 杨彪 (z-lib.org).pdf/p26r91.850,166.320,379.360,344.990z2i(235cb7f4-2978-269c-8e8a-a23d71f6900f).png",
+    "BASE/linux.base",
+    "为什么每个方程代表一个平面.md",
+    "BM25 检索原理.md",
+    "Excalidraw/Drawing 2026-07-25 19.50.55.excalidraw.md",
+    "promptPilot.md",
+    "Readwise/Articles/【Spring源码】14. 消息多播器（观察者模式）_AQin1012的博客-Csdn博客.md",
+    "agents/L0/技术和学习记录/2026-07-25_15-10-11_48addfd8-8a30-4656-87b7-7d3555676525.md",
+    "agents/L0/personal_knowledge_library/2026-07-25_16-43-46_2b9bf7ce-c189-405c-8a7d-7d40b5da5251.md",
+    "agents/L0/技术和学习记录/2026-07-25_16-35-14_2e138406-6c43-454f-8777-87029b3b63c0.md",
+    "线性代数绪论.md",
+    "BASE/知识看点.base",
+    "Readwise/Articles/【Spring】Model，Util，Dao，Service，Controller_南方有乔木的博客-CSDN博客_util.md",
+    "Readwise/Articles/【Docker】daemon.json的作用（八）_2021 真实-CSDN博客_daemon.json.md",
+    "Readwise/Articles/(17条消息) Spring的注解@Qualifier注解_流楚丶格念的博客-Csdn博客.md",
+    "Readwise/Articles/(17条消息) SwaggerAPI注解详解_bgn190215的博客-CSDN博客.md",
+    "Readwise/Articles/(18条消息) Maven 本地仓库更新策略_dianfenglianyaoshi的博客-CSDN博客_更新maven本地仓库.md",
+    "Readwise/Articles/(17条消息) Java中静态内部类和非静态内部类有什么区别？_vcliy的博客-Csdn博客_静态内部类.md",
+    "Readwise/Articles/(17条消息) Idea查看继承关系或其图表的两种方法_流楚丶格念的博客-CSDN博客_idea查看继承关系.md",
+    "Readwise/Articles/(12条消息) ES6 （二十三）Module 的语法、静态加载、export`和`import、export Default、import动态加载_ChrisP3616的博客-Csdn博客.md",
+    "Readwise/Articles/(12条消息) 浅谈箭头函数和function的区别_蛞蝓不孤寡的博客-CSDN博客_箭头函数和function的区别.md",
+    "Readwise/Articles/(9 条消息) Gradle 比 Maven 好为什么用的人少？ - 知乎.md",
+    "back-end/SingletonBeanRegistry接口.md",
+    "booknote/线性代数引论第五版",
+    "agents/L1/personal_knowledge_library",
+    "agents/L0/personal_knowledge_library",
+    "agents/L1/技术和学习记录",
+    "agents/L0/技术和学习记录",
+    "agents/L1/7adiu-d2vq6",
+    "agents/L1/codex",
+    "resources/images/Pasted image 20260716153558.png",
+    "resources/Pasted image 20221009234419.png",
+    "resources/vim键位图/vi-vim-tutorial-7.gif",
+    "resources/vim键位图/vi-vim-tutorial-2.gif",
+    "resources/vim键位图/vi-vim-tutorial-6.gif",
     "数据库连接池.canvas",
     "AKKA.canvas",
     "Java classloader.canvas",

@@ -27,3 +27,12 @@ q 或 Esc：退出滚动模式
 # 安装插件
 
 winget install marlocarlo.tmuxpanel
+
+
+# 恢复会话
+
+安装下面2个插件
+- `psmux-resurrect`：手动保存、恢复
+- `psmux-continuum`：定时自动保存、启动时自动恢复
+
+但是要安装最新的psmux  3.3.6

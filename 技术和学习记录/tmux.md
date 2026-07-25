@@ -89,3 +89,17 @@ ctrl +b }
 
 上下分屏 ctrl+b "
 左右分屏 ctrl+b %
+
+
+# 恢复会话
+
+```
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '15'
+
+run '~/.tmux/plugins/tpm/tpm'
+```

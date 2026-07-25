@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行空间 vs 列空间 · 直观可视化</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #0f0f1a;
+    color: #e0e0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #818cf8, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #8888aa;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  /* ---- 矩阵模块 ---- */
+  .matrix-section {
+    background: #1a1a2e;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+    border: 1px solid #2a2a44;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px 48px;
+    justify-content: center;
+  }
+
+  .matrix-box {
+    text-align: center;
+  }
+
+  .matrix-box .label {
+    font-size: 0.85rem;
+    color: #8888aa;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .matrix {
+    display: inline-block;
+    position: relative;
+    padding: 12px 18px;
+  }
+
+  .matrix::before {
+    content: '[';
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: #6666aa;
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+  }
+
+  .matrix::after {
+    content: ']';
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: #6666aa;
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+  }
+
+  .matrix table {
+    border-collapse: collapse;
+    font-family: 'JetBrains Mono', 'Cascadia Code', monospace;
+    font-size: 1.3rem;
+  }
+
+  .matrix td {
+    padding: 4px 12px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* row highlight */
+  .matrix td.row-hl { background: rgba(129,140,248,0.15); }
+  .matrix td.row-hl-first { border-left: 3px solid #818cf8; }
+  .matrix td.row-hl-last { border-right: 3px solid #818cf8; }
+  tr.row-highlight td { background: rgba(129,140,248,0.10); }
+
+  /* col highlight */
+  .matrix td.col-hl { background: rgba(244,114,182,0.15); }
+  .matrix td.col-hl-first { border-top: 3px solid #f472b6; }
+  .matrix td.col-hl-last { border-bottom: 3px solid #f472b6; }
+  tr.row-highlight td.col-hl { background: rgba(129,140,248,0.08); }
+
+  .matrix .vec-brace { font-size: 1.6rem; color: #6666aa; }
+
+  .matrix-legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .legend-dot {
+    width: 16px; height: 16px;
+    border-radius: 4px;
+  }
+
+  .legend-dot.row-color { background: #818cf8; }
+  .legend-dot.col-color { background: #f472b6; }
+
+  .inline-math {
+    font-family: 'JetBrains Mono', monospace;
+    color: #c0c0e0;
+  }
+
+  .dim-badge {
+    display: inline-block;
+    background: #2a2a44;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #aaaacc;
+    margin-left: 4px;
+  }
+
+  /* ---- 画板区 ---- */
+  .canvas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: 860px) {
+    .canvas-grid { grid-template-columns: 1fr; }
+  }
+
+  .canvas-card {
+    background: #1a1a2e;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #2a2a44;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  .canvas-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .canvas-card h2 .badge {
+    font-size: 0.7rem;
+    background: #2a2a44;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-weight: 400;
+    color: #aaaacc;
+  }
+
+  .canvas-card .sub-info {
+    color: #8888aa;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .canvas-card .sub-info span {
+    display: inline-block;
+    margin-right: 16px;
+  }
+
+  .canvas-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+  }
+
+  .canvas-wrap svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #141428;
+    border-radius: 12px;
+    border: 1px solid #2a2a44;
+  }
+
+  /* ---- 公式/说明区 ---- */
+  .insight-box {
+    background: linear-gradient(135deg, #1a1a2e, #1e1e34);
+    border-radius: 16px;
+    padding: 24px 28px;
+    border: 1px solid #2a2a44;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  .insight-box h3 {
+    color: #818cf8;
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+  }
+
+  .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .insight-grid { grid-template-columns: 1fr; }
+  }
+
+  .insight-card {
+    background: #141428;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid #252542;
+  }
+
+  .insight-card.row-card { border-left: 3px solid #818cf8; }
+  .insight-card.col-card { border-left: 3px solid #f472b6; }
+
+  .insight-card h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .insight-card .formula {
+    font-family: 'JetBrains Mono', monospace;
+    background: #1e1e36;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #c0c0e0;
+  }
+
+  .insight-card .desc {
+    font-size: 0.9rem;
+    color: #b0b0cc;
+    line-height: 1.6;
+  }
+
+  .ns-label {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .ns-label.rn { background: rgba(129,140,248,0.25); color: #a5b4fc; }
+  .ns-label.rm { background: rgba(244,114,182,0.25); color: #f9a8d4; }
+
+  .tap-hint {
+    color: #6666aa;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  /* ---- controls ---- */
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .slider-row label {
+    font-size: 0.85rem;
+    color: #aaaacc;
+  }
+
+  .slider-row input[type="range"] {
+    flex: 1;
+    min-width: 120px;
+    accent-color: #818cf8;
+    height: 4px;
+    cursor: pointer;
+  }
+
+  .slider-row .val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #c0c0e0;
+    min-width: 30px;
+    text-align: center;
+  }
+
+  .slider-row .coeff-label {
+    font-family: 'JetBrains Mono', monospace;
+    color: #f472b6;
+    font-size: 0.85rem;
+  }
+
+  .reset-btn {
+    background: #2a2a44;
+    border: none;
+    color: #c0c0e0;
+    padding: 4px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.2s;
+  }
+
+  .reset-btn:hover { background: #3a3a55; }
+
+  .footer-note {
+    text-align: center;
+    color: #6666aa;
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>行空间 &amp; 列空间</h1>
+  <p class="subtitle">名字即来源：用"行"搭出来的空间 → 行空间，用"列"搭出来的空间 → 列空间</p>
+
+  <!-- 矩阵展示 -->
+  <div class="matrix-section">
+    <div class="matrix-box">
+      <div class="label">矩阵 A（3×2）</div>
+      <div class="matrix" id="matrixDisplay">
+        <table>
+          <tr id="row0">
+            <td class="row-indicator" style="color:#818cf8;padding-right:4px;font-size:0.75rem;">→</td>
+            <td class="row-val r0c0">1</td>
+            <td class="row-val r0c1">0</td>
+            <td style="color:#666;padding-left:6px;font-size:0.7rem;">行₁</td>
+          </tr>
+          <tr id="row1">
+            <td style="color:#818cf8;padding-right:4px;font-size:0.75rem;">→</td>
+            <td class="row-val r1c0">2</td>
+            <td class="row-val r1c1">0</td>
+            <td style="color:#666;padding-left:6px;font-size:0.7rem;">行₂</td>
+          </tr>
+          <tr id="row2">
+            <td style="color:#818cf8;padding-right:4px;font-size:0.75rem;">→</td>
+            <td class="row-val r2c0">0</td>
+            <td class="row-val r2c1">0</td>
+            <td style="color:#666;padding-left:6px;font-size:0.7rem;">行₃</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div style="text-align:left;">
+      <div style="margin-bottom:8px;font-weight:600;font-size:0.9rem;color:#a0a0c0;">材料来源</div>
+      <div class="matrix-legend">
+        <div class="legend-item">
+          <div class="legend-dot row-color"></div>
+          <span><strong style="color:#818cf8;">行空间</strong> ← 用每一<strong style="color:#818cf8;">行</strong>做材料</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot col-color"></div>
+          <span><strong style="color:#f472b6;">列空间</strong> ← 用每一<strong style="color:#f472b6;">列</strong>做材料</span>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:0.85rem;color:#8888aa;">
+        <span style="color:#818cf8;">●</span> 行向量在 <strong>ℝ²</strong>（每行2个数字）&nbsp;&nbsp;
+        <span style="color:#f472b6;">●</span> 列向量在 <strong>ℝ³</strong>（每列3个数字）
+      </div>
+    </div>
+  </div>
+
+  <!-- 两个可视化 -->
+  <div class="canvas-grid">
+    <!-- 行空间 -->
+    <div class="canvas-card">
+      <h2>
+        <span style="color:#818cf8;">■</span> 行空间
+        <span class="badge">ℝ²</span>
+        <span class="badge" style="background:rgba(129,140,248,0.2);color:#a5b4fc;">dim = 1</span>
+      </h2>
+      <div class="sub-info">
+        <span>材料：行₁ = (1,0) 行₂ = (2,0) 行₃ = (0,0)</span>
+        <span>→ 都在 x 轴上</span>
+      </div>
+      <div class="canvas-wrap">
+        <svg viewBox="-3.5 -3.5 7 7" id="rowCanvas">
+          <!-- grid -->
+          <defs>
+            <marker id="arrowGray" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#444466" />
+            </marker>
+            <marker id="arrowRow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#818cf8" />
+            </marker>
+            <marker id="arrowRowDark" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5" />
+            </marker>
+          </defs>
+
+          <!-- axes -->
+          <line x1="-3.2" y1="0" x2="3.2" y2="0" stroke="#3a3a55" stroke-width="0.04" />
+          <line x1="0" y1="-3.2" x2="0" y2="3.2" stroke="#3a3a55" stroke-width="0.04" />
+          <text x="3.1" y="0.25" fill="#6666aa" font-size="0.3" font-family="monospace">x</text>
+          <text x="0.15" y="-3.1" fill="#6666aa" font-size="0.3" font-family="monospace">y</text>
+          <line x1="2.8" y1="0.12" x2="3.0" y2="0" stroke="#444466" stroke-width="0.03" marker-end="url(#arrowGray)"/>
+          <line x1="0.12" y1="-2.8" x2="0" y2="-3.0" stroke="#444466" stroke-width="0.03" marker-end="url(#arrowGray)"/>
+
+          <!-- 行空间 = x 轴 (加粗高亮) -->
+          <line x1="-3.0" y1="0" x2="3.0" y2="0" stroke="#818cf8" stroke-width="0.08" opacity="0.35" />
+          <line x1="-2.6" y1="0" x2="2.6" y2="0" stroke="#818cf8" stroke-width="0.06" opacity="0.5" stroke-dasharray="0.12 0.08" />
+
+          <!-- 行向量箭头 -->
+          <!-- row1: (1,0) -->
+          <line x1="0" y1="0" x2="1" y2="0" stroke="#818cf8" stroke-width="0.08" marker-end="url(#arrowRow)"/>
+          <text x="0.5" y="-0.35" fill="#818cf8" font-size="0.28" font-family="monospace" font-weight="bold">行₁</text>
+
+          <!-- row2: (2,0) -->
+          <line x1="0" y1="0" x2="2.0" y2="0" stroke="#6366f1" stroke-width="0.07" marker-end="url(#arrowRowDark)"/>
+          <text x="1.1" y="0.45" fill="#6366f1" font-size="0.26" font-family="monospace">行₂</text>
+
+          <!-- row3: (0,0) 原点 -->
+          <circle cx="0" cy="0" r="0.08" fill="#818cf8" opacity="0.5"/>
+
+          <!-- 线性组合点（交互） -->
+          <circle id="rowComboDot" cx="0" cy="0" r="0.12" fill="#facc15" stroke="#fbbf24" stroke-width="0.04" />
+          <text id="rowComboLabel" x="0" y="0" fill="#facc15" font-size="0.28" font-family="monospace" dx="0.2" dy="-0.3">组合</text>
+
+          <!-- 刻度 -->
+          <text x="1" y="0.28" fill="#555577" font-size="0.22" font-family="monospace">1</text>
+          <text x="2" y="0.28" fill="#555577" font-size="0.22" font-family="monospace">2</text>
+          <text x="-1" y="0.28" fill="#555577" font-size="0.22" font-family="monospace">-1</text>
+        </svg>
+      </div>
+      <div class="slider-row">
+        <label for="rowSlider">组合系数 <i>a</i> (行₁) + <i>b</i> (行₂)：</label>
+        <span class="coeff-label">a =</span>
+        <input type="range" id="rowSliderA" min="-2.0" max="2.0" step="0.05" value="1.0">
+        <span class="val" id="rowValA">1.0</span>
+        <span class="coeff-label" style="margin-left:4px;">b =</span>
+        <input type="range" id="rowSliderB" min="-2.0" max="2.0" step="0.05" value="0.5">
+        <span class="val" id="rowValB">0.5</span>
+        <button class="reset-btn" id="rowReset">⟳</button>
+      </div>
+      <p class="tap-hint">拖动滑块 → 移动黄色点：这就是"组合行向量"到达的位置</p>
+    </div>
+
+    <!-- 列空间 -->
+    <div class="canvas-card">
+      <h2>
+        <span style="color:#f472b6;">■</span> 列空间
+        <span class="badge">ℝ³</span>
+        <span class="badge" style="background:rgba(244,114,182,0.2);color:#f9a8d4;">dim = 1</span>
+      </h2>
+      <div class="sub-info">
+        <span>材料：列₁ = (1,2,0) 列₂ = (0,0,0)</span>
+        <span>→ 方向 (1,2,0) 上的直线</span>
+      </div>
+      <div class="canvas-wrap">
+        <svg viewBox="-3.5 -3.5 7 7" id="colCanvas">
+          <defs>
+            <marker id="arrowGray2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#444466" />
+            </marker>
+            <marker id="arrowCol" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#f472b6" />
+            </marker>
+            <marker id="arrowColDark" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#db2777" />
+            </marker>
+          </defs>
+
+          <!-- axes -->
+          <line x1="-3.2" y1="0" x2="3.2" y2="0" stroke="#3a3a55" stroke-width="0.04" />
+          <line x1="0" y1="-3.2" x2="0" y2="3.2" stroke="#3a3a55" stroke-width="0.04" />
+          <text x="3.1" y="0.25" fill="#6666aa" font-size="0.3" font-family="monospace">x₁</text>
+          <text x="0.15" y="-3.1" fill="#6666aa" font-size="0.3" font-family="monospace">x₂</text>
+          <line x1="2.8" y1="0.12" x2="3.0" y2="0" stroke="#444466" stroke-width="0.03" marker-end="url(#arrowGray2)"/>
+          <line x1="0.12" y1="-2.8" x2="0" y2="-3.0" stroke="#444466" stroke-width="0.03" marker-end="url(#arrowGray2)"/>
+
+          <!-- 列空间直线: 方向 (1,2,0), 投影到 x₁-x₂ 平面就是穿过原点的斜线 -->
+          <!-- 因为 t*(1,2,0) 投影到 x₁-x₂ 平面就是 y=2x -->
+          <line x1="-2.6" y1="1.3" x2="2.6" y2="-1.3" stroke="#f472b6" stroke-width="0.08" opacity="0.35" />
+          <line x1="-2.2" y1="1.1" x2="2.2" y2="-1.1" stroke="#f472b6" stroke-width="0.06" opacity="0.5" stroke-dasharray="0.12 0.08" />
+
+          <!-- 用3D箭头示意：列向量 (1,2,0) 在 x₁-x₂ 平面上 -->
+          <line x1="0" y1="0" x2="1" y2="-2" stroke="#f472b6" stroke-width="0.08" marker-end="url(#arrowCol)"/>
+          <text x="0.55" y="-1.1" fill="#f472b6" font-size="0.28" font-family="monospace" font-weight="bold">列₁</text>
+
+          <!-- 列2: (0,0,0) 原点 -->
+          <circle cx="0" cy="0" r="0.08" fill="#f472b6" opacity="0.5"/>
+
+          <!-- 组合点 -->
+          <circle id="colComboDot" cx="0" cy="0" r="0.12" fill="#facc15" stroke="#fbbf24" stroke-width="0.04" />
+          <text id="colComboLabel" x="0" y="0" fill="#facc15" font-size="0.28" font-family="monospace" dx="0.2" dy="-0.3">组合</text>
+
+          <!-- 刻度 -->
+          <text x="1" y="0.28" fill="#555577" font-size="0.22" font-family="monospace">1</text>
+          <text x="-1" y="0.28" fill="#555577" font-size="0.22" font-family="monospace">-1</text>
+          <text x="0.15" y="-1.0" fill="#555577" font-size="0.22" font-family="monospace">-2</text>
+
+          <!-- z 轴示意（第三维） -->
+          <text x="2.6" y="-2.8" fill="#444466" font-size="0.22" font-family="monospace">z 轴（垂直于屏幕）</text>
+          <text x="2.6" y="-2.5" fill="#555577" font-size="0.2" font-family="monospace">第三维分量 = 0</text>
+          <circle cx="0" cy="0" r="0.5" fill="none" stroke="#3a3a55" stroke-width="0.02" stroke-dasharray="0.06 0.06" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="slider-row">
+        <label for="colSlider">组合系数 <i>c</i> (列₁)：</label>
+        <span class="coeff-label" style="color:#f472b6;">c =</span>
+        <input type="range" id="colSliderC" min="-2.0" max="2.0" step="0.05" value="0.7">
+        <span class="val" id="colValC">0.7</span>
+        <span style="color:#6666aa;font-size:0.8rem;">列₂恒为零，不影响</span>
+        <button class="reset-btn" id="colReset">⟳</button>
+      </div>
+      <p class="tap-hint">拖动滑块 → 黄色点在列空间直线上滑动</p>
+    </div>
+  </div>
+
+  <!-- 底部总结 -->
+  <div class="insight-box">
+    <h3>🔑 一句话理解</h3>
+    <div class="insight-grid">
+      <div class="insight-card row-card">
+        <h4 style="color:#818cf8;">行空间（Row Space）</h4>
+        <div class="formula">Row Space = span{行₁, 行₂, …, 行<sub>m</sub>}</div>
+        <div class="desc">
+          <strong>名字由来</strong>：拿矩阵的每一<strong style="color:#818cf8;">行</strong>做材料，所有线性组合搭出来的空间。<br>
+          <strong>在哪儿</strong>：<span class="ns-label rn">ℝⁿ = ℝ²</span>（每行有 n=2 个数字）<br>
+          <strong>维度</strong>：秩 r = 1（只有第1列有主元）<br>
+          <strong>本例子</strong>：行向量 (1,0) 和 (2,0) 都在 x 轴上 → 行空间 = x 轴
+        </div>
+      </div>
+      <div class="insight-card col-card">
+        <h4 style="color:#f472b6;">列空间（Column Space）</h4>
+        <div class="formula">Column Space = span{列₁, 列₂, …, 列<sub>n</sub>}</div>
+        <div class="desc">
+          <strong>名字由来</strong>：拿矩阵的每一<strong style="color:#f472b6;">列</strong>做材料，所有线性组合搭出来的空间。<br>
+          <strong>在哪儿</strong>：<span class="ns-label rm">ℝᵐ = ℝ³</span>（每列有 m=3 个数字）<br>
+          <strong>维度</strong>：秩 r = 1（只有第1行有主元）<br>
+          <strong>本例子</strong>：列向量 (1,2,0) 张成一条直线 → 列空间 = 方向 (1,2,0) 的直线
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:18px;padding:14px 18px;background:#141428;border-radius:12px;border:1px solid #252542;">
+      <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:center;">
+        <span style="color:#818cf8;font-weight:600;">行空间 ⊆ ℝ²</span>
+        <span style="color:#6666aa;">← 两个不同的"宇宙" →</span>
+        <span style="color:#f472b6;font-weight:600;">列空间 ⊆ ℝ³</span>
+      </div>
+      <div style="text-align:center;margin-top:8px;color:#8888aa;font-size:0.9rem;">
+        名字就是按<span style="color:#818cf8;">行</span>/<span style="color:#f472b6;">列</span>来的，没有深奥的秘密。就像面包糠是用面包做的。
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    💡 拖动滑块可交互体验"组合行/列向量"的效果
+  </div>
+</div>
+
+<script>
+(function() {
+  // ---- 行空间 ----
+  const rowSliderA = document.getElementById('rowSliderA');
+  const rowSliderB = document.getElementById('rowSliderB');
+  const rowValA = document.getElementById('rowValA');
+  const rowValB = document.getElementById('rowValB');
+  const rowDot = document.getElementById('rowComboDot');
+  const rowLabel = document.getElementById('rowComboLabel');
+  const rowReset = document.getElementById('rowReset');
+
+  function updateRow() {
+    const a = parseFloat(rowSliderA.value);
+    const b = parseFloat(rowSliderB.value);
+    rowValA.textContent = a.toFixed(1);
+    rowValB.textContent = b.toFixed(1);
+    // 组合: a*(1,0) + b*(2,0) = (a+2b, 0)
+    const x = a + 2*b;
+    const y = 0;
+    // SVG 坐标: y 方向翻转 (SVG y 向下为正)
+    const svgX = x;
+    const svgY = -y;
+    rowDot.setAttribute('cx', svgX);
+    rowDot.setAttribute('cy', svgY);
+    rowLabel.setAttribute('x', svgX + 0.15);
+    rowLabel.setAttribute('y', svgY - 0.25);
+    rowLabel.textContent = `(${x.toFixed(1)}, 0)`;
+  }
+
+  rowSliderA.addEventListener('input', updateRow);
+  rowSliderB.addEventListener('input', updateRow);
+  rowReset.addEventListener('click', () => {
+    rowSliderA.value = '1.0';
+    rowSliderB.value = '0.5';
+    updateRow();
+  });
+
+  // ---- 列空间 ----
+  const colSliderC = document.getElementById('colSliderC');
+  const colValC = document.getElementById('colValC');
+  const colDot = document.getElementById('colComboDot');
+  const colLabel = document.getElementById('colComboLabel');
+  const colReset = document.getElementById('colReset');
+
+  function updateCol() {
+    const c = parseFloat(colSliderC.value);
+    colValC.textContent = c.toFixed(1);
+    // 组合: c*(1,2,0) + d*(0,0,0) = (c, 2c, 0)
+    // 在 R³ 里第三维 z=0，投影到 x₁-x₂ 平面为 (c, 2c)
+    // SVG 坐标: x 轴水平，y 轴垂直（第二个分量翻转方向）
+    const px = c;
+    const py = -(2*c);
+    colDot.setAttribute('cx', px);
+    colDot.setAttribute('cy', py);
+    colLabel.setAttribute('x', px + 0.15);
+    colLabel.setAttribute('y', py - 0.25);
+    colLabel.textContent = `(${c.toFixed(1)}, ${(2*c).toFixed(1)}, 0)`;
+  }
+
+  colSliderC.addEventListener('input', updateCol);
+  colReset.addEventListener('click', () => {
+    colSliderC.value = '0.7';
+    updateCol();
+  });
+
+  // 初始化
+  updateRow();
+  updateCol();
+})();
+</script>
+</body>
+</html>

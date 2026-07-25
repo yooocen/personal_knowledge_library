@@ -4,7 +4,6 @@
   "templater-obsidian",
   "obsidian42-brat",
   "obsidian-kanban",
-  "obsidian-image-toolkit",
   "notebook-navigator",
   "obsidian-excalidraw-plugin",
   "editing-toolbar",
@@ -13,6 +12,7 @@
   "mermaid-zoom",
   "obsidian-hider",
   "advanced-canvas",
+  "obsidian-git",
   "realclaudian",
-  "obsidian-git"
+  "obsidian-booknote-plugin"
 ]

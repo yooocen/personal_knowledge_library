@@ -50,3 +50,13 @@ views:
     filters:
       and:
         - file.tags.contains("lazygit")
+  - type: table
+    name: ai
+    filters:
+      and:
+        - file.tags.contains("ai")
+  - type: table
+    name: math
+    filters:
+      and:
+        - file.tags.contains("math")

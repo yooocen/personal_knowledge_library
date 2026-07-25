@@ -5,6 +5,8 @@ tags:
 已知有用
 - superpowers
 - understand-anthing
+- agent-reach
+- blenderMCP
 
 
 
