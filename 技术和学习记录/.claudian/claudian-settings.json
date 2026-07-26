@@ -6,7 +6,7 @@
   "effortLevel": "high",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
-  "titleGenerationModel": "",
+  "titleGenerationModel": "opencode:alibaba-cn/glm-5.2",
   "excludedTags": [],
   "mediaFolder": "",
   "systemPrompt": "",
@@ -309,7 +309,7 @@
       "reasoningSummary": "detailed",
       "environmentVariables": "",
       "environmentHash": "",
-      "catalogTimestamp": 1784941905488,
+      "catalogTimestamp": 1785059869005,
       "catalogFingerprint": "1:0ab73eb4a28ead939f1ade07c31f274bd0c0163d875e49be7f7cce523a70b9d6",
       "installationMethodsByHost": {},
       "wslDistroOverridesByHost": {}
@@ -330,8 +330,8 @@
       "cliPath": "",
       "cliPathsByHost": {},
       "enabled": true,
-      "environmentHash": "OPENCODE_CONFIG=C:\\Users\\cc\\7adiu-d2vq6\\技术和学习记录\\.claudian\\opencode-user-overrides.json",
-      "environmentVariables": "OPENCODE_ENABLE_EXA=1\nOPENCODE_CONFIG=C:\\Users\\cc\\7adiu-d2vq6\\技术和学习记录\\.claudian\\opencode-user-overrides.json",
+      "environmentHash": "",
+      "environmentVariables": "",
       "modelAliases": {},
       "preferredThinkingByModel": {
         "alibaba-cn/deepseek-v4-flash": "high"
@@ -370,7 +370,7 @@
   "settingsProvider": "claude",
   "savedProviderModel": {
     "claude": "haiku",
-    "opencode": "haiku"
+    "opencode": "opencode:alibaba-cn/glm-5.2"
   },
   "savedProviderEffort": {
     "claude": "high",
@@ -378,7 +378,7 @@
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {
-    "opencode": "default"
+    "opencode": "high"
   },
   "savedProviderPermissionMode": {
     "claude": "yolo",
