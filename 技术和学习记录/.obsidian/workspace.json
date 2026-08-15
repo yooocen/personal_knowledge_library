@@ -4,55 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "b4e2a24654f5c214",
+        "id": "b71a6399c80191cc",
         "type": "tabs",
         "children": [
           {
-            "id": "97ab4427451176bc",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "BASE/知识看点.base",
-                "viewName": "tmux"
-              },
-              "pinned": true,
-              "icon": "lucide-table",
-              "title": "知识看点"
-            }
-          },
-          {
-            "id": "aaaf87beb27908d6",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "BASE/linux.base",
-                "viewName": "math"
-              },
-              "pinned": true,
-              "icon": "lucide-table",
-              "title": "linux"
-            }
-          },
-          {
-            "id": "cf213f5f12f2405d",
+            "id": "7f9e3657f9f31891",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Readwise/Articles/用户对问题“application.properties与applicationContext.xml”的回答 - 问答.md",
+                "file": "第3章 向量空间与子空间.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "用户对问题“application.properties与applicationContext.xml”的回答 - 问答"
+              "title": "第3章 向量空间与子空间"
+            }
+          },
+          {
+            "id": "d55803c831e75d25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "卡片编码展示逻辑.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "卡片编码展示逻辑"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,22 +93,13 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
-          },
-          {
-            "id": "229a66f1234d0049",
-            "type": "leaf",
-            "state": {
-              "type": "book-explorer-view",
-              "state": {},
-              "icon": "bold-glyph",
-              "title": "Book Explorer"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 466.3000183105469
+    "width": 466.3000183105469,
+    "collapsed": true
   },
   "right": {
     "id": "3e1ff64513648795",
@@ -133,6 +108,7 @@
       {
         "id": "2d4709cd4b599ae5",
         "type": "tabs",
+        "dimension": 79.95991983967936,
         "children": [
           {
             "id": "09194c49f446f66b",
@@ -177,6 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "zettelkasten 图书馆（官方）.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -195,12 +172,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "记录网络流量定位（解决wsl无法apt update的问题）.md",
+                "file": "为什么每个方程代表一个平面.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "记录网络流量定位（解决wsl无法apt update的问题） 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -216,16 +193,6 @@
               },
               "icon": "lucide-tags",
               "title": "标签"
-            }
-          },
-          {
-            "id": "926fd8c4291ca88c",
-            "type": "leaf",
-            "state": {
-              "type": "view-count",
-              "state": {},
-              "icon": "eye",
-              "title": "View count"
             }
           },
           {
@@ -248,7 +215,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "booknote/线性代数引论第五版/第二章 求解线性方程组.md",
+                "file": "第3章 中等难度习题.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -263,7 +230,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "resources/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf"
+                "file": "卡片编码展示逻辑.md"
               },
               "icon": "lucide-info",
               "title": "笔记属性"
@@ -288,16 +255,62 @@
               "icon": "bot",
               "title": "Claudian"
             }
+          },
+          {
+            "id": "aaaf87beb27908d6",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "BASE/linux.base",
+                "viewName": "卡片盒"
+              },
+              "pinned": true,
+              "icon": "lucide-table",
+              "title": "linux"
+            }
+          },
+          {
+            "id": "97ab4427451176bc",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "BASE/知识看点.base",
+                "viewName": "tmux"
+              },
+              "icon": "lucide-table",
+              "title": "知识看点"
+            }
           }
         ],
         "currentTab": 8
+      },
+      {
+        "id": "383ccb0a96ff37ab",
+        "type": "tabs",
+        "dimension": 20.04008016032064,
+        "children": [
+          {
+            "id": "9cbe3821a6a16fdb",
+            "type": "leaf",
+            "state": {
+              "type": "zk-forest",
+              "state": {},
+              "icon": "git-branch",
+              "title": "Zettelkasten 演化森林"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 668.0999755859375
+    "width": 763.2999877929688
   },
   "left-ribbon": {
     "hiddenItems": {
+      "modern-outline:Toggle modern outline": false,
       "obsidian-git:Open Git source control": false,
       "bases:新建数据库": false,
       "daily-notes:打开/创建今天的日记": false,
@@ -306,63 +319,63 @@
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
-      "templater-obsidian:Templater": false,
       "obsidian42-brat:BRAT": false,
       "obsidian-kanban:创建新看板": false,
-      "notebook-navigator:笔记本导航器": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "realclaudian:Open Claudian": false,
-      "obsidian-booknote-plugin:书库": false
+      "zettelkasten-forest:Zettelkasten 演化森林": false,
+      "advanced-audio-recorder:Start/stop recording": false
     }
   },
-  "active": "cf213f5f12f2405d",
+  "active": "d55803c831e75d25",
   "lastOpenFiles": [
-    "Readwise/Articles/怎么解决java.lang.NoClassDefFoundError错误.md",
-    "Readwise/Articles/这十多个插件，大幅度改善你的 Obsidian 编辑体验.md",
-    "Readwise/Articles/阿里二面：为什么要分库分表？.md",
-    "Readwise/Articles/编程路书.md",
-    "Readwise/Articles/【Java基础】静态内部类与普通内部类的区别.md",
-    "Readwise/Articles/如果你也得了一个b.md",
-    "Readwise/Articles/为什么微服务一定要有网关？.md",
-    "Readwise/Articles/MyBatis源码解读（2）——MapperProxy.md",
-    "Readwise/Articles/Mybatis源码解析之MapperProxy.md",
-    "Readwise/Articles/Spring @Conditional注解 详细讲解及示例.md",
-    "Readwise/Articles/Spring @Conditional注解 详细讲解及示例 (2).md",
-    "Readwise/Articles/Spring的@ControllerAdvice注解作用原理探究 (2).md",
-    "Readwise/Articles/Spring的@ControllerAdvice注解作用原理探究.md",
-    "Readwise/Articles/What Is the Smart UI Anti-Pattern.md",
-    "Readwise/Articles/What Is the Smart UI Anti-Pattern (2).md",
-    "Readwise/Articles/Vim的shiftwidth、tabstop、softtabstop设置.md",
-    "Readwise/Articles/Vim的shiftwidth、tabstop、softtabstop设置 (2).md",
-    "Readwise/Articles/Apache CXF - 维基百科.md",
-    "Readwise/Articles/为什么微服务一定要有网关？ (2).md",
-    "Readwise/Articles/Apache CXF - 维基百科 (2).md",
-    "Readwise/Articles/一文了解AQS(AbstractQueuedSynchronizer).md",
-    "Readwise/Articles/一文了解AQS(AbstractQueuedSynchronizer) (2).md",
-    "Readwise/Articles/哪些网站帮你打开了新世界的大门？.md",
-    "Readwise/Articles/Which Test Framework Should I Use.md",
-    "Readwise/Articles/Maven（三）最详细的profile的使用.md",
-    "Readwise/Articles/Maven（三）最详细的profile的使用 (2).md",
+    "卡片编码展示规则（最终版）.md",
+    "卡片编码展示逻辑.md",
+    "agents/L0/技术和学习记录/2026-08-15_16-58-16_20b6e24f-9eea-4376-bdbd-50ea79d5afd7.md",
+    "第3章 向量空间与子空间.md",
+    "agents/L0/技术和学习记录/2026-08-15_16-01-10_e5dd2297-18e8-49dc-a58b-9ec015d53a77.md",
+    "我的zettelkasten编码规则（非官方）.md",
+    "zettelkasten 图书馆（官方）.md",
+    "第3章 中等难度习题.md",
+    "BASE/知识看点.base",
     "BASE/linux.base",
-    "resources/_la_tmp.pdf",
+    "Excalidraw/证明LDLT.excalidraw.md",
+    "第3章 中等难度习题 参考答案.md",
+    "agents/L0/技术和学习记录/2026-08-10_00-56-47_3b58b84c-6395-4c81-a942-1aea154c0bcf.md",
+    "LDLT 数据归纳法中代入步骤补充说明.md",
+    "第4章 正交性质.md",
+    "四个基本子空间.md",
+    "向量空间.md",
+    "R^n之外的三个向量空间.md",
+    "第2章 求解线性方程组.md",
+    "Excalidraw/第2章 习题求解 草稿.excalidraw.md",
+    "第2章 中等难度习题.md",
+    "LDLT分解存在性证明.md",
     "resources/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
+    "resources/Screenshot_20220929_152342_tv.danmaku.bili.jpg",
+    "resources/Screenshot_20230808_144035_md.obsidian_edit_321602635280093.jpg",
+    "agents/L0/7adiu-d2vq6/2026-08-09_00-01-13_e355e226-2976-4ea0-9fc2-8760366c8d07.md",
+    "什么时候应该新增笔记.md",
+    "agents/L0/7adiu-d2vq6/2026-08-08_14-49-01_9596efbf-9054-4761-aa4a-db5523da9c78.md",
+    "agents/L0/7adiu-d2vq6/2026-08-08_11-43-39_fe3d8bab-b73c-4fe0-8ac8-eed4d0fba946.md",
+    "关于Zettelkasten-navigation 这个插件给我的灵感.md",
+    "resources/images/Pasted image 20260808112638.png",
+    "数据来源.md",
+    "resources/images/Pasted image 20260807112243.png",
+    "resources/images/Pasted image 20260806194110.png",
+    "resources/images/Pasted image 20260806193921.png",
+    "resources/images/Pasted image 20260805230631.png",
+    "resources/images/Pasted image 20260805104038.png",
+    "recording-Track1-2026-08-02T03-38-48-197Z.webm",
+    "recording-Track1-2026-08-02T03-38-48-197Z-part1.webm.tmp",
+    "resources/images/Recording 20260802113831.m4a",
+    "resources/images/Recording 20260802113824.m4a",
+    "resources/images/Recording 20260802113407.m4a",
+    "resources/audio",
+    "agents/L0/notebooklm",
+    "公务员考试.canvas",
     "booknote/books-data/resources/(annots)Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org).pdf/p179r122.800,377.090,172.860,418.960z2i(90771e12-f7c9-b7f4-4687-b99ce767637f).png",
     "booknote/books-data/resources/(annots)Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org).pdf/p179r253.290,363.670,560.620,490.910z2i(c64d26a2-86d4-663e-2aa1-635223e8b63b).png",
-    "booknote/books-data/resources/(annots)领域驱动设计 软件核心复杂性应对之道 修订版 by （美）EricEvans著 (z-lib.org).pdf/p57r13.530,246.200,434.400,558.350z2i(cd683868-0233-3118-fb4c-558f62a15f68).png",
-    "booknote/books-data/resources/(annots)分布式服务架构：原理、设计与实战 by 李艳鹏 杨彪 (z-lib.org).pdf/p28r72.350,290.880,416.470,564.550z2i(21801944-3f10-6971-34a8-51d4204a974f).png",
-    "booknote/books-data/resources/(annots)分布式服务架构：原理、设计与实战 by 李艳鹏 杨彪 (z-lib.org).pdf/p26r91.850,166.320,379.360,344.990z2i(235cb7f4-2978-269c-8e8a-a23d71f6900f).png",
-    "BASE/知识看点.base",
-    "booknote/线性代数引论第五版",
-    "agents/L1/personal_knowledge_library",
-    "agents/L0/personal_knowledge_library",
-    "agents/L1/技术和学习记录",
-    "agents/L0/技术和学习记录",
-    "agents/L1/7adiu-d2vq6",
-    "resources/images/Pasted image 20260716153558.png",
-    "resources/Pasted image 20221009234419.png",
-    "resources/vim键位图/vi-vim-tutorial-7.gif",
-    "resources/vim键位图/vi-vim-tutorial-2.gif",
-    "resources/vim键位图/vi-vim-tutorial-6.gif",
     "数据库连接池.canvas",
     "AKKA.canvas",
     "Java classloader.canvas",
@@ -370,7 +383,6 @@
     "Netty.canvas",
     "机器学习.canvas",
     "spring.canvas",
-    "games101.canvas",
-    "公务员考试.canvas"
+    "games101.canvas"
   ]
 }

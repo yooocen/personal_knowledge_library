@@ -56,5 +56,23 @@
       ],
       "key": "P"
     }
+  ],
+  "audio-recorder:start": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "R"
+    }
+  ],
+  "audio-recorder:stop": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "E"
+    }
   ]
 }

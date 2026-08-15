@@ -163,11 +163,11 @@
     },
     {
       "path": "公务员考试.canvas",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 1,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 2,
       "openLogs": [
         {
-          "timestampMillis": 1752918757683
+          "timestampMillis": 1785067738085
         }
       ]
     },
@@ -706,30 +706,9 @@
     },
     {
       "path": "obsidian用法汇总.md",
-      "uniqueDaysOpened": 11,
-      "totalTimesOpened": 25,
+      "uniqueDaysOpened": 12,
+      "totalTimesOpened": 27,
       "openLogs": [
-        {
-          "timestampMillis": 1780624001961
-        },
-        {
-          "timestampMillis": 1780624087404
-        },
-        {
-          "timestampMillis": 1780624145390
-        },
-        {
-          "timestampMillis": 1780624456079
-        },
-        {
-          "timestampMillis": 1782269013944
-        },
-        {
-          "timestampMillis": 1782272806168
-        },
-        {
-          "timestampMillis": 1782272855654
-        },
         {
           "timestampMillis": 1782359938994
         },
@@ -756,6 +735,12 @@
         },
         {
           "timestampMillis": 1782871067160
+        },
+        {
+          "timestampMillis": 1785066219414
+        },
+        {
+          "timestampMillis": 1785069552149
         }
       ]
     },
@@ -3699,7 +3684,7 @@
     {
       "path": "BASE/linux.base",
       "uniqueDaysOpened": 25,
-      "totalTimesOpened": 163,
+      "totalTimesOpened": 175,
       "openLogs": [
         {
           "timestampMillis": 1782388890374
@@ -4006,6 +3991,42 @@
         },
         {
           "timestampMillis": 1785059089259
+        },
+        {
+          "timestampMillis": 1785063231259
+        },
+        {
+          "timestampMillis": 1785063433933
+        },
+        {
+          "timestampMillis": 1785063435120
+        },
+        {
+          "timestampMillis": 1785065912211
+        },
+        {
+          "timestampMillis": 1785066189395
+        },
+        {
+          "timestampMillis": 1785067225883
+        },
+        {
+          "timestampMillis": 1785067469427
+        },
+        {
+          "timestampMillis": 1785068124267
+        },
+        {
+          "timestampMillis": 1785068389379
+        },
+        {
+          "timestampMillis": 1785068718843
+        },
+        {
+          "timestampMillis": 1785070323693
+        },
+        {
+          "timestampMillis": 1785070337832
         }
       ]
     },
@@ -4135,20 +4156,17 @@
     },
     {
       "path": "resources/gdb.pdf",
-      "uniqueDaysOpened": 3,
-      "totalTimesOpened": 16,
+      "uniqueDaysOpened": 4,
+      "totalTimesOpened": 17,
       "openLogs": [
-        {
-          "timestampMillis": 1781921517703
-        },
-        {
-          "timestampMillis": 1781921518005
-        },
         {
           "timestampMillis": 1784117008984
         },
         {
           "timestampMillis": 1784117009256
+        },
+        {
+          "timestampMillis": 1785069522547
         }
       ]
     },
@@ -5508,14 +5526,23 @@
     },
     {
       "path": "resources/postgresql_internals-14_parts1-4_en.pdf",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 2,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 5,
       "openLogs": [
         {
           "timestampMillis": 1782977423835
         },
         {
           "timestampMillis": 1782977424562
+        },
+        {
+          "timestampMillis": 1785069595550
+        },
+        {
+          "timestampMillis": 1785069625241
+        },
+        {
+          "timestampMillis": 1785069626576
         }
       ]
     },
@@ -5591,11 +5618,17 @@
     },
     {
       "path": "Readwise/Articles/application.properties Versus applicationContext.xml.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 1,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 3,
       "openLogs": [
         {
           "timestampMillis": 1782977667935
+        },
+        {
+          "timestampMillis": 1785063192621
+        },
+        {
+          "timestampMillis": 1785063205993
         }
       ]
     },
@@ -6235,8 +6268,8 @@
     },
     {
       "path": "resources/image-tags/Pasted image 20220331002303.md",
-      "uniqueDaysOpened": 2,
-      "totalTimesOpened": 4,
+      "uniqueDaysOpened": 3,
+      "totalTimesOpened": 5,
       "openLogs": [
         {
           "timestampMillis": 1783607564592
@@ -6249,6 +6282,9 @@
         },
         {
           "timestampMillis": 1784116765658
+        },
+        {
+          "timestampMillis": 1785063225326
         }
       ]
     },
@@ -6684,8 +6720,8 @@
     },
     {
       "path": "resources/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
-      "uniqueDaysOpened": 6,
-      "totalTimesOpened": 26,
+      "uniqueDaysOpened": 7,
+      "totalTimesOpened": 27,
       "openLogs": [
         {
           "timestampMillis": 1783826195401
@@ -6764,6 +6800,9 @@
         },
         {
           "timestampMillis": 1784990978531
+        },
+        {
+          "timestampMillis": 1785069531539
         }
       ]
     },
@@ -6992,8 +7031,8 @@
     },
     {
       "path": "矩阵乘法技巧.md",
-      "uniqueDaysOpened": 5,
-      "totalTimesOpened": 10,
+      "uniqueDaysOpened": 6,
+      "totalTimesOpened": 12,
       "openLogs": [
         {
           "timestampMillis": 1784300575376
@@ -7024,13 +7063,19 @@
         },
         {
           "timestampMillis": 1784880996749
+        },
+        {
+          "timestampMillis": 1785067579910
+        },
+        {
+          "timestampMillis": 1785067637928
         }
       ]
     },
     {
       "path": "向量空间.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 9,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 10,
       "openLogs": [
         {
           "timestampMillis": 1784339379226
@@ -7058,6 +7103,9 @@
         },
         {
           "timestampMillis": 1784366267563
+        },
+        {
+          "timestampMillis": 1785067472668
         }
       ]
     },
@@ -7265,8 +7313,8 @@
     },
     {
       "path": "第1章-向量引论.md",
-      "uniqueDaysOpened": 4,
-      "totalTimesOpened": 27,
+      "uniqueDaysOpened": 5,
+      "totalTimesOpened": 28,
       "openLogs": [
         {
           "timestampMillis": 1784480345636
@@ -7348,6 +7396,9 @@
         },
         {
           "timestampMillis": 1784911761636
+        },
+        {
+          "timestampMillis": 1785067451647
         }
       ]
     },
@@ -7372,8 +7423,8 @@
     },
     {
       "path": "agents/L0/codex/2026-07-24_10-48-57_019f9206-a72b-76b3-9fc3-ffba7d7af2d1.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 12,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 13,
       "openLogs": [
         {
           "timestampMillis": 1784874940407
@@ -7410,6 +7461,9 @@
         },
         {
           "timestampMillis": 1784876994365
+        },
+        {
+          "timestampMillis": 1785066873447
         }
       ]
     },
@@ -7679,8 +7733,8 @@
     },
     {
       "path": "agents/L0/技术和学习记录/2026-07-25_00-27-34_019f94f3-ae44-7e10-9cac-83e960c9c4ad.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 4,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 8,
       "openLogs": [
         {
           "timestampMillis": 1784911806491
@@ -7693,6 +7747,18 @@
         },
         {
           "timestampMillis": 1784941835835
+        },
+        {
+          "timestampMillis": 1785066924991
+        },
+        {
+          "timestampMillis": 1785067060013
+        },
+        {
+          "timestampMillis": 1785067238362
+        },
+        {
+          "timestampMillis": 1785069585614
         }
       ]
     },
@@ -7708,8 +7774,8 @@
     },
     {
       "path": "第2章 求解线性方程组.md",
-      "uniqueDaysOpened": 1,
-      "totalTimesOpened": 17,
+      "uniqueDaysOpened": 2,
+      "totalTimesOpened": 19,
       "openLogs": [
         {
           "timestampMillis": 1784942618618
@@ -7761,6 +7827,12 @@
         },
         {
           "timestampMillis": 1784990813871
+        },
+        {
+          "timestampMillis": 1785063428459
+        },
+        {
+          "timestampMillis": 1785066191347
         }
       ]
     },
@@ -7963,7 +8035,7 @@
     {
       "path": "BM25 检索原理.md",
       "uniqueDaysOpened": 2,
-      "totalTimesOpened": 4,
+      "totalTimesOpened": 5,
       "openLogs": [
         {
           "timestampMillis": 1784974826918
@@ -7976,6 +8048,9 @@
         },
         {
           "timestampMillis": 1785061522783
+        },
+        {
+          "timestampMillis": 1785067776961
         }
       ]
     },
@@ -8028,7 +8103,7 @@
     {
       "path": "为什么每个方程代表一个平面.md",
       "uniqueDaysOpened": 2,
-      "totalTimesOpened": 7,
+      "totalTimesOpened": 10,
       "openLogs": [
         {
           "timestampMillis": 1784991350143
@@ -8050,6 +8125,15 @@
         },
         {
           "timestampMillis": 1785000431105
+        },
+        {
+          "timestampMillis": 1785063434978
+        },
+        {
+          "timestampMillis": 1785063436315
+        },
+        {
+          "timestampMillis": 1785069606884
         }
       ]
     },
@@ -8082,7 +8166,7 @@
     {
       "path": "agents/L0/技术和学习记录/2026-07-26_17-46-13_4afa8651-8f20-40b5-a19f-7c10d4a100d1.md",
       "uniqueDaysOpened": 1,
-      "totalTimesOpened": 12,
+      "totalTimesOpened": 14,
       "openLogs": [
         {
           "timestampMillis": 1785059278794
@@ -8119,6 +8203,12 @@
         },
         {
           "timestampMillis": 1785061436622
+        },
+        {
+          "timestampMillis": 1785063491052
+        },
+        {
+          "timestampMillis": 1785069513952
         }
       ]
     },
@@ -8569,10 +8659,177 @@
     {
       "path": "Readwise/Articles/用户对问题“application.properties与applicationContext.xml”的回答 - 问答.md",
       "uniqueDaysOpened": 1,
-      "totalTimesOpened": 1,
+      "totalTimesOpened": 2,
       "openLogs": [
         {
           "timestampMillis": 1785063102187
+        },
+        {
+          "timestampMillis": 1785063111902
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-26_18-42-47_88aa7adc-7418-4af4-8e7b-3d2ab65ed97e.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 4,
+      "openLogs": [
+        {
+          "timestampMillis": 1785063464000
+        },
+        {
+          "timestampMillis": 1785066731888
+        },
+        {
+          "timestampMillis": 1785066855813
+        },
+        {
+          "timestampMillis": 1785066866200
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-26_18-26-59_4ff8f131-a774-4c77-97f4-4589fc56cb2c.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1785063471532
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-26_18-21-10_3ec0d275-6585-49fc-812d-bed1ed8f76f5.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1785063475667
+        },
+        {
+          "timestampMillis": 1785068755137
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/技术和学习记录/2026-07-26_18-56-44_a7a23584-48c7-4a89-b98a-a91479fd63f0.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1785063570197
+        },
+        {
+          "timestampMillis": 1785066103245
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/personal_knowledge_library/2026-07-25_16-43-46_2b9bf7ce-c189-405c-8a7d-7d40b5da5251.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1785066922262
+        }
+      ]
+    },
+    {
+      "path": "agents/L0/codex/2026-07-14_10-10-02_019f5e63-5c2a-73f0-92cf-04c5befbc249.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1785066923941
+        }
+      ]
+    },
+    {
+      "path": "pdf转md.md",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 5,
+      "openLogs": [
+        {
+          "timestampMillis": 1785068761189
+        },
+        {
+          "timestampMillis": 1785068838897
+        },
+        {
+          "timestampMillis": 1785069311927
+        },
+        {
+          "timestampMillis": 1785069321029
+        },
+        {
+          "timestampMillis": 1785069326817
+        }
+      ]
+    },
+    {
+      "path": "resources/fdocuments.in_how-tomcat-works.pdf",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 8,
+      "openLogs": [
+        {
+          "timestampMillis": 1785069442708
+        },
+        {
+          "timestampMillis": 1785069455298
+        },
+        {
+          "timestampMillis": 1785069511048
+        },
+        {
+          "timestampMillis": 1785069523505
+        },
+        {
+          "timestampMillis": 1785069538821
+        },
+        {
+          "timestampMillis": 1785069646310
+        },
+        {
+          "timestampMillis": 1785069659787
+        },
+        {
+          "timestampMillis": 1785070322727
+        }
+      ]
+    },
+    {
+      "path": "resources/Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org).pdf",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1785069554908
+        },
+        {
+          "timestampMillis": 1785070328941
+        }
+      ]
+    },
+    {
+      "path": "resources/DDD 的实战（第十章）.pdf",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 2,
+      "openLogs": [
+        {
+          "timestampMillis": 1785069555727
+        },
+        {
+          "timestampMillis": 1785069570796
+        }
+      ]
+    },
+    {
+      "path": "resources/postgresql_internals-14_part1_en.pdf",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 1,
+      "openLogs": [
+        {
+          "timestampMillis": 1785069618009
         }
       ]
     }

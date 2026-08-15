@@ -6,7 +6,7 @@
   "effortLevel": "high",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
-  "titleGenerationModel": "opencode:alibaba-cn/glm-5.2",
+  "titleGenerationModel": "",
   "excludedTags": [],
   "mediaFolder": "",
   "systemPrompt": "",
@@ -334,24 +334,13 @@
       "environmentVariables": "",
       "modelAliases": {},
       "preferredThinkingByModel": {
-        "alibaba-cn/deepseek-v4-flash": "high"
+        "alibaba-cn/deepseek-v4-flash": "high",
+        "opencode/deepseek-v4-flash-free": "high"
       },
       "selectedMode": "claudian-yolo",
-      "thinkingOptionsByModel": {
-        "alibaba-cn/deepseek-v4-flash": [
-          {
-            "label": "High",
-            "value": "high"
-          },
-          {
-            "label": "Max",
-            "value": "max"
-          }
-        ]
-      },
+      "thinkingOptionsByModel": {},
       "visibleModels": [
-        "alibaba-cn/glm-5.2",
-        "alibaba-cn/deepseek-v4-flash"
+        "bailian/deepseek-v4-flash-0731"
       ]
     },
     "pi": {
@@ -370,7 +359,7 @@
   "settingsProvider": "claude",
   "savedProviderModel": {
     "claude": "haiku",
-    "opencode": "opencode:alibaba-cn/glm-5.2"
+    "opencode": "opencode:bailian/deepseek-v4-flash-0731"
   },
   "savedProviderEffort": {
     "claude": "high",

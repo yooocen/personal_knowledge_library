@@ -1,9 +1,6 @@
 [
-  "view-count",
-  "templater-obsidian",
   "obsidian42-brat",
   "obsidian-kanban",
-  "notebook-navigator",
   "obsidian-excalidraw-plugin",
   "editing-toolbar",
   "obsidian-custom-frames",
@@ -13,5 +10,9 @@
   "advanced-canvas",
   "obsidian-git",
   "realclaudian",
-  "obsidian-booknote-plugin"
+  "modern-outline",
+  "dataview",
+  "excalibrain",
+  "zettelkasten-forest",
+  "advanced-audio-recorder"
 ]

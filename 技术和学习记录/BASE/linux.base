@@ -11,7 +11,7 @@ views:
       - property: file.basename
         direction: ASC
     columnSize:
-      file.name: 196
+      file.name: 187
   - type: table
     name: gdb相关
     filters:
@@ -60,3 +60,32 @@ views:
     filters:
       and:
         - file.tags.contains("math")
+  - type: table
+    name: 卡片盒
+    filters:
+      and:
+        - zettelkastenNo.startsWith("2")
+    order:
+      - file.name
+      - zettelkastenNo
+    columnSize:
+      file.name: 191
+  - type: table
+    name: 线性代数学习
+    filters:
+      and:
+        - zettelkastenNo.startsWith("1")
+    order:
+      - file.name
+      - zettelkastenNo
+      - zettelkastenUp
+    sort:
+      - property: zettelkastenNo
+        direction: ASC
+    columnSize:
+      file.name: 142
+  - type: table
+    name: 研究房市数据
+    filters:
+      and:
+        - zettelkastenNo.startsWith("3")

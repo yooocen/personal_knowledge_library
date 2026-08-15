@@ -1,0 +1,9 @@
+{
+  "id": "zettelkasten-forest",
+  "name": "Zettelkasten 演化森林",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "从 zettelkastenNo 编码自动推断 Folgezettel 派生树，左→右可视化，跟随当前卡片展示话题上下文。",
+  "author": "cc",
+  "isDesktopOnly": true
+}

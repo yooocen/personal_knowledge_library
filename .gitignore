@@ -3,3 +3,5 @@ Zettl-Temp/
 技术和学习记录/resources/*.mov
 技术和学习记录/.claudian/*
 技术和学习记录/.superpowers/*
+**/.smart-env/**
+**/node_modules/**

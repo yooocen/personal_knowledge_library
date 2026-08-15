@@ -1,0 +1,122 @@
+/* Zettelkasten 演化森林 — 视图样式 */
+
+.zk-forest-view {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--background-primary);
+}
+
+.zk-forest-toolbar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  display: flex;
+  gap: 6px;
+}
+
+.zk-forest-toolbar button {
+  padding: 4px 10px;
+  font-size: var(--font-ui-small);
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-normal);
+}
+
+.zk-forest-toolbar button.is-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.zk-forest-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 节点 */
+.zk-node {
+  cursor: pointer;
+}
+
+.zk-node rect {
+  fill: var(--background-secondary);
+  stroke: var(--background-modifier-border);
+  stroke-width: 1px;
+  rx: 6;
+  ry: 6;
+}
+
+.zk-node text {
+  font-size: 11px;
+  fill: var(--text-normal);
+  font-family: var(--font-ui);
+}
+
+/* 第一行：编码（加粗） */
+.zk-node .zk-node-code {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* 第二行：标题（较小、次要） */
+.zk-node .zk-node-title {
+  font-size: 10px;
+  fill: var(--text-muted);
+}
+
+/* 当前卡：放大 + 强调色 + 光晕 */
+.zk-node.is-current rect {
+  fill: var(--interactive-accent);
+  stroke: var(--interactive-accent-hover);
+  stroke-width: 2px;
+}
+
+.zk-node.is-current text {
+  fill: var(--text-on-accent);
+  font-weight: 600;
+}
+
+/* 幽灵节点：灰色虚线，不可点击 */
+.zk-node.is-ghost rect {
+  fill: var(--background-modifier-form-field);
+  stroke: var(--text-faint);
+  stroke-dasharray: 4 3;
+}
+
+.zk-node.is-ghost text {
+  fill: var(--text-faint);
+  font-style: italic;
+}
+
+.zk-node.is-ghost {
+  cursor: default;
+}
+
+/* 不一致标记 */
+.zk-node .zk-warn-badge {
+  fill: var(--text-warning);
+}
+
+/* 连线 */
+.zk-link {
+  fill: none;
+  stroke: var(--background-modifier-border);
+  stroke-width: 1.5px;
+}
+
+/* 空状态 */
+.zk-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+  font-size: var(--font-ui-medium);
+  flex-direction: column;
+  gap: 12px;
+}
