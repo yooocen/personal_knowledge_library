@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "b71a6399c80191cc",
+        "id": "1137a753b98d8a13",
         "type": "tabs",
         "children": [
           {
-            "id": "7f9e3657f9f31891",
+            "id": "f4ec20e45810d2c1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "第3章 向量空间与子空间.md",
-                "mode": "source",
-                "source": false
+                "aFile": "技术和学习记录/.obsidian/community-plugins.json",
+                "bFile": "技术和学习记录/.obsidian/community-plugins.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "第3章 向量空间与子空间"
-            }
-          },
-          {
-            "id": "d55803c831e75d25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "卡片编码展示逻辑.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "卡片编码展示逻辑"
+              "icon": "diff",
+              "title": "Diff: community-plugins.json  (Working Tree)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,8 +93,33 @@
       {
         "id": "2d4709cd4b599ae5",
         "type": "tabs",
-        "dimension": 79.95991983967936,
         "children": [
+          {
+            "id": "aaaf87beb27908d6",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "BASE/linux.base",
+                "viewName": "线性代数学习"
+              },
+              "icon": "lucide-table",
+              "title": "linux"
+            }
+          },
+          {
+            "id": "97ab4427451176bc",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "BASE/知识看点.base",
+                "viewName": "tmux"
+              },
+              "icon": "lucide-table",
+              "title": "知识看点"
+            }
+          },
           {
             "id": "09194c49f446f66b",
             "type": "leaf",
@@ -145,6 +155,16 @@
               },
               "icon": "lucide-git-fork",
               "title": "gdb x命令 的关系图"
+            }
+          },
+          {
+            "id": "c51ae8630073a471",
+            "type": "leaf",
+            "state": {
+              "type": "zk-show-view",
+              "state": {},
+              "icon": "git-branch",
+              "title": "ZK Show 卡片关系图"
             }
           },
           {
@@ -230,7 +250,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "卡片编码展示逻辑.md"
+                "file": "线性代数绪论.md"
               },
               "icon": "lucide-info",
               "title": "笔记属性"
@@ -251,66 +271,41 @@
             "type": "leaf",
             "state": {
               "type": "claudian-view",
-              "state": {},
+              "state": {
+                "tabWorkspace": {
+                  "version": 1,
+                  "openTabs": [
+                    {
+                      "tabId": "tab-1786291761077-qm61j8h",
+                      "conversationId": "conv-1786862958237-vldykid5z"
+                    },
+                    {
+                      "tabId": "tab-1788140581958-6ogpm41",
+                      "conversationId": "conv-1788140638959-jpc0hhf94"
+                    },
+                    {
+                      "tabId": "tab-1788141653414-5uf2nlt",
+                      "conversationId": "conv-1788141670001-wv20l6ag3"
+                    }
+                  ],
+                  "activeTabId": "tab-1788141653414-5uf2nlt"
+                }
+              },
               "icon": "bot",
               "title": "Claudian"
             }
-          },
-          {
-            "id": "aaaf87beb27908d6",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "BASE/linux.base",
-                "viewName": "卡片盒"
-              },
-              "pinned": true,
-              "icon": "lucide-table",
-              "title": "linux"
-            }
-          },
-          {
-            "id": "97ab4427451176bc",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "BASE/知识看点.base",
-                "viewName": "tmux"
-              },
-              "icon": "lucide-table",
-              "title": "知识看点"
-            }
           }
         ],
-        "currentTab": 8
-      },
-      {
-        "id": "383ccb0a96ff37ab",
-        "type": "tabs",
-        "dimension": 20.04008016032064,
-        "children": [
-          {
-            "id": "9cbe3821a6a16fdb",
-            "type": "leaf",
-            "state": {
-              "type": "zk-forest",
-              "state": {},
-              "icon": "git-branch",
-              "title": "Zettelkasten 演化森林"
-            }
-          }
-        ]
+        "currentTab": 10
       }
     ],
     "direction": "horizontal",
-    "width": 763.2999877929688
+    "width": 642.7411499023438
   },
   "left-ribbon": {
     "hiddenItems": {
       "modern-outline:Toggle modern outline": false,
+      "zk-show:ZK Show 卡片关系图": false,
       "obsidian-git:Open Git source control": false,
       "bases:新建数据库": false,
       "daily-notes:打开/创建今天的日记": false,
@@ -323,59 +318,58 @@
       "obsidian-kanban:创建新看板": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "realclaudian:Open Claudian": false,
-      "zettelkasten-forest:Zettelkasten 演化森林": false,
       "advanced-audio-recorder:Start/stop recording": false
     }
   },
-  "active": "d55803c831e75d25",
+  "active": "426fc9fe546d4f52",
   "lastOpenFiles": [
-    "卡片编码展示规则（最终版）.md",
+    "agents/L0/技术和学习记录/2026-08-31_10-02-02_342e4c91-7201-4d32-8ee0-b08bb37e9a83.md",
+    "agents/L0/zk-show/2026-08-18_10-48-29_9e19e098.md",
+    "Excalidraw/Drawing 2026-08-22 15.44.23.excalidraw.md",
+    "安娜的档案 zlibrary.md",
+    "agents/L0/zk-show/2026-08-31_09-44-07_f036b138-f1a8-44fe-852a-358e83e86395.md",
     "卡片编码展示逻辑.md",
-    "agents/L0/技术和学习记录/2026-08-15_16-58-16_20b6e24f-9eea-4376-bdbd-50ea79d5afd7.md",
-    "第3章 向量空间与子空间.md",
-    "agents/L0/技术和学习记录/2026-08-15_16-01-10_e5dd2297-18e8-49dc-a58b-9ec015d53a77.md",
-    "我的zettelkasten编码规则（非官方）.md",
-    "zettelkasten 图书馆（官方）.md",
-    "第3章 中等难度习题.md",
-    "BASE/知识看点.base",
-    "BASE/linux.base",
-    "Excalidraw/证明LDLT.excalidraw.md",
-    "第3章 中等难度习题 参考答案.md",
-    "agents/L0/技术和学习记录/2026-08-10_00-56-47_3b58b84c-6395-4c81-a942-1aea154c0bcf.md",
-    "LDLT 数据归纳法中代入步骤补充说明.md",
+    "Excalidraw/卡片编码展示逻辑.excalidraw.md",
+    "2进制.md",
+    "线性代数绪论.md",
     "第4章 正交性质.md",
-    "四个基本子空间.md",
-    "向量空间.md",
-    "R^n之外的三个向量空间.md",
+    "resources/images/Pasted image 20260716153558.png",
+    "resources/html-show/matrix-four-subspaces.html",
+    "agents/L0/zk-show/2026-08-29_11-03-32_3355071c-2d88-4265-aae5-c670573abaa7.md",
+    "第1章-向量引论.md",
+    "第3章 向量空间与子空间.md",
+    "第3章 中等难度习题.md",
+    "第3章 中等难度习题 参考答案.md",
     "第2章 求解线性方程组.md",
-    "Excalidraw/第2章 习题求解 草稿.excalidraw.md",
-    "第2章 中等难度习题.md",
+    "主元与秩.md",
+    "线性无关.md",
+    "阶梯形非零行无关证明.md",
+    "分量数.md",
+    "四个基本子空间.md",
+    "线性代数.md",
+    "数学.md",
+    "LDLT 数据归纳法中代入步骤补充说明.md",
+    "Excalidraw/证明LDLT.excalidraw.md",
     "LDLT分解存在性证明.md",
+    "BASE/linux.base",
+    "resources/images/Pasted Image 20260817113027_083.png",
+    "resources/images/Pasted Image 20260816230127_107.png",
+    "BASE/知识看点.base",
+    "resources/images/Pasted Image 20260818103413_532.png",
+    "resources/images/Pasted Image 20260816230326_240.png",
+    "agents/L0/zk-show",
     "resources/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
     "resources/Screenshot_20220929_152342_tv.danmaku.bili.jpg",
     "resources/Screenshot_20230808_144035_md.obsidian_edit_321602635280093.jpg",
-    "agents/L0/7adiu-d2vq6/2026-08-09_00-01-13_e355e226-2976-4ea0-9fc2-8760366c8d07.md",
-    "什么时候应该新增笔记.md",
-    "agents/L0/7adiu-d2vq6/2026-08-08_14-49-01_9596efbf-9054-4761-aa4a-db5523da9c78.md",
-    "agents/L0/7adiu-d2vq6/2026-08-08_11-43-39_fe3d8bab-b73c-4fe0-8ac8-eed4d0fba946.md",
-    "关于Zettelkasten-navigation 这个插件给我的灵感.md",
     "resources/images/Pasted image 20260808112638.png",
-    "数据来源.md",
     "resources/images/Pasted image 20260807112243.png",
     "resources/images/Pasted image 20260806194110.png",
-    "resources/images/Pasted image 20260806193921.png",
-    "resources/images/Pasted image 20260805230631.png",
-    "resources/images/Pasted image 20260805104038.png",
     "recording-Track1-2026-08-02T03-38-48-197Z.webm",
     "recording-Track1-2026-08-02T03-38-48-197Z-part1.webm.tmp",
     "resources/images/Recording 20260802113831.m4a",
     "resources/images/Recording 20260802113824.m4a",
     "resources/images/Recording 20260802113407.m4a",
-    "resources/audio",
-    "agents/L0/notebooklm",
     "公务员考试.canvas",
-    "booknote/books-data/resources/(annots)Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org).pdf/p179r122.800,377.090,172.860,418.960z2i(90771e12-f7c9-b7f4-4687-b99ce767637f).png",
-    "booknote/books-data/resources/(annots)Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org).pdf/p179r253.290,363.670,560.620,490.910z2i(c64d26a2-86d4-663e-2aa1-635223e8b63b).png",
     "数据库连接池.canvas",
     "AKKA.canvas",
     "Java classloader.canvas",

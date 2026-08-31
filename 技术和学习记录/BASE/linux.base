@@ -68,6 +68,9 @@ views:
     order:
       - file.name
       - zettelkastenNo
+    sort:
+      - property: file.name
+        direction: ASC
     columnSize:
       file.name: 191
   - type: table
@@ -83,7 +86,7 @@ views:
       - property: zettelkastenNo
         direction: ASC
     columnSize:
-      file.name: 142
+      file.name: 308
   - type: table
     name: 研究房市数据
     filters:
