@@ -1,0 +1,24 @@
+/* 去除 Excalidraw 手写笔悬浮时的十字准星光标
+   适用于 Obsidian Excalidraw 插件 */
+
+/* 1. 隐藏十字准星DOM元素（Excalidraw 自定义绘制的十字线） */
+.excalidraw .cursor-crosshair,
+.excalidraw .cursor-crosshair-line,
+.excalidraw .crosshair-cursor,
+.excalidraw__canvas cursor-crosshair {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* 2. 隐藏 canvas 上的十字光标，替换为普通笔形光标 */
+.excalidraw.is-pen-hover canvas,
+.excalidraw canvas[style*="cursor: crosshair"] {
+  cursor: none !important;
+  /* 如果想保留笔形光标，替换上面一行为: cursor: pen !important; */
+}
+
+/* 3. 全局在笔悬浮状态下去除十字光标 */
+.excalidraw.is-pen-hover {
+  cursor: none !important;
+}

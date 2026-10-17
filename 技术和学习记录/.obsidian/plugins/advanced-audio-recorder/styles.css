@@ -107,7 +107,8 @@ If your plugin does not need CSS, delete this file.
 .aar-playback-controls,
 .aar-playback-buttons,
 .aar-playback-audio-controls,
-.aar-playback-marker-controls {
+.aar-playback-marker-controls,
+.aar-playback-chapter-controls {
     display: inline-flex;
     align-items: center;
 }
@@ -121,7 +122,8 @@ If your plugin does not need CSS, delete this file.
 
 .aar-playback-buttons,
 .aar-playback-audio-controls,
-.aar-playback-marker-controls {
+.aar-playback-marker-controls,
+.aar-playback-chapter-controls {
     gap: 2px;
 }
 
@@ -351,6 +353,15 @@ input.aar-input-invalid {
     border-color: var(--text-error);
 }
 
+/* Why a setting refused the value that was entered, under the row's own
+   description. Obsidian renders this itself from 1.13; below it the row is the
+   plugin's to append to, and a control whose value is accepted never grows one. */
+.aar-setting-error {
+    margin-top: 4px;
+    font-size: 0.9em;
+    color: var(--text-error);
+}
+
 /* Enhanced audio player */
 .aar-player {
     /* Waveform colors derive from the theme so it matches any palette. The
@@ -359,45 +370,101 @@ input.aar-input-invalid {
        one place (the constant) rather than being duplicated here. */
     --aar-waveform-played: var(--color-accent);
     --aar-waveform-unplayed: var(--background-modifier-border);
+    /*
+     * Three surfaces, all taken from the theme: the player itself, the cards
+     * and buttons raised above it, and the fields and waveform set into it. A
+     * raised surface moves toward the text colour, so it lifts in a dark theme
+     * and tints in a light one.
+     */
+    --aar-surface-raised: color-mix(
+        in srgb,
+        var(--background-secondary),
+        var(--text-normal) 6%
+    );
+    --aar-surface-sunken: var(--background-primary);
+    /* Fields sit just below the card they are on, so text stays the focus */
+    --aar-surface-field: color-mix(
+        in srgb,
+        var(--aar-surface-raised),
+        var(--background-primary) 35%
+    );
+    --aar-line: color-mix(
+        in srgb,
+        var(--background-secondary),
+        var(--text-normal) 13%
+    );
+    --aar-control-size: 28px;
 
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 100%;
-    padding: 10px 12px;
+    padding: 10px;
     border: 1px solid var(--background-modifier-border);
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: var(--background-secondary);
+}
+
+/*
+ * The player renders into Obsidian's own embed element, which the app styles
+ * as .internal-embed:not(.image-embed) { display: block }. That rule outranks
+ * a single class, so without this one the player loses its column layout and
+ * every gap between its parts. Equal specificity, stated later, wins.
+ */
+.internal-embed.aar-player {
+    display: flex;
+}
+
+/*
+ * Live Preview goes further: .markdown-source-view.mod-cm6 .cm-content > *
+ * sets display: block on every line of the editor, the player included. The
+ * app answers the same rule this way for its own image embeds.
+ */
+.markdown-source-view.mod-cm6 .cm-content > .aar-player {
+    display: flex;
 }
 
 .aar-player-controls {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     flex-wrap: wrap;
 }
 
-.aar-player-btn {
+/*
+ * Buttons, text fields and the note inside the player are stated under
+ * .aar-player: the app styles them through button:not(.clickable-icon) and
+ * input[type='text'], and a bare class loses to either.
+ */
+.aar-player .aar-player-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 28px;
     height: 28px;
     padding: 0 6px;
-    border: none;
-    border-radius: 5px;
-    background-color: transparent;
+    border: 1px solid var(--aar-line);
+    border-radius: 6px;
+    background-color: var(--aar-surface-raised);
     color: var(--text-normal);
     cursor: pointer;
     box-shadow: none;
-    transition: background-color 0.15s ease, color 0.15s ease;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease;
 }
 
-.aar-player-btn:hover {
-    background-color: var(--background-modifier-hover);
+.aar-player .aar-player-btn:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--aar-surface-raised),
+        var(--text-normal) 8%
+    );
 }
 
-.aar-player-btn.is-active {
+.aar-player .aar-player-btn.is-active {
+    border-color: var(--color-accent);
     color: var(--color-accent);
 }
 
@@ -406,23 +473,68 @@ input.aar-input-invalid {
     height: 16px;
 }
 
+/* The primary action: a round accent button, a little larger than the rest */
+.aar-player .aar-player-play {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    padding: 0;
+    margin-right: 2px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--interactive-accent);
+    box-shadow: 0 1px 6px
+        color-mix(in srgb, var(--interactive-accent) 35%, transparent);
+    color: var(--text-on-accent);
+}
+
+.aar-player .aar-player-play:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+.aar-player-play svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
 .aar-player-speed {
-    font-size: 0.85em;
+    gap: 6px;
+    font-size: var(--font-ui-small);
     font-weight: 600;
     font-variant-numeric: tabular-nums;
 }
 
-.aar-player-volume {
-    width: 80px;
+/* A chevron says the speed button opens a menu */
+.aar-player-speed::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin-top: -3px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    opacity: 0.7;
+}
+
+/*
+ * The volume slider is the one control that gives way: the row breaks onto a
+ * second line by its minimum width, and any room left over widens it.
+ */
+.aar-player .aar-player-volume {
+    flex: 1 1 0;
+    min-width: 36px;
+    max-width: 96px;
     accent-color: var(--color-accent);
     cursor: pointer;
 }
 
 .aar-player-time {
     margin-left: auto;
-    font-size: 0.85em;
+    padding: 0 2px;
+    font-size: var(--font-ui-small);
     font-variant-numeric: tabular-nums;
-    color: var(--text-muted);
+    color: var(--text-normal);
     white-space: nowrap;
 }
 
@@ -441,14 +553,16 @@ input.aar-input-invalid {
 .aar-player-seek-waveform {
     /* Frame the waveform in a padded rectangle so it reads as its own
        panel. content-box keeps the canvas height equal to
-       --aar-waveform-height (no stretch); the padding/border add around it. */
+       --aar-waveform-height (no stretch); the padding/border add around it.
+       The padding is vertical only: the ticks and the seek position are
+       measured across the full width of this element. */
     box-sizing: content-box;
     height: var(--aar-waveform-height);
-    padding: 20px 0;
-    margin: 8px 0;
-    border: 1px solid var(--background-modifier-border);
-    border-radius: 6px;
-    background-color: var(--background-primary);
+    padding: 12px 0;
+    margin: 2px 0;
+    border: 1px solid var(--aar-line);
+    border-radius: 8px;
+    background-color: var(--aar-surface-sunken);
 }
 
 /* Inner layer that stacks the base and played waveform canvases */
@@ -541,8 +655,22 @@ input.aar-input-invalid {
     cursor: pointer;
 }
 
+/*
+ * The colours a marker may carry, mapped to the theme's own accents so a
+ * coloured marker stays legible in light and dark alike. A marker with no
+ * colour sets no property, which leaves the default each rule below declares.
+ */
+.aar-player {
+    --aar-marker-red: var(--color-red);
+    --aar-marker-orange: var(--color-orange);
+    --aar-marker-yellow: var(--color-yellow);
+    --aar-marker-green: var(--color-green);
+    --aar-marker-blue: var(--color-blue);
+    --aar-marker-purple: var(--color-purple);
+}
+
 .aar-player-tick-bookmark {
-    background-color: var(--text-accent);
+    background-color: var(--aar-marker-color, var(--text-accent));
     opacity: 0.7;
 }
 
@@ -551,7 +679,10 @@ input.aar-input-invalid {
 }
 
 .aar-player-tick-chapter {
-    background-color: var(--text-warning, var(--color-orange));
+    background-color: var(
+        --aar-marker-color,
+        var(--text-warning, var(--color-orange))
+    );
     width: 2px;
     opacity: 0.85;
 }
@@ -562,32 +693,74 @@ input.aar-input-invalid {
     top: 0;
     left: -2px;
     border: 3px solid transparent;
-    border-top-color: var(--text-warning, var(--color-orange));
+    border-top-color: var(
+        --aar-marker-color,
+        var(--text-warning, var(--color-orange))
+    );
 }
 
 /* Marker / chapter list below the player */
 .aar-player-marker-list {
+    /* Sized by the player, so rows can adapt to the width they are given */
+    container-type: inline-size;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 6px;
+}
+
+/* Editable rows are taller, so they sit closer together */
+.aar-player:not(.aar-player-readonly) .aar-player-marker-list {
+    gap: 3px;
 }
 
 .aar-player-marker-row {
+    /* Also the gap inside a reading-view note line, which starts the note
+       where the marker's icon starts only while the two are equal */
+    --aar-marker-row-gap: 8px;
     display: flex;
+    /* A reading-view note takes a line of its own under the row, so it wraps. */
+    flex-wrap: wrap;
     align-items: center;
-    gap: 6px;
-    padding: 1px 4px;
-    border-radius: 4px;
+    gap: var(--aar-marker-row-gap);
+    padding: 5px 10px;
+    border: 1px solid var(--aar-line);
+    border-radius: 8px;
+    background-color: var(--aar-surface-raised);
+}
+
+/*
+ * An editable row is a grid. Every control sits on the title's line, and the
+ * note is a group of its own on the line below, starting under the title, so
+ * a note of several lines never pulls the controls down with it. Only the
+ * placement changes: the DOM order, and with it the tab order, stays as
+ * built. The row is positioned so the colour select can lie over its cell.
+ */
+div.aar-player-marker-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto minmax(0, 1fr) auto auto auto auto auto;
+    grid-template-areas:
+        'kind time label length jump here color delete'
+        '. . note note note note note note';
+    align-items: center;
+    /*
+     * Cells are spaced, lines are not: a hidden empty note must leave no gap
+     * behind. Written as the grid shorthand because a bare column-gap reads
+     * to Obsidian's plugin validator as the multi-column property of the same
+     * name, which its oldest supported app version only partly implements.
+     */
+    gap: 0 4px;
 }
 
 .aar-player-marker-kind {
+    grid-area: kind;
     display: inline-flex;
-    color: var(--text-muted);
+    color: var(--text-faint);
 }
 
 .aar-player-marker-kind svg {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
 }
 
 .aar-player-marker-time {
@@ -599,42 +772,292 @@ input.aar-input-invalid {
     box-shadow: none;
     padding: 0 4px;
     cursor: pointer;
+    /* As wide as the list's longest timestamp, so every row lines up */
+    box-sizing: content-box;
+    min-width: calc(var(--aar-marker-time-chars, 0) * 1ch);
+    text-align: right;
 }
 
-.aar-player-marker-label {
-    flex: 1;
-    min-width: 0;
-    font-size: 0.85em;
-    background: transparent;
-    border: 1px solid transparent;
-    border-radius: 4px;
+.aar-player .aar-player-marker-label,
+.aar-player .aar-player-marker-time-edit {
+    box-sizing: border-box;
+    height: var(--aar-control-size);
+    border: 1px solid var(--aar-line);
+    border-radius: 6px;
+    background-color: var(--aar-surface-field);
+    box-shadow: none;
     color: var(--text-normal);
+    font-size: var(--font-ui-small);
 }
 
-.aar-player-marker-label:hover,
-.aar-player-marker-label:focus {
-    border-color: var(--background-modifier-border);
-    background-color: var(--background-primary);
+.aar-player .aar-player-marker-label:hover,
+.aar-player .aar-player-marker-time-edit:hover {
+    border-color: color-mix(in srgb, var(--aar-line), var(--text-normal) 20%);
+}
+
+.aar-player .aar-player-marker-label:focus,
+.aar-player .aar-player-marker-time-edit:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px
+        color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+.aar-player .aar-player-marker-label {
+    grid-area: label;
+    width: 100%;
+    min-width: 0;
+    /* Room on the right for the pencil drawn over the field */
+    padding: 0 32px 0 10px;
+    font-size: var(--font-ui-medium);
+}
+
+/* The pencil says the title is edited in place; clicks pass to the field */
+.aar-player-marker-label-icon {
+    --icon-size: 14px;
+    grid-area: label;
+    justify-self: end;
+    display: inline-flex;
+    margin-right: 10px;
+    color: var(--text-faint);
+    pointer-events: none;
+}
+
+/* The marker's time opens its row, as a field the time is typed into */
+.aar-player .aar-player-marker-time-edit {
+    grid-area: time;
+    width: calc(6ch + 16px);
+    /* Never narrower than the list's longest timestamp: its characters plus
+       16px of padding, 2px of border and 2px for the caret */
+    min-width: calc(var(--aar-marker-time-chars, 0) * 1ch + 20px);
+    padding: 0 8px;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+/* Jump, crosshair and delete are bare icons: their chrome is clickable-icon */
+.aar-player .aar-player-marker-jump,
+.aar-player .aar-player-marker-here,
+.aar-player .aar-player-marker-delete {
+    --icon-size: 14px;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    justify-content: center;
+}
+
+.aar-player-marker-jump {
+    grid-area: jump;
+}
+
+.aar-player-marker-here {
+    grid-area: here;
 }
 
 .aar-player-marker-delete {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    color: var(--text-faint);
-    cursor: pointer;
+    grid-area: delete;
 }
 
-.aar-player-marker-delete:hover {
+.aar-player .aar-player-marker-delete:hover {
     color: var(--text-error);
 }
 
-.aar-player-marker-delete svg {
-    width: 14px;
-    height: 14px;
+/* The row that is playing offers its delete in red, ready to hand */
+.aar-player .aar-player-marker-row.is-active .aar-player-marker-delete {
+    color: var(--text-error);
+}
+
+/*
+ * The colour control is drawn as a dot in the marker's colour and a chevron.
+ * The native select lies over that drawing, transparent and the same size, so
+ * choosing a colour is still the platform's own menu and keyboard handling.
+ */
+.aar-player-marker-color {
+    grid-area: color;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.aar-player-marker-swatch {
+    --icon-size: 12px;
+    grid-area: color;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    height: 22px;
+    padding: 0 3px;
+    border-radius: 6px;
+    color: var(--text-muted);
+}
+
+.aar-player-marker-swatch-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* A marker with no colour shows a neutral grey, whatever the theme's
+       faint text happens to be */
+    background-color: var(
+        --aar-marker-color,
+        color-mix(in srgb, var(--text-normal) 35%, transparent)
+    );
+}
+
+.aar-player-marker-swatch-chevron {
+    display: inline-flex;
+}
+
+.aar-player-marker-color:hover + .aar-player-marker-swatch {
+    background-color: var(--background-modifier-hover);
+    color: var(--text-normal);
+}
+
+.aar-player-marker-color:focus-visible + .aar-player-marker-swatch {
+    box-shadow: 0 0 0 3px var(--background-modifier-border-focus);
+}
+
+/*
+ * Every colour names itself in the menu and draws itself as well: the option
+ * text is a filled circle plus the name, both in the colour the marker gets.
+ */
+.aar-player-marker-color-red {
+    color: var(--aar-marker-red);
+}
+
+.aar-player-marker-color-orange {
+    color: var(--aar-marker-orange);
+}
+
+.aar-player-marker-color-yellow {
+    color: var(--aar-marker-yellow);
+}
+
+.aar-player-marker-color-green {
+    color: var(--aar-marker-green);
+}
+
+.aar-player-marker-color-blue {
+    color: var(--aar-marker-blue);
+}
+
+.aar-player-marker-color-purple {
+    color: var(--aar-marker-purple);
+}
+
+/*
+ * The note is prose, so it sits under the title across the width the title
+ * has: a quiet line until it is hovered or edited, one line tall until its
+ * text needs more.
+ */
+.aar-player .aar-player-marker-note {
+    grid-area: note;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 2px;
+    min-height: 0;
+    height: auto;
+    /* Room on the left for the page icon drawn over the field */
+    padding: 2px 10px 2px 30px;
+    resize: none;
+    field-sizing: content;
+    font-size: var(--font-ui-small);
+    line-height: 1.4;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--text-muted);
+}
+
+/* Where the field cannot size itself, it can still be dragged taller */
+@supports not (field-sizing: content) {
+    .aar-player .aar-player-marker-note {
+        resize: vertical;
+    }
+}
+
+.aar-player .aar-player-marker-note:hover {
+    border-color: var(--aar-line);
+}
+
+.aar-player .aar-player-marker-note:focus {
+    border-color: var(--color-accent);
+    background-color: var(--aar-surface-field);
+    color: var(--text-normal);
+}
+
+.aar-player-marker-note-icon {
+    --icon-size: 14px;
+    grid-area: note;
+    justify-self: start;
+    align-self: start;
+    display: inline-flex;
+    margin: 6px 0 0 10px;
+    color: var(--text-faint);
+    pointer-events: none;
+}
+
+/*
+ * An empty note keeps the row to one line until the row is being worked in.
+ * MarkerListView opens the row as one of its text fields takes focus and
+ * closes it once the click or key release that took focus away has been
+ * dispatched, so the rows below hold still for that click. The closed field is
+ * collapsed to no height instead of taken out of the layout, so Tab and
+ * Shift+Tab still reach it, and reaching it opens the row. A note that has
+ * text is always shown.
+ */
+div.aar-player-marker-row:not(.aar-player-marker-row-open) .aar-player-marker-note:placeholder-shown {
+    height: 0;
+    margin-top: 0;
+    padding-block: 0;
+    border-block-width: 0;
+    overflow: hidden;
+}
+
+/*
+ * The icon is built directly after the field it marks, so the empty note is
+ * reached through the sibling rather than through :has on the row. The row
+ * selector would make every marker list re-evaluate the whole subtree on each
+ * keystroke in a note, which is the cost Obsidian's validator warns about.
+ */
+div.aar-player-marker-row:not(.aar-player-marker-row-open) .aar-player-marker-note:placeholder-shown + .aar-player-marker-note-icon {
+    display: none;
+}
+
+/*
+ * The note starts where the marker's icon does, not under its timecode. The
+ * indent is a hidden copy of the timecode rather than a fixed measurement, so
+ * a list whose stamps run to an hour lines up as well as one that does not,
+ * and a note long enough to wrap keeps its whole block in the same column.
+ * The gap after the indent is the row's own for the same reason.
+ */
+.aar-player-marker-note-line {
+    display: flex;
+    flex-basis: 100%;
+    gap: var(--aar-marker-row-gap);
+}
+
+.aar-player-marker-note-indent {
+    flex: none;
+    visibility: hidden;
+    font-size: 0.85em;
+    font-variant-numeric: tabular-nums;
+    padding: 0 4px;
+    box-sizing: content-box;
+    min-width: calc(var(--aar-marker-time-chars, 0) * 1ch);
+}
+
+.aar-player-marker-note-static {
+    flex: 1;
+    font-size: 0.8em;
+    color: var(--text-muted);
+    text-align: left;
+    /* A note typed over several lines is shown over the same lines */
+    white-space: pre-wrap;
 }
 
 /* Read-only mode (reading view): hide editing affordances */
@@ -651,35 +1074,100 @@ input.aar-input-invalid {
     padding: 0 4px;
     text-align: left;
     justify-content: flex-start;
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: var(--text-normal);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* Segment length shown at the right of a read-only row */
+/* Segment length: how long the entry runs, at the right of its row */
 .aar-player-marker-segment {
+    grid-area: length;
     padding-left: 8px;
+    text-align: right;
+    box-sizing: content-box;
+    min-width: calc(var(--aar-marker-time-chars, 0) * 1ch);
     font-variant-numeric: tabular-nums;
     font-size: 0.8em;
     color: var(--text-muted);
     white-space: nowrap;
 }
 
-/* The whole read-only row is a single jump target */
+/* The whole read-only row is a single jump target, and it is a real button,
+   so it needs the same chrome reset the other player buttons carry. Reading
+   view styles a bare button with a background, a border and centred text, none
+   of which belongs on a row of the list. */
+button.aar-player-marker-row {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid var(--aar-line);
+    border-radius: 8px;
+    box-shadow: none;
+    background-color: var(--aar-surface-raised);
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    /* A marker with a note wraps onto a second line, and a themed button
+       carries a fixed height and nowrap text: without these the note spilled
+       out of its own row and over the one below it. */
+    height: auto;
+    min-height: 0;
+    white-space: normal;
+}
+
 .aar-player-marker-row-clickable {
     cursor: pointer;
 }
 
 .aar-player-marker-row-clickable:hover {
-    background-color: var(--background-modifier-hover);
+    background-color: color-mix(
+        in srgb,
+        var(--aar-surface-raised),
+        var(--text-normal) 5%
+    );
 }
 
-/* Currently-playing segment: highlighted with an accent edge */
+/* Keyboard focus on a marker row, matching the seek area's ring so every
+   focusable part of the player is outlined the same way. */
+.aar-player-marker-row:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Currently-playing segment: highlighted with an accent border */
 .aar-player-marker-row.is-active {
-    background-color: var(--background-modifier-hover);
-    box-shadow: inset 2px 0 0 var(--color-accent);
+    border-color: var(--color-accent);
+    background-color: color-mix(
+        in srgb,
+        var(--aar-surface-raised),
+        var(--color-accent) 8%
+    );
+}
+
+/*
+ * The colour a marker carries, drawn as a left edge. Stated with the row
+ * class as well, so it outranks the reading-view button reset above: that
+ * rule clears every box-shadow, and a plain .aar-player-marker-row-colored
+ * lost to it, which is why a colour showed while editing and vanished the
+ * moment the note was read.
+ */
+.aar-player-marker-row.aar-player-marker-row-colored {
+    box-shadow: inset 4px 0 0 var(--aar-marker-color);
+}
+
+/*
+ * A narrow player keeps the title on the first line with its time, gives the
+ * note the second, and moves the row's controls to a third, right-aligned.
+ */
+@container (max-width: 480px) {
+    div.aar-player-marker-row {
+        grid-template-areas:
+            'kind time label label label label label label'
+            '. . note note note note note note'
+            '. . . length jump here color delete';
+        row-gap: 3px;
+    }
 }
 
 /* Modal text shared by the transcription and audio-cleanup dialogs */
@@ -702,6 +1190,19 @@ input.aar-input-invalid {
 .aar-modal-status {
     margin: 8px 0 4px;
     font-size: 0.9em;
+}
+
+/* Why a dialog cannot accept what was typed, shown under the field it belongs
+   to while the confirming button stays disabled. Holding no message is what
+   keeps it out of the layout, so nothing has to toggle it. */
+.aar-modal-error {
+    margin: 4px 0 0;
+    font-size: 0.9em;
+    color: var(--text-error);
+}
+
+.aar-modal-error:empty {
+    display: none;
 }
 
 /* Speaker rename dialog: the third column of each speaker row, one button
@@ -825,23 +1326,196 @@ input.aar-input-invalid {
     font-size: 0.85em;
 }
 
-/* Multi-line prompt editor: stack the control under the label and let the
-   text area fill the row so long editable prompts have room to breathe. */
-.aar-setting-stacked {
+/* Multi-line editors - a glossary, a guidance prompt - on both Obsidians, which
+   put every control in the same narrow right-hand column a toggle lives in. A
+   text area is written in paragraphs, so the control moves under the label and
+   fills the row instead. The two selectors are the two ways such a row is
+   found: the legacy renderer marks the row itself, while from 1.13 the row
+   belongs to the framework and only a group takes a class, so the tree keeps
+   its text areas in a block of their own and this rule dresses that block. */
+.aar-setting-stacked,
+.aar-stacked-text .setting-item {
     display: block;
 }
 
-.aar-setting-stacked .setting-item-control {
+.aar-setting-stacked .setting-item-control,
+.aar-stacked-text .setting-item-control {
     width: 100%;
     padding-top: var(--size-4-2);
     justify-content: flex-start;
 }
 
-.aar-setting-stacked .setting-item-control textarea {
+.aar-setting-stacked .setting-item-control textarea,
+.aar-stacked-text .setting-item-control > textarea {
     width: 100%;
     min-height: 6em;
     resize: vertical;
     font-family: var(--font-monospace);
+}
+
+/* Where the lines of this tab go: between the blocks, not between the rows
+   inside them. A block is one group of the definition tree, and every group the
+   tree declares carries .aar-settings-section, which is also the scope of these
+   rules: they reach nothing but this tab's own blocks and what those blocks
+   hold. The tree leaves no row loose beside them, so a block the framework
+   builds around loose rows - which would carry no class - never arises.
+
+   The row divider is switched off through Obsidian's own variable rather than
+   by overriding the rule that reads it, so a theme changing that rule keeps
+   working. */
+.aar-settings-section {
+    --setting-items-divider-width: 0;
+}
+
+.aar-settings-section + .aar-settings-section {
+    border-top: var(--divider-width) solid var(--background-modifier-border);
+    padding-top: var(--size-4-4);
+}
+
+/* A row that opens a page is a link, and Obsidian marks it with a chevron and
+   the pointer cursor of the moment - it declares the transition for a hover
+   background on such a row but never sets one on the desktop, so the row reads
+   as text under the pointer. It gets the background the app gives its own
+   action rows, written the way the app writes it, hover-capable devices only:
+   on a touch device the framework has its own tap state. */
+@media (hover: hover) {
+    .aar-settings-section .setting-item.mod-navigable:hover {
+        background-color: var(--background-modifier-hover);
+    }
+}
+
+/* A number row is a real input[type=number] with its min, max, and step
+   already set, and Obsidian only hides the browser's stepper. It is shown back
+   here, so a count is nudged with the arrows (or the arrow keys, which have
+   always worked) instead of being retyped, and the browser keeps it in range. */
+.aar-settings-section input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: auto;
+    appearance: auto;
+    opacity: 1;
+}
+
+/* The per-track rows repeat one pair of pickers, and a picker sized to its own
+   text ends where its longest option ends: a device name runs to sixty
+   characters and a channel layout to twenty, so the block reads as a ragged
+   column. They share one width instead, and each picker truncates its own
+   label the way a picker does. */
+.aar-track-rows .setting-item-control {
+    flex: 0 0 var(--aar-track-control-width, 60%);
+}
+
+.aar-track-rows .setting-item-control select {
+    width: 100%;
+}
+
+/* The Obsidian before 1.13 renders the same tree as a flat list of rows with no
+   group element at all, so the same rule is expressed the other way round: a
+   row keeps no divider of its own, and a heading carries the line above the
+   block it opens. A 1.13 group heading is the first element of its group, which
+   is what keeps this from drawing a second line under the one above. */
+.aar-settings-tab .setting-item {
+    border-top: none;
+}
+
+.aar-settings-tab .setting-item-heading:not(:first-child) {
+    border-top: var(--divider-width) solid var(--background-modifier-border);
+    padding-top: var(--size-4-4);
+}
+
+/* Obsidian 1.13+ renders the settings tab from getSettingDefinitions(), and the
+   framework owns the rows of a declarative group: it resets the group's list to
+   exactly the rows it tracks after every render. The tab body therefore lives
+   inside the single row element the framework tracks, and that row has to stop
+   behaving like a setting row - no flex layout, padding, background, or
+   divider - so the settings inside it read as an ordinary settings column. The
+   second selector of each rule outweighs Obsidian's own
+   ".setting-group .setting-item:not(.setting-item-heading)" rules, which would
+   otherwise keep the row's padding and divider and inset the whole body twice.
+   It repeats that ":not" deliberately: matching the shape of the rule being
+   overridden wins on specificity rather than on stylesheet order, so a theme or
+   a snippet carrying the app's own weight cannot put the inset back. */
+.setting-item.aar-settings-root,
+.setting-group .setting-item.aar-settings-root:not(.setting-item-heading) {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.setting-item.aar-settings-root::before,
+.setting-group .setting-item.aar-settings-root:not(.setting-item-heading)::before {
+    content: none;
+}
+
+/* Obsidian spaces a row's first child away from its control column; the body's
+   first section is not a control and must not inherit that gap. */
+.setting-item.aar-settings-root>*:first-child {
+    margin-inline-end: 0;
+}
+
+/* A row whose render callback puts block content under its control - the test
+   recording's status line and playback element - rather than beside it. The row
+   is a flex line, so the block only starts on its own line once the row wraps
+   and the block claims the full width. */
+.setting-item.aar-setting-block-row {
+    flex-wrap: wrap;
+}
+
+.setting-item.aar-setting-block-row>.aar-test-status,
+.setting-item.aar-setting-block-row>.aar-test-audio {
+    flex-basis: 100%;
+    margin-inline: 0;
+}
+
+/* An action row runs its action when clicked anywhere. Obsidian styles its own
+   from 1.13 on; this is the same affordance on the versions below it. */
+.setting-item.aar-action-row {
+    cursor: var(--cursor, pointer);
+}
+
+/* Obsidian before 1.13 has no group header to hang a list's filter and add
+   button on, so both become rows of their own. The filter has no label to sit
+   beside, so it takes the whole row instead of the narrow control column. */
+.setting-item.aar-search-row {
+    padding-block: var(--size-4-2);
+    border-top: none;
+}
+
+.setting-item.aar-search-row .setting-item-info {
+    display: none;
+}
+
+.setting-item.aar-search-row .setting-item-control,
+.setting-item.aar-search-row .search-input-container {
+    width: 100%;
+}
+
+/* An empty list says so in a row of its own. It reads as a note rather than as
+   a setting whose control failed to render. */
+.setting-item.aar-empty-state-row .setting-item-name {
+    color: var(--text-muted);
+    font-weight: normal;
+}
+
+/* The add affordance closes the list, so it carries no divider of its own. */
+.setting-item.aar-add-item-row {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* The body's few blocks that are not setting rows have to line up with the rows
+   around them: a row carries Obsidian's own horizontal inset, a plain element
+   does not. The 0 fallback leaves pre-1.13 rendering, where the body is not
+   inside a row at all, exactly as it was. */
+.aar-settings-root .aar-doc-callout,
+.aar-settings-root .aar-test-status {
+    margin-inline: var(--setting-items-padding-x, 0);
+}
+
+.aar-settings-root .aar-test-audio {
+    margin-inline: var(--setting-items-padding-x, 0);
+    width: calc(100% - 2 * var(--setting-items-padding-x, 0px));
 }
 
 /* Documentation callout at the top of the settings tab. A subtle, accent-bordered
@@ -898,4 +1572,55 @@ input.aar-input-invalid {
 .aar-number-input {
     width: 6em;
     text-align: right;
+}
+
+/* One row of the vault-wide marker search: the marker's own name above,
+   where it is and what it says below, in the muted colour Obsidian uses for
+   secondary text in its own suggestion lists. */
+.aar-marker-search-title {
+    font-weight: var(--font-medium);
+}
+
+.aar-marker-search-meta {
+    color: var(--text-muted);
+    font-size: var(--font-ui-smaller);
+}
+
+/* The transcription queue: one row per recording, its state to the right and
+   a way to drop it at the end. Scrolls rather than growing, so a folder of a
+   hundred recordings still fits a dialog. */
+.aar-queue-cost {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+.aar-queue-list {
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.aar-queue-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 0;
+}
+
+.aar-queue-state {
+    flex: 1;
+    color: var(--text-muted);
+    font-size: var(--font-ui-smaller);
+    text-align: right;
+}
+
+.aar-queue-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: var(--text-muted);
+    cursor: pointer;
 }

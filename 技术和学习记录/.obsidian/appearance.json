@@ -2,5 +2,8 @@
   "theme": "system",
   "nativeMenus": false,
   "showViewHeader": true,
-  "showRibbon": true
+  "showRibbon": true,
+  "enabledCssSnippets": [
+    "excalidraw-hide-pen-crosshair"
+  ]
 }

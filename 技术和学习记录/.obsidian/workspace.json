@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1137a753b98d8a13",
+        "id": "8b760322a812663f",
         "type": "tabs",
         "children": [
           {
-            "id": "f4ec20e45810d2c1",
+            "id": "a0c59b818632ce8f",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "技术和学习记录/.obsidian/community-plugins.json",
-                "bFile": "技术和学习记录/.obsidian/community-plugins.json",
-                "aRef": ""
+                "file": "第3章 向量空间与子空间.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: community-plugins.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "第3章 向量空间与子空间"
             }
           }
         ]
@@ -56,7 +56,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 466.3000183105469,
+    "width": 291.98692321777344,
     "collapsed": true
   },
   "right": {
@@ -121,59 +121,12 @@
             }
           },
           {
-            "id": "09194c49f446f66b",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "gdb x命令.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1,
-                  "close": false
-                }
-              },
-              "icon": "lucide-git-fork",
-              "title": "gdb x命令 的关系图"
-            }
-          },
-          {
-            "id": "c51ae8630073a471",
-            "type": "leaf",
-            "state": {
-              "type": "zk-show-view",
-              "state": {},
-              "icon": "git-branch",
-              "title": "ZK Show 卡片关系图"
-            }
-          },
-          {
             "id": "ea657350a2ca4108",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zettelkasten 图书馆（官方）.md",
+                "file": "主元与秩.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -250,7 +203,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "线性代数绪论.md"
+                "file": "第3章 向量空间与子空间.md"
               },
               "icon": "lucide-info",
               "title": "笔记属性"
@@ -267,40 +220,21 @@
             }
           },
           {
-            "id": "7e6de8ea078d075a",
+            "id": "4b680db0f9db635e",
             "type": "leaf",
             "state": {
-              "type": "claudian-view",
-              "state": {
-                "tabWorkspace": {
-                  "version": 1,
-                  "openTabs": [
-                    {
-                      "tabId": "tab-1786291761077-qm61j8h",
-                      "conversationId": "conv-1786862958237-vldykid5z"
-                    },
-                    {
-                      "tabId": "tab-1788140581958-6ogpm41",
-                      "conversationId": "conv-1788140638959-jpc0hhf94"
-                    },
-                    {
-                      "tabId": "tab-1788141653414-5uf2nlt",
-                      "conversationId": "conv-1788141670001-wv20l6ag3"
-                    }
-                  ],
-                  "activeTabId": "tab-1788141653414-5uf2nlt"
-                }
-              },
-              "icon": "bot",
-              "title": "Claudian"
+              "type": "zk-show-view",
+              "state": {},
+              "icon": "git-branch",
+              "title": "ZK Show 卡片关系图"
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
-    "width": 642.7411499023438
+    "width": 504.68402099609375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -317,58 +251,57 @@
       "obsidian42-brat:BRAT": false,
       "obsidian-kanban:创建新看板": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "realclaudian:Open Claudian": false,
-      "advanced-audio-recorder:Start/stop recording": false
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "426fc9fe546d4f52",
+  "active": "a0c59b818632ce8f",
   "lastOpenFiles": [
-    "agents/L0/技术和学习记录/2026-08-31_10-02-02_342e4c91-7201-4d32-8ee0-b08bb37e9a83.md",
-    "agents/L0/zk-show/2026-08-18_10-48-29_9e19e098.md",
-    "Excalidraw/Drawing 2026-08-22 15.44.23.excalidraw.md",
-    "安娜的档案 zlibrary.md",
-    "agents/L0/zk-show/2026-08-31_09-44-07_f036b138-f1a8-44fe-852a-358e83e86395.md",
-    "卡片编码展示逻辑.md",
-    "Excalidraw/卡片编码展示逻辑.excalidraw.md",
-    "2进制.md",
-    "线性代数绪论.md",
-    "第4章 正交性质.md",
-    "resources/images/Pasted image 20260716153558.png",
-    "resources/html-show/matrix-four-subspaces.html",
-    "agents/L0/zk-show/2026-08-29_11-03-32_3355071c-2d88-4265-aae5-c670573abaa7.md",
-    "第1章-向量引论.md",
     "第3章 向量空间与子空间.md",
-    "第3章 中等难度习题.md",
-    "第3章 中等难度习题 参考答案.md",
-    "第2章 求解线性方程组.md",
-    "主元与秩.md",
-    "线性无关.md",
-    "阶梯形非零行无关证明.md",
-    "分量数.md",
-    "四个基本子空间.md",
+    "秩一与秩二矩阵分解 算例与延伸.md",
     "线性代数.md",
+    "我的zettelkasten编码规则（非官方）.md",
+    "第1章-向量引论.md",
+    "线性代数绪论.md",
+    "线性无关.md",
+    "Excalidraw/向量与子空间复习.excalidraw.md",
+    "第2章 求解线性方程组.md",
+    "第2章 中等难度习题.md",
+    "第3章 中等难度习题.md",
+    "四个基本子空间.md",
+    "R^n之外的三个向量空间.md",
+    "齐次方程.md",
+    "零空间.md",
+    "分量数.md",
+    "向量空间.md",
+    "主元与秩.md",
+    "阶梯形非零行无关证明.md",
+    "矩阵乘法技巧.md",
+    "线性代数中无法深刻记住的概念.md",
+    "第4章 正交性质.md",
+    "第3章 中等难度习题 参考答案.md",
+    "agents/L0/技术和学习记录/2026-10-11_14-18-28_7569b9e6-2db6-4919-82ed-2385ff998406.md",
+    "agents/L0/zk-show/2026-10-15_14-59-08_8ad65f8c-759a-494c-96fa-cfc96c5b1158.md",
+    "resources/Pasted image 20221218132527.png",
+    "resources/Pasted image 20220923002255.png",
+    "resources/Pasted image 20230209004846.png",
+    "resources/math-pdf/线性代数的艺术 -- Kenji Hiranabe -- c2dabe70eb35fa3bf32b22043269f71d -- Anna’s Archive.pdf",
+    "resources/math-pdf",
+    "resources/Pasted image 20230207003101.png",
+    "resources/Pasted image 20221218215257.png",
+    "resources/Pasted image 20230207003415.png",
+    "resources/Implementing domain-driven design by Addison-Wesley.Evans, EricVernon, Vaughn (z-lib.org) 副本.pdf",
+    "resources/fdocuments.in_how-tomcat-works.pdf",
+    "resources/DDD 的实战（第十章）.pdf",
+    "resources/223005882-6632c997-b9a6-445b-800c-77a4b76a6325.mov",
+    "resources/math-pdf/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
     "数学.md",
-    "LDLT 数据归纳法中代入步骤补充说明.md",
-    "Excalidraw/证明LDLT.excalidraw.md",
-    "LDLT分解存在性证明.md",
-    "BASE/linux.base",
-    "resources/images/Pasted Image 20260817113027_083.png",
-    "resources/images/Pasted Image 20260816230127_107.png",
-    "BASE/知识看点.base",
-    "resources/images/Pasted Image 20260818103413_532.png",
-    "resources/images/Pasted Image 20260816230326_240.png",
-    "agents/L0/zk-show",
-    "resources/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
-    "resources/Screenshot_20220929_152342_tv.danmaku.bili.jpg",
-    "resources/Screenshot_20230808_144035_md.obsidian_edit_321602635280093.jpg",
-    "resources/images/Pasted image 20260808112638.png",
-    "resources/images/Pasted image 20260807112243.png",
-    "resources/images/Pasted image 20260806194110.png",
-    "recording-Track1-2026-08-02T03-38-48-197Z.webm",
-    "recording-Track1-2026-08-02T03-38-48-197Z-part1.webm.tmp",
-    "resources/images/Recording 20260802113831.m4a",
-    "resources/images/Recording 20260802113824.m4a",
-    "resources/images/Recording 20260802113407.m4a",
+    "resources/images/Pasted Image 20260929154508_493.png",
+    "resources/images/Pasted Image 20260929110032_397.png",
+    "resources/images/Pasted Image 20260929110456_399.png",
+    "resources/images/Pasted Image 20260929110418_064.png",
+    "agents/L0/gim-daily",
+    "agents/L0/健身教学视频汇总",
+    "resources/html-show/matrix-four-subspaces.html",
     "公务员考试.canvas",
     "数据库连接池.canvas",
     "AKKA.canvas",
