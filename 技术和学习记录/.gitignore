@@ -1,2 +1,5 @@
 # Claudian 本地配置与会话缓存，不纳入版本控制
 .claudian/
+
+# NotebookLM 生成笔记时的中间产物（裁页 PDF / 提示词 / 原始 report / 脚本）
+.notebooklm-work/

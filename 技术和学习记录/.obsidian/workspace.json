@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8b760322a812663f",
+        "id": "3e70351515cd455d",
         "type": "tabs",
         "children": [
           {
-            "id": "a0c59b818632ce8f",
+            "id": "66468eadeb063843",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "第3章 向量空间与子空间.md",
-                "mode": "source",
-                "source": false
+                "aFile": "技术和学习记录/.obsidian/plugins/html-viewer-plus/debug.log",
+                "bFile": "技术和学习记录/.obsidian/plugins/html-viewer-plus/debug.log",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "第3章 向量空间与子空间"
+              "icon": "diff",
+              "title": "Diff: debug.log  (Working Tree)"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.98692321777344,
+    "width": 290.52635192871094,
     "collapsed": true
   },
   "right": {
@@ -93,6 +93,7 @@
       {
         "id": "2d4709cd4b599ae5",
         "type": "tabs",
+        "dimension": 61.40350877192983,
         "children": [
           {
             "id": "aaaf87beb27908d6",
@@ -202,9 +203,7 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "第3章 向量空间与子空间.md"
-              },
+              "state": {},
               "icon": "lucide-info",
               "title": "笔记属性"
             }
@@ -218,7 +217,15 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
+          }
+        ],
+        "currentTab": 8
+      },
+      {
+        "id": "459f1df078b703b5",
+        "type": "tabs",
+        "dimension": 38.59649122807017,
+        "children": [
           {
             "id": "4b680db0f9db635e",
             "type": "leaf",
@@ -229,12 +236,11 @@
               "title": "ZK Show 卡片关系图"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 504.68402099609375
+    "width": 672.683349609375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -254,11 +260,34 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "a0c59b818632ce8f",
+  "active": "66468eadeb063843",
   "lastOpenFiles": [
-    "第3章 向量空间与子空间.md",
-    "秩一与秩二矩阵分解 算例与延伸.md",
+    "Excalidraw/Drawing 2026-10-18 10.38.29.excalidraw.md",
+    "第12章 概率与统计的线性代数.md",
     "线性代数.md",
+    "第7章 奇异值分解 SVD.md",
+    "第6章 特征值与特征向量.md",
+    "数学.md",
+    "resources/Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org).pdf",
+    "resources/Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans (z-lib.org)-annotate.md",
+    "resources/Implementing domain-driven design by Addison-Wesley.Evans, EricVernon, Vaughn (z-lib.org) 副本.pdf",
+    "resources/gdb.pdf",
+    "resources/Implementing domain-driven design by Addison-Wesley.Evans, EricVernon, Vaughn (z-lib.org) 副本-1665769279432.png",
+    "resources/Implementing_Domain_Driven_Design-annotate.md",
+    "resources/jdbc-api-tutorial-and-reference-maydene-fisher-jon--annas-archive--libgenrs-nf-24487.pdf",
+    "resources/postgresql_internals-14_parts1-4_en.pdf",
+    "resources/Screenshot_20230808_144035_md.obsidian_edit_321602635280093.jpg",
+    "第5章 行列式.md",
+    "Excalidraw/公网虚拟机串流网络拓扑.excalidraw.md",
+    "resources/math-pdf/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
+    "数据来源.md",
+    "第4章 正交性质.md",
+    "为什么零空间和行空间正交.md",
+    "第3章 向量空间与子空间.md",
+    "tmp_ch5.txt",
+    "tmp_ext.py",
+    "tmp_toc.py",
+    "秩一与秩二矩阵分解 算例与延伸.md",
     "我的zettelkasten编码规则（非官方）.md",
     "第1章-向量引论.md",
     "线性代数绪论.md",
@@ -270,38 +299,15 @@
     "四个基本子空间.md",
     "R^n之外的三个向量空间.md",
     "齐次方程.md",
-    "零空间.md",
-    "分量数.md",
-    "向量空间.md",
-    "主元与秩.md",
-    "阶梯形非零行无关证明.md",
-    "矩阵乘法技巧.md",
-    "线性代数中无法深刻记住的概念.md",
-    "第4章 正交性质.md",
-    "第3章 中等难度习题 参考答案.md",
-    "agents/L0/技术和学习记录/2026-10-11_14-18-28_7569b9e6-2db6-4919-82ed-2385ff998406.md",
-    "agents/L0/zk-show/2026-10-15_14-59-08_8ad65f8c-759a-494c-96fa-cfc96c5b1158.md",
     "resources/Pasted image 20221218132527.png",
     "resources/Pasted image 20220923002255.png",
     "resources/Pasted image 20230209004846.png",
     "resources/math-pdf/线性代数的艺术 -- Kenji Hiranabe -- c2dabe70eb35fa3bf32b22043269f71d -- Anna’s Archive.pdf",
-    "resources/math-pdf",
     "resources/Pasted image 20230207003101.png",
     "resources/Pasted image 20221218215257.png",
     "resources/Pasted image 20230207003415.png",
-    "resources/Implementing domain-driven design by Addison-Wesley.Evans, EricVernon, Vaughn (z-lib.org) 副本.pdf",
-    "resources/fdocuments.in_how-tomcat-works.pdf",
-    "resources/DDD 的实战（第十章）.pdf",
-    "resources/223005882-6632c997-b9a6-445b-800c-77a4b76a6325.mov",
-    "resources/math-pdf/线性代数引论原书第五版(introduction to linear algebra 中译版) .pdf",
-    "数学.md",
     "resources/images/Pasted Image 20260929154508_493.png",
     "resources/images/Pasted Image 20260929110032_397.png",
-    "resources/images/Pasted Image 20260929110456_399.png",
-    "resources/images/Pasted Image 20260929110418_064.png",
-    "agents/L0/gim-daily",
-    "agents/L0/健身教学视频汇总",
-    "resources/html-show/matrix-four-subspaces.html",
     "公务员考试.canvas",
     "数据库连接池.canvas",
     "AKKA.canvas",

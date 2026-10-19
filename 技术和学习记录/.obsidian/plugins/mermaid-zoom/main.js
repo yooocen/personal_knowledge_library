@@ -40,7 +40,7 @@ var en_default = {
   "setting.zoomSensitivity.name": "Zoom sensitivity",
   "setting.zoomSensitivity.desc": "How strongly mouse-wheel scrolling and pinch gestures zoom. Lower values feel gentler \u2014 try 0.5x if scrolling on a trackpad or Magic Mouse zooms too fast. Inline zoom picks it up immediately; the fullscreen view the next time it opens.",
   "setting.inlineZoomButtons.name": "Show inline zoom buttons",
-  "setting.inlineZoomButtons.desc": "Show zoom in / zoom out / reset / lock buttons on each diagram. The fullscreen button is always shown. While locked, the page scrolls through diagrams normally; unlock to zoom with the mouse wheel, dragging, or pinching.",
+  "setting.inlineZoomButtons.desc": "Show zoom in / zoom out / fit width / reset / lock buttons on each diagram. The fullscreen button is always shown. While locked, the page scrolls through diagrams normally; unlock to zoom with the mouse wheel, dragging, or pinching.",
   "setting.containerBorder.name": "Show container border",
   "setting.containerBorder.desc": "Display a dashed border around each diagram container to help visualize the zoom area boundaries.",
   "setting.alignment.name": "Default alignment",
@@ -63,6 +63,7 @@ var en_default = {
   "modal.reset": "Reset zoom",
   "inline.unlock": "Unlock gestures (wheel zoom, drag, pinch)",
   "inline.lock": "Lock gestures (page scrolls normally)",
+  "inline.fitWidth": "Fit to width",
   "inline.fullscreen": "Open fullscreen view"
 };
 
@@ -71,7 +72,7 @@ var zh_default = {
   "setting.zoomSensitivity.name": "\u7F29\u653E\u7075\u654F\u5EA6",
   "setting.zoomSensitivity.desc": "\u9F20\u6807\u6EDA\u8F6E\u548C\u53CC\u6307\u634F\u5408\u7684\u7F29\u653E\u5F3A\u5EA6\u3002\u6570\u503C\u8D8A\u5C0F\u624B\u611F\u8D8A\u67D4\u548C\u2014\u2014\u82E5\u89E6\u63A7\u677F\u6216\u5999\u63A7\u9F20\u6807\u6EDA\u52A8\u7F29\u653E\u8FC7\u5FEB\uFF0C\u53EF\u5C1D\u8BD5 0.5x\u3002\u5185\u8054\u7F29\u653E\u7ACB\u5373\u751F\u6548\uFF1B\u5168\u5C4F\u89C6\u56FE\u5728\u4E0B\u6B21\u6253\u5F00\u65F6\u751F\u6548\u3002",
   "setting.inlineZoomButtons.name": "\u663E\u793A\u5185\u8054\u7F29\u653E\u6309\u94AE",
-  "setting.inlineZoomButtons.desc": "\u5728\u6BCF\u4E2A\u56FE\u8868\u4E0A\u663E\u793A\u653E\u5927\u3001\u7F29\u5C0F\u3001\u91CD\u7F6E\u548C\u9501\u5B9A\u6309\u94AE\u3002\u5168\u5C4F\u6309\u94AE\u59CB\u7EC8\u663E\u793A\u3002\u9501\u5B9A\u65F6\u9875\u9762\u6B63\u5E38\u6EDA\u8FC7\u56FE\u8868\uFF1B\u89E3\u9501\u540E\u53EF\u7528\u6EDA\u8F6E\u3001\u62D6\u62FD\u6216\u634F\u5408\u7F29\u653E\u3002",
+  "setting.inlineZoomButtons.desc": "\u5728\u6BCF\u4E2A\u56FE\u8868\u4E0A\u663E\u793A\u653E\u5927\u3001\u7F29\u5C0F\u3001\u9002\u5E94\u5BBD\u5EA6\u3001\u91CD\u7F6E\u548C\u9501\u5B9A\u6309\u94AE\u3002\u5168\u5C4F\u6309\u94AE\u59CB\u7EC8\u663E\u793A\u3002\u9501\u5B9A\u65F6\u9875\u9762\u6B63\u5E38\u6EDA\u8FC7\u56FE\u8868\uFF1B\u89E3\u9501\u540E\u53EF\u7528\u6EDA\u8F6E\u3001\u62D6\u62FD\u6216\u634F\u5408\u7F29\u653E\u3002",
   "setting.containerBorder.name": "\u663E\u793A\u5BB9\u5668\u8FB9\u6846",
   "setting.containerBorder.desc": "\u5728\u6BCF\u4E2A\u56FE\u8868\u5BB9\u5668\u5468\u56F4\u663E\u793A\u865A\u7EBF\u8FB9\u6846\uFF0C\u4FBF\u4E8E\u770B\u6E05\u7F29\u653E\u533A\u57DF\u7684\u8FB9\u754C\u3002",
   "setting.alignment.name": "\u9ED8\u8BA4\u5BF9\u9F50\u65B9\u5F0F",
@@ -94,6 +95,7 @@ var zh_default = {
   "modal.reset": "\u91CD\u7F6E\u7F29\u653E",
   "inline.unlock": "\u89E3\u9501\u624B\u52BF\uFF08\u6EDA\u8F6E\u7F29\u653E\u3001\u62D6\u62FD\u3001\u634F\u5408\uFF09",
   "inline.lock": "\u9501\u5B9A\u624B\u52BF\uFF08\u9875\u9762\u6B63\u5E38\u6EDA\u52A8\uFF09",
+  "inline.fitWidth": "\u9002\u5E94\u5BBD\u5EA6",
   "inline.fullscreen": "\u5168\u5C4F\u67E5\u770B"
 };
 
@@ -102,7 +104,7 @@ var zh_TW_default = {
   "setting.zoomSensitivity.name": "\u7E2E\u653E\u9748\u654F\u5EA6",
   "setting.zoomSensitivity.desc": "\u6ED1\u9F20\u6EFE\u8F2A\u8207\u96D9\u6307\u634F\u5408\u7684\u7E2E\u653E\u5F37\u5EA6\u3002\u6578\u503C\u8D8A\u5C0F\u624B\u611F\u8D8A\u67D4\u548C\u2014\u2014\u82E5\u89F8\u63A7\u677F\u6216\u5DE7\u63A7\u6ED1\u9F20\u6372\u52D5\u7E2E\u653E\u904E\u5FEB\uFF0C\u53EF\u5617\u8A66 0.5x\u3002\u5167\u806F\u7E2E\u653E\u7ACB\u5373\u751F\u6548\uFF1B\u5168\u87A2\u5E55\u6AA2\u8996\u65BC\u4E0B\u6B21\u958B\u555F\u6642\u751F\u6548\u3002",
   "setting.inlineZoomButtons.name": "\u986F\u793A\u5167\u806F\u7E2E\u653E\u6309\u9215",
-  "setting.inlineZoomButtons.desc": "\u5728\u6BCF\u500B\u5716\u8868\u4E0A\u986F\u793A\u653E\u5927\u3001\u7E2E\u5C0F\u3001\u91CD\u7F6E\u8207\u9396\u5B9A\u6309\u9215\u3002\u5168\u87A2\u5E55\u6309\u9215\u4E00\u5F8B\u986F\u793A\u3002\u9396\u5B9A\u6642\u9801\u9762\u6B63\u5E38\u6372\u904E\u5716\u8868\uFF1B\u89E3\u9396\u5F8C\u53EF\u7528\u6EFE\u8F2A\u3001\u62D6\u66F3\u6216\u634F\u5408\u7E2E\u653E\u3002",
+  "setting.inlineZoomButtons.desc": "\u5728\u6BCF\u500B\u5716\u8868\u4E0A\u986F\u793A\u653E\u5927\u3001\u7E2E\u5C0F\u3001\u7B26\u5408\u5BEC\u5EA6\u3001\u91CD\u7F6E\u8207\u9396\u5B9A\u6309\u9215\u3002\u5168\u87A2\u5E55\u6309\u9215\u4E00\u5F8B\u986F\u793A\u3002\u9396\u5B9A\u6642\u9801\u9762\u6B63\u5E38\u6372\u904E\u5716\u8868\uFF1B\u89E3\u9396\u5F8C\u53EF\u7528\u6EFE\u8F2A\u3001\u62D6\u66F3\u6216\u634F\u5408\u7E2E\u653E\u3002",
   "setting.containerBorder.name": "\u986F\u793A\u5BB9\u5668\u908A\u6846",
   "setting.containerBorder.desc": "\u5728\u6BCF\u500B\u5716\u8868\u5BB9\u5668\u5468\u570D\u986F\u793A\u865B\u7DDA\u908A\u6846\uFF0C\u4FBF\u65BC\u770B\u6E05\u7E2E\u653E\u5340\u57DF\u7684\u908A\u754C\u3002",
   "setting.alignment.name": "\u9810\u8A2D\u5C0D\u9F4A\u65B9\u5F0F",
@@ -117,6 +119,7 @@ var zh_TW_default = {
   "modal.reset": "\u91CD\u8A2D\u7E2E\u653E",
   "inline.unlock": "\u89E3\u9396\u624B\u52E2\uFF08\u6EFE\u8F2A\u7E2E\u653E\u3001\u62D6\u66F3\u3001\u634F\u5408\uFF09",
   "inline.lock": "\u9396\u5B9A\u624B\u52E2\uFF08\u9801\u9762\u6B63\u5E38\u6372\u52D5\uFF09",
+  "inline.fitWidth": "\u7B26\u5408\u5BEC\u5EA6",
   "inline.fullscreen": "\u5168\u87A2\u5E55\u6AA2\u8996"
 };
 
@@ -125,7 +128,7 @@ var ja_default = {
   "setting.zoomSensitivity.name": "\u30BA\u30FC\u30E0\u611F\u5EA6",
   "setting.zoomSensitivity.desc": "\u30DE\u30A6\u30B9\u30DB\u30A4\u30FC\u30EB\u3068\u30D4\u30F3\u30C1\u64CD\u4F5C\u306B\u3088\u308B\u30BA\u30FC\u30E0\u306E\u5F37\u3055\u3067\u3059\u3002\u5024\u3092\u5C0F\u3055\u304F\u3059\u308B\u3068\u3088\u308A\u7DE9\u3084\u304B\u306B\u52D5\u4F5C\u3057\u307E\u3059\u3002\u30C8\u30E9\u30C3\u30AF\u30D1\u30C3\u30C9\u3084 Magic Mouse \u3067\u30BA\u30FC\u30E0\u304C\u901F\u3059\u304E\u308B\u5834\u5408\u306F 0.5x \u3092\u8A66\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u30A4\u30F3\u30E9\u30A4\u30F3\u30BA\u30FC\u30E0\u306F\u3059\u3050\u306B\u53CD\u6620\u3055\u308C\u3001\u5168\u753B\u9762\u8868\u793A\u306F\u6B21\u56DE\u958B\u3044\u305F\u3068\u304D\u306B\u53CD\u6620\u3055\u308C\u307E\u3059\u3002",
   "setting.inlineZoomButtons.name": "\u30A4\u30F3\u30E9\u30A4\u30F3\u30BA\u30FC\u30E0\u30DC\u30BF\u30F3\u3092\u8868\u793A",
-  "setting.inlineZoomButtons.desc": "\u5404\u56F3\u306B\u30BA\u30FC\u30E0\u30A4\u30F3\u30FB\u30BA\u30FC\u30E0\u30A2\u30A6\u30C8\u30FB\u30EA\u30BB\u30C3\u30C8\u30FB\u30ED\u30C3\u30AF\u30DC\u30BF\u30F3\u3092\u8868\u793A\u3057\u307E\u3059\u3002\u5168\u753B\u9762\u30DC\u30BF\u30F3\u306F\u5E38\u306B\u8868\u793A\u3055\u308C\u307E\u3059\u3002\u30ED\u30C3\u30AF\u4E2D\u306F\u30DA\u30FC\u30B8\u304C\u901A\u5E38\u3069\u304A\u308A\u30B9\u30AF\u30ED\u30FC\u30EB\u3057\u3001\u30ED\u30C3\u30AF\u89E3\u9664\u3059\u308B\u3068\u30DB\u30A4\u30FC\u30EB\u30FB\u30C9\u30E9\u30C3\u30B0\u30FB\u30D4\u30F3\u30C1\u3067\u30BA\u30FC\u30E0\u3067\u304D\u307E\u3059\u3002",
+  "setting.inlineZoomButtons.desc": "\u5404\u56F3\u306B\u30BA\u30FC\u30E0\u30A4\u30F3\u30FB\u30BA\u30FC\u30E0\u30A2\u30A6\u30C8\u30FB\u5E45\u306B\u5408\u308F\u305B\u308B\u30FB\u30EA\u30BB\u30C3\u30C8\u30FB\u30ED\u30C3\u30AF\u30DC\u30BF\u30F3\u3092\u8868\u793A\u3057\u307E\u3059\u3002\u5168\u753B\u9762\u30DC\u30BF\u30F3\u306F\u5E38\u306B\u8868\u793A\u3055\u308C\u307E\u3059\u3002\u30ED\u30C3\u30AF\u4E2D\u306F\u30DA\u30FC\u30B8\u304C\u901A\u5E38\u3069\u304A\u308A\u30B9\u30AF\u30ED\u30FC\u30EB\u3057\u3001\u30ED\u30C3\u30AF\u89E3\u9664\u3059\u308B\u3068\u30DB\u30A4\u30FC\u30EB\u30FB\u30C9\u30E9\u30C3\u30B0\u30FB\u30D4\u30F3\u30C1\u3067\u30BA\u30FC\u30E0\u3067\u304D\u307E\u3059\u3002",
   "setting.containerBorder.name": "\u30B3\u30F3\u30C6\u30CA\u306E\u67A0\u7DDA\u3092\u8868\u793A",
   "setting.containerBorder.desc": "\u5404\u56F3\u306E\u30B3\u30F3\u30C6\u30CA\u5468\u56F2\u306B\u7834\u7DDA\u306E\u67A0\u3092\u8868\u793A\u3057\u3001\u30BA\u30FC\u30E0\u9818\u57DF\u306E\u5883\u754C\u3092\u898B\u3084\u3059\u304F\u3057\u307E\u3059\u3002",
   "setting.alignment.name": "\u30C7\u30D5\u30A9\u30EB\u30C8\u306E\u914D\u7F6E",
@@ -140,6 +143,7 @@ var ja_default = {
   "modal.reset": "\u30BA\u30FC\u30E0\u3092\u30EA\u30BB\u30C3\u30C8",
   "inline.unlock": "\u30B8\u30A7\u30B9\u30C1\u30E3\u30FC\u306E\u30ED\u30C3\u30AF\u3092\u89E3\u9664\uFF08\u30DB\u30A4\u30FC\u30EB\u30BA\u30FC\u30E0\u30FB\u30C9\u30E9\u30C3\u30B0\u30FB\u30D4\u30F3\u30C1\uFF09",
   "inline.lock": "\u30B8\u30A7\u30B9\u30C1\u30E3\u30FC\u3092\u30ED\u30C3\u30AF\uFF08\u30DA\u30FC\u30B8\u306F\u901A\u5E38\u3069\u304A\u308A\u30B9\u30AF\u30ED\u30FC\u30EB\uFF09",
+  "inline.fitWidth": "\u5E45\u306B\u5408\u308F\u305B\u308B",
   "inline.fullscreen": "\u5168\u753B\u9762\u8868\u793A\u3067\u958B\u304F"
 };
 
@@ -148,7 +152,7 @@ var de_default = {
   "setting.zoomSensitivity.name": "Zoom-Empfindlichkeit",
   "setting.zoomSensitivity.desc": "Wie stark Mausrad-Scrollen und Pinch-Gesten zoomen. Niedrigere Werte f\xFChlen sich sanfter an \u2014 probieren Sie 0.5x, wenn Zoomen per Trackpad oder Magic Mouse zu schnell ist. Der Inline-Zoom \xFCbernimmt sie sofort, die Vollbildansicht beim n\xE4chsten \xD6ffnen.",
   "setting.inlineZoomButtons.name": "Inline-Zoom-Schaltfl\xE4chen anzeigen",
-  "setting.inlineZoomButtons.desc": "Zeigt auf jedem Diagramm Schaltfl\xE4chen zum Vergr\xF6\xDFern, Verkleinern, Zur\xFCcksetzen und Sperren. Die Vollbild-Schaltfl\xE4che ist immer sichtbar. Im gesperrten Zustand scrollt die Seite normal \xFCber Diagramme hinweg; nach dem Entsperren zoomen Sie mit Mausrad, Ziehen oder Pinch.",
+  "setting.inlineZoomButtons.desc": "Zeigt auf jedem Diagramm Schaltfl\xE4chen zum Vergr\xF6\xDFern, Verkleinern, Anpassen an die Breite, Zur\xFCcksetzen und Sperren. Die Vollbild-Schaltfl\xE4che ist immer sichtbar. Im gesperrten Zustand scrollt die Seite normal \xFCber Diagramme hinweg; nach dem Entsperren zoomen Sie mit Mausrad, Ziehen oder Pinch.",
   "setting.containerBorder.name": "Container-Rahmen anzeigen",
   "setting.containerBorder.desc": "Zeigt einen gestrichelten Rahmen um jeden Diagramm-Container, um die Grenzen des Zoombereichs besser zu erkennen.",
   "setting.alignment.name": "Standardausrichtung",
@@ -163,6 +167,7 @@ var de_default = {
   "modal.reset": "Zoom zur\xFCcksetzen",
   "inline.unlock": "Gesten entsperren (Rad-Zoom, Ziehen, Pinch)",
   "inline.lock": "Gesten sperren (Seite scrollt normal)",
+  "inline.fitWidth": "An Breite anpassen",
   "inline.fullscreen": "Vollbildansicht \xF6ffnen"
 };
 
@@ -171,7 +176,7 @@ var es_default = {
   "setting.zoomSensitivity.name": "Sensibilidad de zoom",
   "setting.zoomSensitivity.desc": "La intensidad con la que ampl\xEDan la rueda del rat\xF3n y el gesto de pellizco. Los valores bajos se sienten m\xE1s suaves: prueba 0.5x si el zoom con el trackpad o el Magic Mouse va demasiado r\xE1pido. El zoom integrado se aplica de inmediato; la vista a pantalla completa, al volver a abrirla.",
   "setting.inlineZoomButtons.name": "Mostrar botones de zoom integrados",
-  "setting.inlineZoomButtons.desc": "Muestra botones de ampliar, reducir, restablecer y bloquear en cada diagrama. El bot\xF3n de pantalla completa siempre est\xE1 visible. Con el bloqueo activado, la p\xE1gina se desplaza con normalidad sobre los diagramas; al desbloquear puedes hacer zoom con la rueda, arrastrando o pellizcando.",
+  "setting.inlineZoomButtons.desc": "Muestra botones de ampliar, reducir, ajustar al ancho, restablecer y bloquear en cada diagrama. El bot\xF3n de pantalla completa siempre est\xE1 visible. Con el bloqueo activado, la p\xE1gina se desplaza con normalidad sobre los diagramas; al desbloquear puedes hacer zoom con la rueda, arrastrando o pellizcando.",
   "setting.containerBorder.name": "Mostrar borde del contenedor",
   "setting.containerBorder.desc": "Muestra un borde discontinuo alrededor de cada contenedor de diagrama para visualizar mejor los l\xEDmites del \xE1rea de zoom.",
   "setting.alignment.name": "Alineaci\xF3n predeterminada",
@@ -186,6 +191,7 @@ var es_default = {
   "modal.reset": "Restablecer zoom",
   "inline.unlock": "Desbloquear gestos (rueda, arrastrar, pellizco)",
   "inline.lock": "Bloquear gestos (la p\xE1gina se desplaza con normalidad)",
+  "inline.fitWidth": "Ajustar al ancho",
   "inline.fullscreen": "Abrir vista a pantalla completa"
 };
 
@@ -194,7 +200,7 @@ var fr_default = {
   "setting.zoomSensitivity.name": "Sensibilit\xE9 du zoom",
   "setting.zoomSensitivity.desc": "Intensit\xE9 du zoom \xE0 la molette de la souris et au pincement. Des valeurs plus faibles sont plus douces \u2014 essayez 0.5x si le zoom au trackpad ou \xE0 la Magic Mouse est trop rapide. Le zoom int\xE9gr\xE9 le prend en compte imm\xE9diatement ; la vue plein \xE9cran \xE0 la prochaine ouverture.",
   "setting.inlineZoomButtons.name": "Afficher les boutons de zoom int\xE9gr\xE9s",
-  "setting.inlineZoomButtons.desc": "Affiche sur chaque diagramme les boutons zoom avant, zoom arri\xE8re, r\xE9initialisation et verrouillage. Le bouton plein \xE9cran reste toujours visible. Verrouill\xE9, la page d\xE9file normalement sur les diagrammes ; d\xE9verrouill\xE9, zoomez \xE0 la molette, en glissant ou en pin\xE7ant.",
+  "setting.inlineZoomButtons.desc": "Affiche sur chaque diagramme les boutons zoom avant, zoom arri\xE8re, ajustement \xE0 la largeur, r\xE9initialisation et verrouillage. Le bouton plein \xE9cran reste toujours visible. Verrouill\xE9, la page d\xE9file normalement sur les diagrammes ; d\xE9verrouill\xE9, zoomez \xE0 la molette, en glissant ou en pin\xE7ant.",
   "setting.containerBorder.name": "Afficher la bordure du conteneur",
   "setting.containerBorder.desc": "Affiche une bordure en pointill\xE9s autour de chaque conteneur de diagramme pour mieux visualiser les limites de la zone de zoom.",
   "setting.alignment.name": "Alignement par d\xE9faut",
@@ -209,6 +215,7 @@ var fr_default = {
   "modal.reset": "R\xE9initialiser le zoom",
   "inline.unlock": "D\xE9verrouiller les gestes (molette, glisser, pincer)",
   "inline.lock": "Verrouiller les gestes (la page d\xE9file normalement)",
+  "inline.fitWidth": "Ajuster \xE0 la largeur",
   "inline.fullscreen": "Ouvrir en plein \xE9cran"
 };
 
@@ -217,7 +224,7 @@ var ru_default = {
   "setting.zoomSensitivity.name": "\u0427\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
   "setting.zoomSensitivity.desc": "\u041D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0441\u0438\u043B\u044C\u043D\u043E \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u044E\u0442 \u043F\u0440\u043E\u043A\u0440\u0443\u0442\u043A\u0430 \u043A\u043E\u043B\u0435\u0441\u0430 \u043C\u044B\u0448\u0438 \u0438 \u0436\u0435\u0441\u0442 \u0449\u0438\u043F\u043A\u0430. \u041C\u0435\u043D\u044C\u0448\u0438\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u043E\u0449\u0443\u0449\u0430\u044E\u0442\u0441\u044F \u043C\u044F\u0433\u0447\u0435 \u2014 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 0.5x, \u0435\u0441\u043B\u0438 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u043D\u0430 \u0442\u0440\u0435\u043A\u043F\u0430\u0434\u0435 \u0438\u043B\u0438 Magic Mouse \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442 \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0431\u044B\u0441\u0442\u0440\u043E. \u0412\u0441\u0442\u0440\u043E\u0435\u043D\u043D\u044B\u0439 \u043C\u0430\u0441\u0448\u0442\u0430\u0431 \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u0435\u0442 \u0435\u0451 \u0441\u0440\u0430\u0437\u0443, \u043F\u043E\u043B\u043D\u043E\u044D\u043A\u0440\u0430\u043D\u043D\u044B\u0439 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440 \u2014 \u043F\u0440\u0438 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u0438.",
   "setting.inlineZoomButtons.name": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u043A\u043D\u043E\u043F\u043A\u0438 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
-  "setting.inlineZoomButtons.desc": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u043D\u0430 \u043A\u0430\u0436\u0434\u043E\u0439 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0435 \u043A\u043D\u043E\u043F\u043A\u0438 \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u044F, \u0443\u043C\u0435\u043D\u044C\u0448\u0435\u043D\u0438\u044F, \u0441\u0431\u0440\u043E\u0441\u0430 \u0438 \u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u043A\u0438. \u041A\u043D\u043E\u043F\u043A\u0430 \u043F\u043E\u043B\u043D\u043E\u044D\u043A\u0440\u0430\u043D\u043D\u043E\u0433\u043E \u0440\u0435\u0436\u0438\u043C\u0430 \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0430\u0435\u0442\u0441\u044F \u0432\u0441\u0435\u0433\u0434\u0430. \u0412 \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u043E\u043C \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0438 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043F\u0440\u043E\u043A\u0440\u0443\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u043F\u043E \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0430\u043C \u043A\u0430\u043A \u043E\u0431\u044B\u0447\u043D\u043E; \u043F\u043E\u0441\u043B\u0435 \u0440\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u043A\u0438 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u0439\u0442\u0435 \u043A\u043E\u043B\u0435\u0441\u043E\u043C \u043C\u044B\u0448\u0438, \u043F\u0435\u0440\u0435\u0442\u0430\u0441\u043A\u0438\u0432\u0430\u043D\u0438\u0435\u043C \u0438\u043B\u0438 \u0449\u0438\u043F\u043A\u043E\u043C.",
+  "setting.inlineZoomButtons.desc": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u043D\u0430 \u043A\u0430\u0436\u0434\u043E\u0439 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0435 \u043A\u043D\u043E\u043F\u043A\u0438 \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u044F, \u0443\u043C\u0435\u043D\u044C\u0448\u0435\u043D\u0438\u044F, \u043F\u043E\u0434\u0433\u043E\u043D\u043A\u0438 \u043F\u043E \u0448\u0438\u0440\u0438\u043D\u0435, \u0441\u0431\u0440\u043E\u0441\u0430 \u0438 \u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u043A\u0438. \u041A\u043D\u043E\u043F\u043A\u0430 \u043F\u043E\u043B\u043D\u043E\u044D\u043A\u0440\u0430\u043D\u043D\u043E\u0433\u043E \u0440\u0435\u0436\u0438\u043C\u0430 \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0430\u0435\u0442\u0441\u044F \u0432\u0441\u0435\u0433\u0434\u0430. \u0412 \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u043E\u043C \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0438 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043F\u0440\u043E\u043A\u0440\u0443\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u043F\u043E \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0430\u043C \u043A\u0430\u043A \u043E\u0431\u044B\u0447\u043D\u043E; \u043F\u043E\u0441\u043B\u0435 \u0440\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u043A\u0438 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u0439\u0442\u0435 \u043A\u043E\u043B\u0435\u0441\u043E\u043C \u043C\u044B\u0448\u0438, \u043F\u0435\u0440\u0435\u0442\u0430\u0441\u043A\u0438\u0432\u0430\u043D\u0438\u0435\u043C \u0438\u043B\u0438 \u0449\u0438\u043F\u043A\u043E\u043C.",
   "setting.containerBorder.name": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u0440\u0430\u043C\u043A\u0443 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430",
   "setting.containerBorder.desc": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u043F\u0443\u043D\u043A\u0442\u0438\u0440\u043D\u0443\u044E \u0440\u0430\u043C\u043A\u0443 \u0432\u043E\u043A\u0440\u0443\u0433 \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u044B, \u0447\u0442\u043E\u0431\u044B \u043B\u0443\u0447\u0448\u0435 \u0432\u0438\u0434\u0435\u0442\u044C \u0433\u0440\u0430\u043D\u0438\u0446\u044B \u043E\u0431\u043B\u0430\u0441\u0442\u0438 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F.",
   "setting.alignment.name": "\u0412\u044B\u0440\u0430\u0432\u043D\u0438\u0432\u0430\u043D\u0438\u0435 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E",
@@ -232,6 +239,7 @@ var ru_default = {
   "modal.reset": "\u0421\u0431\u0440\u043E\u0441\u0438\u0442\u044C \u043C\u0430\u0441\u0448\u0442\u0430\u0431",
   "inline.unlock": "\u0420\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0436\u0435\u0441\u0442\u044B (\u043A\u043E\u043B\u0435\u0441\u043E, \u043F\u0435\u0440\u0435\u0442\u0430\u0441\u043A\u0438\u0432\u0430\u043D\u0438\u0435, \u0449\u0438\u043F\u043E\u043A)",
   "inline.lock": "\u0417\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0436\u0435\u0441\u0442\u044B (\u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043F\u0440\u043E\u043A\u0440\u0443\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u043A\u0430\u043A \u043E\u0431\u044B\u0447\u043D\u043E)",
+  "inline.fitWidth": "\u041F\u043E\u0434\u043E\u0433\u043D\u0430\u0442\u044C \u043F\u043E \u0448\u0438\u0440\u0438\u043D\u0435",
   "inline.fullscreen": "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0432\u043E \u0432\u0435\u0441\u044C \u044D\u043A\u0440\u0430\u043D"
 };
 
@@ -240,7 +248,7 @@ var pt_BR_default = {
   "setting.zoomSensitivity.name": "Sensibilidade do zoom",
   "setting.zoomSensitivity.desc": "Qu\xE3o forte o zoom responde \xE0 roda do mouse e ao gesto de pin\xE7a. Valores menores s\xE3o mais suaves \u2014 tente 0.5x se o zoom no trackpad ou Magic Mouse for r\xE1pido demais. O zoom integrado aplica a mudan\xE7a imediatamente; a tela cheia, na pr\xF3xima vez que for aberta.",
   "setting.inlineZoomButtons.name": "Mostrar bot\xF5es de zoom integrados",
-  "setting.inlineZoomButtons.desc": "Mostra em cada diagrama os bot\xF5es de ampliar, reduzir, redefinir e bloquear. O bot\xE3o de tela cheia est\xE1 sempre vis\xEDvel. Bloqueado, a p\xE1gina rola normalmente sobre os diagramas; desbloqueado, voc\xEA pode ampliar com a roda do mouse, arrastando ou fazendo pin\xE7a.",
+  "setting.inlineZoomButtons.desc": "Mostra em cada diagrama os bot\xF5es de ampliar, reduzir, ajustar \xE0 largura, redefinir e bloquear. O bot\xE3o de tela cheia est\xE1 sempre vis\xEDvel. Bloqueado, a p\xE1gina rola normalmente sobre os diagramas; desbloqueado, voc\xEA pode ampliar com a roda do mouse, arrastando ou fazendo pin\xE7a.",
   "setting.containerBorder.name": "Mostrar borda do cont\xEAiner",
   "setting.containerBorder.desc": "Exibe uma borda tracejada ao redor de cada cont\xEAiner de diagrama para ajudar a visualizar os limites da \xE1rea de zoom.",
   "setting.alignment.name": "Alinhamento padr\xE3o",
@@ -255,6 +263,7 @@ var pt_BR_default = {
   "modal.reset": "Redefinir zoom",
   "inline.unlock": "Desbloquear gestos (roda do mouse, arrastar, pin\xE7a)",
   "inline.lock": "Bloquear gestos (a p\xE1gina rola normalmente)",
+  "inline.fitWidth": "Ajustar \xE0 largura",
   "inline.fullscreen": "Abrir em tela cheia"
 };
 
@@ -263,7 +272,7 @@ var ko_default = {
   "setting.zoomSensitivity.name": "\uD655\uB300/\uCD95\uC18C \uBBFC\uAC10\uB3C4",
   "setting.zoomSensitivity.desc": "\uB9C8\uC6B0\uC2A4 \uD720\uACFC \uC9D1\uAE30 \uC81C\uC2A4\uCC98\uC758 \uD655\uB300/\uCD95\uC18C \uAC15\uB3C4\uC785\uB2C8\uB2E4. \uAC12\uC774 \uB0AE\uC744\uC218\uB85D \uBD80\uB4DC\uB7FD\uAC8C \uC791\uB3D9\uD558\uBA70, \uD2B8\uB799\uD328\uB4DC\uB098 \uB9E4\uC9C1 \uB9C8\uC6B0\uC2A4\uC5D0\uC11C \uD655\uB300/\uCD95\uC18C\uAC00 \uB108\uBB34 \uBE60\uB974\uBA74 0.5x\uB97C \uC0AC\uC6A9\uD574 \uBCF4\uC138\uC694. \uC778\uB77C\uC778 \uD655\uB300/\uCD95\uC18C\uC5D0\uB294 \uC989\uC2DC \uC801\uC6A9\uB418\uBA70, \uC804\uCCB4 \uD654\uBA74 \uBCF4\uAE30\uC5D0\uB294 \uB2E4\uC74C\uC5D0 \uC5F4\uB9B4 \uB54C \uC801\uC6A9\uB429\uB2C8\uB2E4.",
   "setting.inlineZoomButtons.name": "\uC778\uB77C\uC778 \uD655\uB300/\uCD95\uC18C \uBC84\uD2BC \uD45C\uC2DC",
-  "setting.inlineZoomButtons.desc": "\uAC01 \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC5D0 \uD655\uB300, \uCD95\uC18C, \uC7AC\uC124\uC815, \uC7A0\uAE08 \uBC84\uD2BC\uC744 \uD45C\uC2DC\uD569\uB2C8\uB2E4. \uC804\uCCB4 \uD654\uBA74 \uBC84\uD2BC\uC740 \uD56D\uC0C1 \uD45C\uC2DC\uB429\uB2C8\uB2E4. \uC7A0\uACA8 \uC788\uC73C\uBA74 \uD398\uC774\uC9C0\uAC00 \uB2E4\uC774\uC5B4\uADF8\uB7A8 \uC704\uB97C \uC815\uC0C1\uC801\uC73C\uB85C \uC2A4\uD06C\uB864\uD558\uBA70, \uC7A0\uAE08\uC744 \uD574\uC81C\uD558\uBA74 \uD720, \uB4DC\uB798\uADF8, \uC9D1\uAE30 \uC81C\uC2A4\uCC98\uB85C \uD655\uB300/\uCD95\uC18C\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
+  "setting.inlineZoomButtons.desc": "\uAC01 \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC5D0 \uD655\uB300, \uCD95\uC18C, \uB108\uBE44\uC5D0 \uB9DE\uCD94\uAE30, \uC7AC\uC124\uC815, \uC7A0\uAE08 \uBC84\uD2BC\uC744 \uD45C\uC2DC\uD569\uB2C8\uB2E4. \uC804\uCCB4 \uD654\uBA74 \uBC84\uD2BC\uC740 \uD56D\uC0C1 \uD45C\uC2DC\uB429\uB2C8\uB2E4. \uC7A0\uACA8 \uC788\uC73C\uBA74 \uD398\uC774\uC9C0\uAC00 \uB2E4\uC774\uC5B4\uADF8\uB7A8 \uC704\uB97C \uC815\uC0C1\uC801\uC73C\uB85C \uC2A4\uD06C\uB864\uD558\uBA70, \uC7A0\uAE08\uC744 \uD574\uC81C\uD558\uBA74 \uD720, \uB4DC\uB798\uADF8, \uC9D1\uAE30 \uC81C\uC2A4\uCC98\uB85C \uD655\uB300/\uCD95\uC18C\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
   "setting.containerBorder.name": "\uCEE8\uD14C\uC774\uB108 \uD14C\uB450\uB9AC \uD45C\uC2DC",
   "setting.containerBorder.desc": "\uAC01 \uB2E4\uC774\uC5B4\uADF8\uB7A8 \uCEE8\uD14C\uC774\uB108 \uC8FC\uC704\uC5D0 \uC810\uC120 \uD14C\uB450\uB9AC\uB97C \uD45C\uC2DC\uD558\uC5EC \uD655\uB300/\uCD95\uC18C \uC601\uC5ED\uC758 \uACBD\uACC4\uB97C \uC27D\uAC8C \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
   "setting.alignment.name": "\uAE30\uBCF8 \uC815\uB82C",
@@ -278,6 +287,7 @@ var ko_default = {
   "modal.reset": "\uD655\uB300/\uCD95\uC18C \uC7AC\uC124\uC815",
   "inline.unlock": "\uC81C\uC2A4\uCC98 \uC7A0\uAE08 \uD574\uC81C (\uD720 \uD655\uB300, \uB4DC\uB798\uADF8, \uC9D1\uAE30)",
   "inline.lock": "\uC81C\uC2A4\uCC98 \uC7A0\uAE08 (\uD398\uC774\uC9C0\uAC00 \uC815\uC0C1\uC801\uC73C\uB85C \uC2A4\uD06C\uB864\uB428)",
+  "inline.fitWidth": "\uB108\uBE44\uC5D0 \uB9DE\uCD94\uAE30",
   "inline.fullscreen": "\uC804\uCCB4 \uD654\uBA74\uC73C\uB85C \uC5F4\uAE30"
 };
 
@@ -634,15 +644,26 @@ function getBlockScale(block) {
   const parsed = parseFloat((_a = block.dataset.mzScale) != null ? _a : "");
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
 }
-var clampScale = (scale) => Math.max(INLINE_MIN_SCALE, Math.min(INLINE_MAX_SCALE, scale));
+function fitWidthScale(block, natural) {
+  const style = block.win.getComputedStyle(block);
+  const available = block.clientWidth - (parseFloat(style.paddingLeft) || 0) - (parseFloat(style.paddingRight) || 0);
+  if (available <= 0)
+    return null;
+  return Math.floor(available) / natural.width;
+}
+function clampScale(block, natural, scale) {
+  const fit = fitWidthScale(block, natural);
+  const min = fit === null ? INLINE_MIN_SCALE : Math.min(INLINE_MIN_SCALE, fit);
+  return Math.max(min, Math.min(INLINE_MAX_SCALE, scale));
+}
 function setBlockScale(block, scale, anchorClientX) {
-  const newScale = clampScale(scale);
   const svg = block.querySelector("svg");
   if (!svg)
     return;
   const natural = svgNaturalSize(svg);
   if (!natural)
     return;
+  const newScale = clampScale(block, natural, scale);
   const oldScale = getBlockScale(block);
   if (newScale === 1) {
     restorePristine(svg);
@@ -669,16 +690,32 @@ function setBlockScale(block, scale, anchorClientX) {
     }
   }
 }
-function zoomBlockBy(block, factor, anchorClientX) {
+function gestureScaleTo(block, target, anchorClientX) {
+  const svg = block.querySelector("svg");
+  const natural = svg ? svgNaturalSize(svg) : null;
+  if (!natural)
+    return false;
   const current = getBlockScale(block);
-  const next = clampScale(current * factor);
-  if (next === current)
+  const next = clampScale(block, natural, target);
+  if (target < current ? next >= current : next <= current)
     return false;
   setBlockScale(block, next, anchorClientX);
   return true;
 }
+function zoomBlockBy(block, factor, anchorClientX) {
+  return gestureScaleTo(block, getBlockScale(block) * factor, anchorClientX);
+}
 function resetBlockZoom(block) {
   setBlockScale(block, 1);
+}
+function fitBlockToWidth(block) {
+  const svg = block.querySelector("svg");
+  const natural = svg ? svgNaturalSize(svg) : null;
+  if (!natural)
+    return;
+  const fit = fitWidthScale(block, natural);
+  if (fit !== null)
+    setBlockScale(block, fit);
 }
 function isUnlocked(block) {
   return block.hasClass("mermaid-zoom-unlocked");
@@ -785,7 +822,7 @@ function attachGestures(block, getSensitivity) {
         e.touches[1].clientY - e.touches[0].clientY
       );
       const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-      setBlockScale(block, pinchStartScale * (dist / pinchStartDist), midX);
+      gestureScaleTo(block, pinchStartScale * (dist / pinchStartDist), midX);
       return;
     }
     if (e.touches.length !== 1 || touchAxis === "y")
@@ -858,6 +895,7 @@ function ensureControlCluster(block, opts) {
   };
   makeButton("plus", t("modal.zoomIn"), () => zoomBlockBy(block, INLINE_ZOOM_STEP));
   makeButton("minus", t("modal.zoomOut"), () => zoomBlockBy(block, 1 / INLINE_ZOOM_STEP));
+  makeButton("move-horizontal", t("inline.fitWidth"), () => fitBlockToWidth(block));
   makeButton("rotate-ccw", t("modal.reset"), () => resetBlockZoom(block));
   const lockBtn = cluster.createEl("button", {
     cls: "mermaid-zoom-icon-btn mermaid-zoom-inline-zoom-btn mermaid-zoom-lock-btn"

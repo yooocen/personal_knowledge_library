@@ -6,7 +6,7 @@
     "highlighter": 1
   },
   "inkColors": {
-    "pen": "#f4f4f2",
+    "pen": "#000000",
     "highlighter": "#a9e34b"
   },
   "pressureSensitivity": false,
