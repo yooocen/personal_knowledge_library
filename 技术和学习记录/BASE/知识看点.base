@@ -22,3 +22,8 @@ views:
     filters:
       and:
         - file.basename.contains("tmux")
+  - type: table
+    name: 视图
+    filters:
+      and:
+        - zettelkastenNo.startsWith("3")
